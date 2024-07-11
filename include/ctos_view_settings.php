@@ -185,7 +185,7 @@ $tdatactos_view[".ajaxCodeSnippetAdded"] = false;
 
 $tdatactos_view[".buttonsAdded"] = false;
 
-$tdatactos_view[".addPageEvents"] = false;
+$tdatactos_view[".addPageEvents"] = true;
 
 // use timepicker for search panel
 $tdatactos_view[".isUseTimeForSearch"] = false;
@@ -945,22 +945,21 @@ $tdatactos_view[".hideMobileList"] = array();
 
 // Begin Lookup settings
 				$edata["LookupType"] = 2;
-	$edata["LookupTable"] = "spliters";
-		$edata["listPageId"] = "list";
-		$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["LookupTable"] = "numeros_de_spliters";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
 	$edata["autoCompleteFields"] = array();
 		$edata["LCType"] = 0;
 
 	
 		
-	$edata["LinkField"] = "spliter";
+	$edata["LinkField"] = "Spliter";
 	$edata["LinkFieldType"] = 0;
-	$edata["DisplayField"] = "spliter";
+	$edata["DisplayField"] = "Spliter";
 
 	
 
 	
-	$edata["LookupOrderBy"] = "id_spliters";
+	$edata["LookupOrderBy"] = "id_Spliters";
 
 	
 	
@@ -1814,6 +1813,7 @@ $tdatactos_view[".sqlquery"] = $queryData_ctos_view;
 
 
 
-$tdatactos_view[".hasEvents"] = false;
+include_once(getabspath("include/ctos_view_events.php"));
+$tdatactos_view[".hasEvents"] = true;
 
 ?>

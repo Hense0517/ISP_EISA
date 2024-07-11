@@ -149,7 +149,7 @@ $tdatalocalidad[".ajaxCodeSnippetAdded"] = false;
 
 $tdatalocalidad[".buttonsAdded"] = false;
 
-$tdatalocalidad[".addPageEvents"] = false;
+$tdatalocalidad[".addPageEvents"] = true;
 
 // use timepicker for search panel
 $tdatalocalidad[".isUseTimeForSearch"] = false;
@@ -734,6 +734,7 @@ $tdatalocalidad[".sqlquery"] = $queryData_localidad;
 
 
 
-$tdatalocalidad[".hasEvents"] = false;
+include_once(getabspath("include/localidad_events.php"));
+$tdatalocalidad[".hasEvents"] = true;
 
 ?>

@@ -261,7 +261,7 @@ DisplayMap($mapSettings);
 	// Longitude and latitude or address field should be specified
 // name of field in table that used as address for map
 $mapSettings["addressField"] = "DisplayOnMap";
-$mapSettings["address2Field"] = "Spliter";
+
 
 // name of field in table that used as latitude for map
 $mapSettings["latField"] = "Latitud";
@@ -313,7 +313,7 @@ $mapSettings['zoom'] = 13;
 // uncomment the next line if you want to show user's location on the map
  $mapSettings['showCurrentLocation'] = true;
 // optional icon for current location marker
- $mapSettings['currentLocationIcon'] = "images/smile.png";
+ $mapSettings['currentLocationIcon'] = "/images/Smile.png";
 
 DisplayMap($mapSettings);
 	;

@@ -75,13 +75,13 @@ function InitLookupLinks()
 			$lookupTableLinks["numeros_cto"]["ctos_view.Cto"] = array();
 		}
 		$lookupTableLinks["numeros_cto"]["ctos_view.Cto"]["edit"] = array("table" => "ctos_view", "field" => "Cto", "page" => "edit");
-		if( !isset( $lookupTableLinks["spliters"] ) ) {
-			$lookupTableLinks["spliters"] = array();
+		if( !isset( $lookupTableLinks["numeros_de_spliters"] ) ) {
+			$lookupTableLinks["numeros_de_spliters"] = array();
 		}
-		if( !isset( $lookupTableLinks["spliters"]["ctos_view.Spliter"] )) {
-			$lookupTableLinks["spliters"]["ctos_view.Spliter"] = array();
+		if( !isset( $lookupTableLinks["numeros_de_spliters"]["ctos_view.Spliter"] )) {
+			$lookupTableLinks["numeros_de_spliters"]["ctos_view.Spliter"] = array();
 		}
-		$lookupTableLinks["spliters"]["ctos_view.Spliter"]["edit"] = array("table" => "ctos_view", "field" => "Spliter", "page" => "edit");
+		$lookupTableLinks["numeros_de_spliters"]["ctos_view.Spliter"]["edit"] = array("table" => "ctos_view", "field" => "Spliter", "page" => "edit");
 		if( !isset( $lookupTableLinks["numeros_de_cables"] ) ) {
 			$lookupTableLinks["numeros_de_cables"] = array();
 		}
