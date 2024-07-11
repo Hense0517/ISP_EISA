@@ -301,7 +301,7 @@ $mapSettings['zoom'] = 13;
 
 // uncomment the next line to make map markers lead to Edit pages.
 // By default clicks on markers open View pages.
- $mapSettings["markerAsEditLink"] = false;
+ $mapSettings["markerAsEditLink"] = true;
 
 // Display Center map link in the address field
 // 1 - display center link near the address
