@@ -138,7 +138,7 @@ class ConnectionManager extends ConnectionManager_Base
 
 $host="localhost";
 $user="utrcgest_sopl476";
-$pwd="Y8%]6>o4=fhvK%,";
+$pwd="p2.Szn-(0cLw!19!";
 $port="3306";
 $sys_dbname="utrcgest_isp_eisa";
 $data["connInfo"][0] = $host;

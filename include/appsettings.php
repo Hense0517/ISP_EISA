@@ -632,7 +632,7 @@ $globalSettings["htmlEmailTemplates"] = array();
 
 
 
-$globalSettings["apiGoogleMapsCode"] = "";
+$globalSettings["apiGoogleMapsCode"] = "AIzaSyBuiX5yYrOyl95mLlv2FfqFQoSRSvGPmz0";
 
 $globalSettings["useEmbedMapsAPI"] = 1 != 0;
 
@@ -726,9 +726,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "183_1720707733";
+$projectBuildKey = "185_1720709008";
 $wizardBuildKey = "39558";
-$projectBuildNumber = "183";
+$projectBuildNumber = "185";
 
 $mlang_messages = array();
 $mlang_charsets = array();
