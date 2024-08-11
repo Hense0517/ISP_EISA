@@ -6,11 +6,11 @@ $tdatalocalidad[".OwnerID"] = "";
 $tdatalocalidad[".OriginalTable"] = "localidad";
 
 
-$tdatalocalidad[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
+$tdatalocalidad[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
 $tdatalocalidad[".originalPagesByType"] = $tdatalocalidad[".pagesByType"];
-$tdatalocalidad[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
+$tdatalocalidad[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
 $tdatalocalidad[".originalPages"] = $tdatalocalidad[".pages"];
-$tdatalocalidad[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\"}" );
+$tdatalocalidad[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
 $tdatalocalidad[".originalDefaultPages"] = $tdatalocalidad[".defaultPages"];
 
 //	field labels
@@ -31,6 +31,51 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelslocalidad["Spanish"]["id_localidad"] = "Id Localidad";
 	$fieldToolTipslocalidad["Spanish"]["id_localidad"] = "";
 	$placeHolderslocalidad["Spanish"]["id_localidad"] = "";
+	$fieldLabelslocalidad["Spanish"]["Tipo_Olt"] = "Tipo Olt";
+	$fieldToolTipslocalidad["Spanish"]["Tipo_Olt"] = "";
+	$placeHolderslocalidad["Spanish"]["Tipo_Olt"] = "";
+	$fieldLabelslocalidad["Spanish"]["Serial_Olt"] = "Serial Olt";
+	$fieldToolTipslocalidad["Spanish"]["Serial_Olt"] = "";
+	$placeHolderslocalidad["Spanish"]["Serial_Olt"] = "";
+	$fieldLabelslocalidad["Spanish"]["Tipo_Mikrotik"] = "Tipo Mikrotik";
+	$fieldToolTipslocalidad["Spanish"]["Tipo_Mikrotik"] = "";
+	$placeHolderslocalidad["Spanish"]["Tipo_Mikrotik"] = "";
+	$fieldLabelslocalidad["Spanish"]["Serial_Mikrotik"] = "Serial Mikrotik";
+	$fieldToolTipslocalidad["Spanish"]["Serial_Mikrotik"] = "";
+	$placeHolderslocalidad["Spanish"]["Serial_Mikrotik"] = "";
+	$fieldLabelslocalidad["Spanish"]["Serial_Ont_Prueba"] = "Serial Ont Prueba";
+	$fieldToolTipslocalidad["Spanish"]["Serial_Ont_Prueba"] = "";
+	$placeHolderslocalidad["Spanish"]["Serial_Ont_Prueba"] = "";
+	$fieldLabelslocalidad["Spanish"]["Serial_Raspberry"] = "Serial Raspberry";
+	$fieldToolTipslocalidad["Spanish"]["Serial_Raspberry"] = "";
+	$placeHolderslocalidad["Spanish"]["Serial_Raspberry"] = "";
+	$fieldLabelslocalidad["Spanish"]["Serial_Camara"] = "Serial Camara";
+	$fieldToolTipslocalidad["Spanish"]["Serial_Camara"] = "";
+	$placeHolderslocalidad["Spanish"]["Serial_Camara"] = "";
+	$fieldLabelslocalidad["Spanish"]["Nombre_del_custodio"] = "Nombre Del Custodio";
+	$fieldToolTipslocalidad["Spanish"]["Nombre_del_custodio"] = "";
+	$placeHolderslocalidad["Spanish"]["Nombre_del_custodio"] = "";
+	$fieldLabelslocalidad["Spanish"]["Telefono_del_custodio"] = "Telefono Del Custodio";
+	$fieldToolTipslocalidad["Spanish"]["Telefono_del_custodio"] = "";
+	$placeHolderslocalidad["Spanish"]["Telefono_del_custodio"] = "";
+	$fieldLabelslocalidad["Spanish"]["Contrato_de_energia"] = "Contrato De Energia";
+	$fieldToolTipslocalidad["Spanish"]["Contrato_de_energia"] = "";
+	$placeHolderslocalidad["Spanish"]["Contrato_de_energia"] = "";
+	$fieldLabelslocalidad["Spanish"]["Latitud"] = "Latitud";
+	$fieldToolTipslocalidad["Spanish"]["Latitud"] = "";
+	$placeHolderslocalidad["Spanish"]["Latitud"] = "";
+	$fieldLabelslocalidad["Spanish"]["Longitud"] = "Longitud";
+	$fieldToolTipslocalidad["Spanish"]["Longitud"] = "";
+	$placeHolderslocalidad["Spanish"]["Longitud"] = "";
+	$fieldLabelslocalidad["Spanish"]["Mapa"] = "Mapa";
+	$fieldToolTipslocalidad["Spanish"]["Mapa"] = "";
+	$placeHolderslocalidad["Spanish"]["Mapa"] = "";
+	$fieldLabelslocalidad["Spanish"]["Direccion"] = "Direccion";
+	$fieldToolTipslocalidad["Spanish"]["Direccion"] = "";
+	$placeHolderslocalidad["Spanish"]["Direccion"] = "";
+	$fieldLabelslocalidad["Spanish"]["Observaciones"] = "Observaciones";
+	$fieldToolTipslocalidad["Spanish"]["Observaciones"] = "";
+	$placeHolderslocalidad["Spanish"]["Observaciones"] = "";
 	if (count($fieldToolTipslocalidad["Spanish"]))
 		$tdatalocalidad[".isUseToolTips"] = true;
 }
@@ -46,6 +91,51 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelslocalidad["English"]["Localidad"] = "Localidad";
 	$fieldToolTipslocalidad["English"]["Localidad"] = "";
 	$placeHolderslocalidad["English"]["Localidad"] = "";
+	$fieldLabelslocalidad["English"]["Tipo_Olt"] = "Tipo Olt";
+	$fieldToolTipslocalidad["English"]["Tipo_Olt"] = "";
+	$placeHolderslocalidad["English"]["Tipo_Olt"] = "";
+	$fieldLabelslocalidad["English"]["Serial_Olt"] = "Serial Olt";
+	$fieldToolTipslocalidad["English"]["Serial_Olt"] = "";
+	$placeHolderslocalidad["English"]["Serial_Olt"] = "";
+	$fieldLabelslocalidad["English"]["Tipo_Mikrotik"] = "Tipo Mikrotik";
+	$fieldToolTipslocalidad["English"]["Tipo_Mikrotik"] = "";
+	$placeHolderslocalidad["English"]["Tipo_Mikrotik"] = "";
+	$fieldLabelslocalidad["English"]["Serial_Mikrotik"] = "Serial Mikrotik";
+	$fieldToolTipslocalidad["English"]["Serial_Mikrotik"] = "";
+	$placeHolderslocalidad["English"]["Serial_Mikrotik"] = "";
+	$fieldLabelslocalidad["English"]["Serial_Ont_Prueba"] = "Serial Ont Prueba";
+	$fieldToolTipslocalidad["English"]["Serial_Ont_Prueba"] = "";
+	$placeHolderslocalidad["English"]["Serial_Ont_Prueba"] = "";
+	$fieldLabelslocalidad["English"]["Serial_Raspberry"] = "Serial Raspberry";
+	$fieldToolTipslocalidad["English"]["Serial_Raspberry"] = "";
+	$placeHolderslocalidad["English"]["Serial_Raspberry"] = "";
+	$fieldLabelslocalidad["English"]["Serial_Camara"] = "Serial Camara";
+	$fieldToolTipslocalidad["English"]["Serial_Camara"] = "";
+	$placeHolderslocalidad["English"]["Serial_Camara"] = "";
+	$fieldLabelslocalidad["English"]["Nombre_del_custodio"] = "Nombre Del Custodio";
+	$fieldToolTipslocalidad["English"]["Nombre_del_custodio"] = "";
+	$placeHolderslocalidad["English"]["Nombre_del_custodio"] = "";
+	$fieldLabelslocalidad["English"]["Telefono_del_custodio"] = "Telefono Del Custodio";
+	$fieldToolTipslocalidad["English"]["Telefono_del_custodio"] = "";
+	$placeHolderslocalidad["English"]["Telefono_del_custodio"] = "";
+	$fieldLabelslocalidad["English"]["Contrato_de_energia"] = "Contrato De Energia";
+	$fieldToolTipslocalidad["English"]["Contrato_de_energia"] = "";
+	$placeHolderslocalidad["English"]["Contrato_de_energia"] = "";
+	$fieldLabelslocalidad["English"]["Latitud"] = "Latitud";
+	$fieldToolTipslocalidad["English"]["Latitud"] = "";
+	$placeHolderslocalidad["English"]["Latitud"] = "";
+	$fieldLabelslocalidad["English"]["Longitud"] = "Longitud";
+	$fieldToolTipslocalidad["English"]["Longitud"] = "";
+	$placeHolderslocalidad["English"]["Longitud"] = "";
+	$fieldLabelslocalidad["English"]["Mapa"] = "Mapa";
+	$fieldToolTipslocalidad["English"]["Mapa"] = "";
+	$placeHolderslocalidad["English"]["Mapa"] = "";
+	$fieldLabelslocalidad["English"]["Direccion"] = "Direccion";
+	$fieldToolTipslocalidad["English"]["Direccion"] = "";
+	$placeHolderslocalidad["English"]["Direccion"] = "";
+	$fieldLabelslocalidad["English"]["Observaciones"] = "Observaciones";
+	$fieldToolTipslocalidad["English"]["Observaciones"] = "";
+	$placeHolderslocalidad["English"]["Observaciones"] = "";
 	if (count($fieldToolTipslocalidad["English"]))
 		$tdatalocalidad[".isUseToolTips"] = true;
 }
@@ -143,7 +233,7 @@ $tdatalocalidad[".isUseAjaxSuggest"] = true;
 
 
 
-
+			
 
 $tdatalocalidad[".ajaxCodeSnippetAdded"] = false;
 
@@ -154,6 +244,7 @@ $tdatalocalidad[".addPageEvents"] = true;
 // use timepicker for search panel
 $tdatalocalidad[".isUseTimeForSearch"] = false;
 
+$tdatalocalidad[".isUseFieldsMaps"] = true;
 
 $tdatalocalidad[".badgeColor"] = "EDCA00";
 
@@ -165,6 +256,21 @@ $tdatalocalidad[".requiredSearchFields"] = array();
 $tdatalocalidad[".googleLikeFields"] = array();
 $tdatalocalidad[".googleLikeFields"][] = "id_localidad";
 $tdatalocalidad[".googleLikeFields"][] = "Localidad";
+$tdatalocalidad[".googleLikeFields"][] = "Tipo_Olt";
+$tdatalocalidad[".googleLikeFields"][] = "Serial_Olt";
+$tdatalocalidad[".googleLikeFields"][] = "Tipo_Mikrotik";
+$tdatalocalidad[".googleLikeFields"][] = "Serial_Mikrotik";
+$tdatalocalidad[".googleLikeFields"][] = "Serial_Ont_Prueba";
+$tdatalocalidad[".googleLikeFields"][] = "Serial_Raspberry";
+$tdatalocalidad[".googleLikeFields"][] = "Serial_Camara";
+$tdatalocalidad[".googleLikeFields"][] = "Nombre_del_custodio";
+$tdatalocalidad[".googleLikeFields"][] = "Telefono_del_custodio";
+$tdatalocalidad[".googleLikeFields"][] = "Contrato_de_energia";
+$tdatalocalidad[".googleLikeFields"][] = "Latitud";
+$tdatalocalidad[".googleLikeFields"][] = "Longitud";
+$tdatalocalidad[".googleLikeFields"][] = "Mapa";
+$tdatalocalidad[".googleLikeFields"][] = "Direccion";
+$tdatalocalidad[".googleLikeFields"][] = "Observaciones";
 
 
 
@@ -200,9 +306,9 @@ $tdatalocalidad[".orderindexes"] = array();
 
 
 
-$tdatalocalidad[".sqlHead"] = "SELECT `id_localidad`,  `Localidad`";
+$tdatalocalidad[".sqlHead"] = "SELECT `id_localidad`,  `Localidad`,  `Tipo_Olt`,  `Serial_Olt`,  `Tipo_Mikrotik`,  `Serial_Mikrotik`,  `Serial_Ont_Prueba`,  `Serial_Raspberry`,  `Serial_Camara`,  `Nombre_del_custodio`,  `Telefono_del_custodio`,  `Contrato_de_energia`,  `Latitud`,  `Longitud`,  `Mapa`,  `Direccion`,  `Observaciones`";
 $tdatalocalidad[".sqlFrom"] = "FROM `localidad`";
-$tdatalocalidad[".sqlWhereExpr"] = "";
+$tdatalocalidad[".sqlWhereExpr"] = "(`Localidad` NOT IN ('EL BAGRE', 'ZARAGOZA'))";
 $tdatalocalidad[".sqlTail"] = "";
 
 
@@ -239,6 +345,7 @@ $tdatalocalidad[".arrGroupsPerPage"] = $arrGPP;
 $tdatalocalidad[".highlightSearchResults"] = true;
 
 $tableKeyslocalidad = array();
+$tableKeyslocalidad[] = "id_localidad";
 $tdatalocalidad[".Keys"] = $tableKeyslocalidad;
 
 
@@ -528,6 +635,2114 @@ $tdatalocalidad[".hideMobileList"] = array();
 
 	$tdatalocalidad["Localidad"] = $fdata;
 		$tdatalocalidad[".searchableFields"][] = "Localidad";
+//	Tipo_Olt
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 3;
+	$fdata["strName"] = "Tipo_Olt";
+	$fdata["GoodName"] = "Tipo_Olt";
+	$fdata["ownerTable"] = "localidad";
+	$fdata["Label"] = GetFieldLabel("localidad","Tipo_Olt");
+	$fdata["FieldType"] = 200;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "Tipo_Olt";
+
+		$fdata["sourceSingle"] = "Tipo_Olt";
+
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "`Tipo_Olt`";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Lookup wizard");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+// Begin Lookup settings
+		$edata["LookupType"] = 0;
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+	
+		$edata["LookupValues"] = array();
+	$edata["LookupValues"][] = "Gabinete";
+	$edata["LookupValues"][] = "Rack";
+
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+	
+	
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Equals";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatalocalidad["Tipo_Olt"] = $fdata;
+		$tdatalocalidad[".searchableFields"][] = "Tipo_Olt";
+//	Serial_Olt
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 4;
+	$fdata["strName"] = "Serial_Olt";
+	$fdata["GoodName"] = "Serial_Olt";
+	$fdata["ownerTable"] = "localidad";
+	$fdata["Label"] = GetFieldLabel("localidad","Serial_Olt");
+	$fdata["FieldType"] = 200;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "Serial_Olt";
+
+		$fdata["sourceSingle"] = "Serial_Olt";
+
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "`Serial_Olt`";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+			$edata["EditParams"].= " maxlength=50";
+
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatalocalidad["Serial_Olt"] = $fdata;
+		$tdatalocalidad[".searchableFields"][] = "Serial_Olt";
+//	Tipo_Mikrotik
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 5;
+	$fdata["strName"] = "Tipo_Mikrotik";
+	$fdata["GoodName"] = "Tipo_Mikrotik";
+	$fdata["ownerTable"] = "localidad";
+	$fdata["Label"] = GetFieldLabel("localidad","Tipo_Mikrotik");
+	$fdata["FieldType"] = 200;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "Tipo_Mikrotik";
+
+		$fdata["sourceSingle"] = "Tipo_Mikrotik";
+
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "`Tipo_Mikrotik`";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Lookup wizard");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+// Begin Lookup settings
+		$edata["LookupType"] = 0;
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+	
+		$edata["LookupValues"] = array();
+	$edata["LookupValues"][] = "CCR2116-12G";
+	$edata["LookupValues"][] = "CCR2004-16G";
+
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+	
+	
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Equals";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatalocalidad["Tipo_Mikrotik"] = $fdata;
+		$tdatalocalidad[".searchableFields"][] = "Tipo_Mikrotik";
+//	Serial_Mikrotik
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 6;
+	$fdata["strName"] = "Serial_Mikrotik";
+	$fdata["GoodName"] = "Serial_Mikrotik";
+	$fdata["ownerTable"] = "localidad";
+	$fdata["Label"] = GetFieldLabel("localidad","Serial_Mikrotik");
+	$fdata["FieldType"] = 200;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "Serial_Mikrotik";
+
+		$fdata["sourceSingle"] = "Serial_Mikrotik";
+
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "`Serial_Mikrotik`";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+			$edata["EditParams"].= " maxlength=50";
+
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatalocalidad["Serial_Mikrotik"] = $fdata;
+		$tdatalocalidad[".searchableFields"][] = "Serial_Mikrotik";
+//	Serial_Ont_Prueba
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 7;
+	$fdata["strName"] = "Serial_Ont_Prueba";
+	$fdata["GoodName"] = "Serial_Ont_Prueba";
+	$fdata["ownerTable"] = "localidad";
+	$fdata["Label"] = GetFieldLabel("localidad","Serial_Ont_Prueba");
+	$fdata["FieldType"] = 200;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "Serial_Ont_Prueba";
+
+		$fdata["sourceSingle"] = "Serial_Ont_Prueba";
+
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "`Serial_Ont_Prueba`";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+			$edata["EditParams"].= " maxlength=50";
+
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatalocalidad["Serial_Ont_Prueba"] = $fdata;
+		$tdatalocalidad[".searchableFields"][] = "Serial_Ont_Prueba";
+//	Serial_Raspberry
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 8;
+	$fdata["strName"] = "Serial_Raspberry";
+	$fdata["GoodName"] = "Serial_Raspberry";
+	$fdata["ownerTable"] = "localidad";
+	$fdata["Label"] = GetFieldLabel("localidad","Serial_Raspberry");
+	$fdata["FieldType"] = 200;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "Serial_Raspberry";
+
+		$fdata["sourceSingle"] = "Serial_Raspberry";
+
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "`Serial_Raspberry`";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+			$edata["EditParams"].= " maxlength=50";
+
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatalocalidad["Serial_Raspberry"] = $fdata;
+		$tdatalocalidad[".searchableFields"][] = "Serial_Raspberry";
+//	Serial_Camara
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 9;
+	$fdata["strName"] = "Serial_Camara";
+	$fdata["GoodName"] = "Serial_Camara";
+	$fdata["ownerTable"] = "localidad";
+	$fdata["Label"] = GetFieldLabel("localidad","Serial_Camara");
+	$fdata["FieldType"] = 200;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "Serial_Camara";
+
+		$fdata["sourceSingle"] = "Serial_Camara";
+
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "`Serial_Camara`";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+			$edata["EditParams"].= " maxlength=50";
+
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatalocalidad["Serial_Camara"] = $fdata;
+		$tdatalocalidad[".searchableFields"][] = "Serial_Camara";
+//	Nombre_del_custodio
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 10;
+	$fdata["strName"] = "Nombre_del_custodio";
+	$fdata["GoodName"] = "Nombre_del_custodio";
+	$fdata["ownerTable"] = "localidad";
+	$fdata["Label"] = GetFieldLabel("localidad","Nombre_del_custodio");
+	$fdata["FieldType"] = 200;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "Nombre_del_custodio";
+
+		$fdata["sourceSingle"] = "Nombre_del_custodio";
+
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "`Nombre_del_custodio`";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+			$edata["EditParams"].= " maxlength=50";
+
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatalocalidad["Nombre_del_custodio"] = $fdata;
+		$tdatalocalidad[".searchableFields"][] = "Nombre_del_custodio";
+//	Telefono_del_custodio
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 11;
+	$fdata["strName"] = "Telefono_del_custodio";
+	$fdata["GoodName"] = "Telefono_del_custodio";
+	$fdata["ownerTable"] = "localidad";
+	$fdata["Label"] = GetFieldLabel("localidad","Telefono_del_custodio");
+	$fdata["FieldType"] = 200;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "Telefono_del_custodio";
+
+		$fdata["sourceSingle"] = "Telefono_del_custodio";
+
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "`Telefono_del_custodio`";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+			$edata["EditParams"].= " maxlength=50";
+
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatalocalidad["Telefono_del_custodio"] = $fdata;
+		$tdatalocalidad[".searchableFields"][] = "Telefono_del_custodio";
+//	Contrato_de_energia
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 12;
+	$fdata["strName"] = "Contrato_de_energia";
+	$fdata["GoodName"] = "Contrato_de_energia";
+	$fdata["ownerTable"] = "localidad";
+	$fdata["Label"] = GetFieldLabel("localidad","Contrato_de_energia");
+	$fdata["FieldType"] = 200;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "Contrato_de_energia";
+
+		$fdata["sourceSingle"] = "Contrato_de_energia";
+
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "`Contrato_de_energia`";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+			$edata["EditParams"].= " maxlength=50";
+
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatalocalidad["Contrato_de_energia"] = $fdata;
+		$tdatalocalidad[".searchableFields"][] = "Contrato_de_energia";
+//	Latitud
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 13;
+	$fdata["strName"] = "Latitud";
+	$fdata["GoodName"] = "Latitud";
+	$fdata["ownerTable"] = "localidad";
+	$fdata["Label"] = GetFieldLabel("localidad","Latitud");
+	$fdata["FieldType"] = 200;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "Latitud";
+
+		$fdata["sourceSingle"] = "Latitud";
+
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "`Latitud`";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+			$edata["EditParams"].= " maxlength=50";
+
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatalocalidad["Latitud"] = $fdata;
+		$tdatalocalidad[".searchableFields"][] = "Latitud";
+//	Longitud
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 14;
+	$fdata["strName"] = "Longitud";
+	$fdata["GoodName"] = "Longitud";
+	$fdata["ownerTable"] = "localidad";
+	$fdata["Label"] = GetFieldLabel("localidad","Longitud");
+	$fdata["FieldType"] = 200;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "Longitud";
+
+		$fdata["sourceSingle"] = "Longitud";
+
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "`Longitud`";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+			$edata["EditParams"].= " maxlength=50";
+
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatalocalidad["Longitud"] = $fdata;
+		$tdatalocalidad[".searchableFields"][] = "Longitud";
+//	Mapa
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 15;
+	$fdata["strName"] = "Mapa";
+	$fdata["GoodName"] = "Mapa";
+	$fdata["ownerTable"] = "localidad";
+	$fdata["Label"] = GetFieldLabel("localidad","Mapa");
+	$fdata["FieldType"] = 200;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "Mapa";
+
+		$fdata["sourceSingle"] = "Mapa";
+
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "`Mapa`";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "Map");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["mapData"] = array();
+	$vdata["mapData"]['width'] = 300;
+	$vdata["mapData"]['height'] = 225;
+	$vdata["mapData"]['address'] = "Localidad";
+	$vdata["mapData"]['lat'] = "Latitud";
+	$vdata["mapData"]['lng'] = "Longitud";
+	$vdata["mapData"]['desc'] = "Localidad";
+	$vdata["mapData"]['mapIcon'] = "";
+	$vdata["mapData"]['isMapIconCustom'] = 0;
+		$vdata["mapData"]['zoom'] = 15;
+
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+			$edata["EditParams"].= " maxlength=50";
+
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatalocalidad["Mapa"] = $fdata;
+		$tdatalocalidad[".searchableFields"][] = "Mapa";
+//	Direccion
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 16;
+	$fdata["strName"] = "Direccion";
+	$fdata["GoodName"] = "Direccion";
+	$fdata["ownerTable"] = "localidad";
+	$fdata["Label"] = GetFieldLabel("localidad","Direccion");
+	$fdata["FieldType"] = 200;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "Direccion";
+
+		$fdata["sourceSingle"] = "Direccion";
+
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "`Direccion`";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+			$edata["EditParams"].= " maxlength=50";
+
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatalocalidad["Direccion"] = $fdata;
+		$tdatalocalidad[".searchableFields"][] = "Direccion";
+//	Observaciones
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 17;
+	$fdata["strName"] = "Observaciones";
+	$fdata["GoodName"] = "Observaciones";
+	$fdata["ownerTable"] = "localidad";
+	$fdata["Label"] = GetFieldLabel("localidad","Observaciones");
+	$fdata["FieldType"] = 201;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "Observaciones";
+
+		$fdata["sourceSingle"] = "Observaciones";
+
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "`Observaciones`";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text area");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 0;
+
+	
+	
+	
+				$edata["nRows"] = 100;
+			$edata["nCols"] = 200;
+
+	
+	
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+//	End validation
+
+		$edata["CreateThumbnail"] = true;
+	$edata["StrThumbnail"] = "th";
+			$edata["ThumbnailSize"] = 600;
+
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatalocalidad["Observaciones"] = $fdata;
+		$tdatalocalidad[".searchableFields"][] = "Observaciones";
 
 
 $tables_data["localidad"]=&$tdatalocalidad;
@@ -575,6 +2790,36 @@ $detailsTablesData["localidad"] = array();
 				$detailsTablesData["localidad"][$dIndex]["detailKeys"] = array();
 
 	$detailsTablesData["localidad"][$dIndex]["detailKeys"][]="localidad";
+//	Mapa_General
+	
+	
+
+		$dIndex = 1;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="Mapa_General";
+		$detailsParam["dOriginalTable"] = "ctos";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "mapa_general";
+	$detailsParam["dCaptionTable"] = GetTableCaption("Mapa_General");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["localidad"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["localidad"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["localidad"][$dIndex]["masterKeys"][]="Localidad";
+
+				$detailsTablesData["localidad"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["localidad"][$dIndex]["detailKeys"][]="Localidad";
 //endif
 
 // tables which are master tables for current table (detail)
@@ -602,23 +2847,25 @@ function createSqlQuery_localidad()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "`id_localidad`,  `Localidad`";
+$proto0["m_strFieldList"] = "`id_localidad`,  `Localidad`,  `Tipo_Olt`,  `Serial_Olt`,  `Tipo_Mikrotik`,  `Serial_Mikrotik`,  `Serial_Ont_Prueba`,  `Serial_Raspberry`,  `Serial_Camara`,  `Nombre_del_custodio`,  `Telefono_del_custodio`,  `Contrato_de_energia`,  `Latitud`,  `Longitud`,  `Mapa`,  `Direccion`,  `Observaciones`";
 $proto0["m_strFrom"] = "FROM `localidad`";
-$proto0["m_strWhere"] = "";
+$proto0["m_strWhere"] = "(`Localidad` NOT IN ('EL BAGRE', 'ZARAGOZA'))";
 $proto0["m_strOrderBy"] = "ORDER BY `Localidad`";
 	
 		;
 			$proto0["cipherer"] = null;
 $proto2=array();
-$proto2["m_sql"] = "";
+$proto2["m_sql"] = "`Localidad` NOT IN ('EL BAGRE', 'ZARAGOZA')";
 $proto2["m_uniontype"] = "SQLL_UNKNOWN";
-	$obj = new SQLNonParsed(array(
-	"m_sql" => ""
+						$obj = new SQLField(array(
+	"m_strName" => "Localidad",
+	"m_strTable" => "localidad",
+	"m_srcTableName" => "localidad"
 ));
 
 $proto2["m_column"]=$obj;
 $proto2["m_contained"] = array();
-$proto2["m_strCase"] = "";
+$proto2["m_strCase"] = "NOT IN ('EL BAGRE', 'ZARAGOZA')";
 $proto2["m_havingmode"] = false;
 $proto2["m_inBrackets"] = false;
 $proto2["m_useAlias"] = false;
@@ -670,53 +2917,278 @@ $proto8["m_alias"] = "";
 $obj = new SQLFieldListItem($proto8);
 
 $proto0["m_fieldlist"][]=$obj;
-$proto0["m_fromlist"] = array();
-												$proto10=array();
-$proto10["m_link"] = "SQLL_MAIN";
-			$proto11=array();
-$proto11["m_strName"] = "localidad";
-$proto11["m_srcTableName"] = "localidad";
-$proto11["m_columns"] = array();
-$proto11["m_columns"][] = "id_localidad";
-$proto11["m_columns"][] = "Localidad";
-$obj = new SQLTable($proto11);
+						$proto10=array();
+			$obj = new SQLField(array(
+	"m_strName" => "Tipo_Olt",
+	"m_strTable" => "localidad",
+	"m_srcTableName" => "localidad"
+));
 
-$proto10["m_table"] = $obj;
-$proto10["m_sql"] = "`localidad`";
-$proto10["m_alias"] = "";
+$proto10["m_sql"] = "`Tipo_Olt`";
 $proto10["m_srcTableName"] = "localidad";
-$proto12=array();
-$proto12["m_sql"] = "";
-$proto12["m_uniontype"] = "SQLL_UNKNOWN";
+$proto10["m_expr"]=$obj;
+$proto10["m_alias"] = "";
+$obj = new SQLFieldListItem($proto10);
+
+$proto0["m_fieldlist"][]=$obj;
+						$proto12=array();
+			$obj = new SQLField(array(
+	"m_strName" => "Serial_Olt",
+	"m_strTable" => "localidad",
+	"m_srcTableName" => "localidad"
+));
+
+$proto12["m_sql"] = "`Serial_Olt`";
+$proto12["m_srcTableName"] = "localidad";
+$proto12["m_expr"]=$obj;
+$proto12["m_alias"] = "";
+$obj = new SQLFieldListItem($proto12);
+
+$proto0["m_fieldlist"][]=$obj;
+						$proto14=array();
+			$obj = new SQLField(array(
+	"m_strName" => "Tipo_Mikrotik",
+	"m_strTable" => "localidad",
+	"m_srcTableName" => "localidad"
+));
+
+$proto14["m_sql"] = "`Tipo_Mikrotik`";
+$proto14["m_srcTableName"] = "localidad";
+$proto14["m_expr"]=$obj;
+$proto14["m_alias"] = "";
+$obj = new SQLFieldListItem($proto14);
+
+$proto0["m_fieldlist"][]=$obj;
+						$proto16=array();
+			$obj = new SQLField(array(
+	"m_strName" => "Serial_Mikrotik",
+	"m_strTable" => "localidad",
+	"m_srcTableName" => "localidad"
+));
+
+$proto16["m_sql"] = "`Serial_Mikrotik`";
+$proto16["m_srcTableName"] = "localidad";
+$proto16["m_expr"]=$obj;
+$proto16["m_alias"] = "";
+$obj = new SQLFieldListItem($proto16);
+
+$proto0["m_fieldlist"][]=$obj;
+						$proto18=array();
+			$obj = new SQLField(array(
+	"m_strName" => "Serial_Ont_Prueba",
+	"m_strTable" => "localidad",
+	"m_srcTableName" => "localidad"
+));
+
+$proto18["m_sql"] = "`Serial_Ont_Prueba`";
+$proto18["m_srcTableName"] = "localidad";
+$proto18["m_expr"]=$obj;
+$proto18["m_alias"] = "";
+$obj = new SQLFieldListItem($proto18);
+
+$proto0["m_fieldlist"][]=$obj;
+						$proto20=array();
+			$obj = new SQLField(array(
+	"m_strName" => "Serial_Raspberry",
+	"m_strTable" => "localidad",
+	"m_srcTableName" => "localidad"
+));
+
+$proto20["m_sql"] = "`Serial_Raspberry`";
+$proto20["m_srcTableName"] = "localidad";
+$proto20["m_expr"]=$obj;
+$proto20["m_alias"] = "";
+$obj = new SQLFieldListItem($proto20);
+
+$proto0["m_fieldlist"][]=$obj;
+						$proto22=array();
+			$obj = new SQLField(array(
+	"m_strName" => "Serial_Camara",
+	"m_strTable" => "localidad",
+	"m_srcTableName" => "localidad"
+));
+
+$proto22["m_sql"] = "`Serial_Camara`";
+$proto22["m_srcTableName"] = "localidad";
+$proto22["m_expr"]=$obj;
+$proto22["m_alias"] = "";
+$obj = new SQLFieldListItem($proto22);
+
+$proto0["m_fieldlist"][]=$obj;
+						$proto24=array();
+			$obj = new SQLField(array(
+	"m_strName" => "Nombre_del_custodio",
+	"m_strTable" => "localidad",
+	"m_srcTableName" => "localidad"
+));
+
+$proto24["m_sql"] = "`Nombre_del_custodio`";
+$proto24["m_srcTableName"] = "localidad";
+$proto24["m_expr"]=$obj;
+$proto24["m_alias"] = "";
+$obj = new SQLFieldListItem($proto24);
+
+$proto0["m_fieldlist"][]=$obj;
+						$proto26=array();
+			$obj = new SQLField(array(
+	"m_strName" => "Telefono_del_custodio",
+	"m_strTable" => "localidad",
+	"m_srcTableName" => "localidad"
+));
+
+$proto26["m_sql"] = "`Telefono_del_custodio`";
+$proto26["m_srcTableName"] = "localidad";
+$proto26["m_expr"]=$obj;
+$proto26["m_alias"] = "";
+$obj = new SQLFieldListItem($proto26);
+
+$proto0["m_fieldlist"][]=$obj;
+						$proto28=array();
+			$obj = new SQLField(array(
+	"m_strName" => "Contrato_de_energia",
+	"m_strTable" => "localidad",
+	"m_srcTableName" => "localidad"
+));
+
+$proto28["m_sql"] = "`Contrato_de_energia`";
+$proto28["m_srcTableName"] = "localidad";
+$proto28["m_expr"]=$obj;
+$proto28["m_alias"] = "";
+$obj = new SQLFieldListItem($proto28);
+
+$proto0["m_fieldlist"][]=$obj;
+						$proto30=array();
+			$obj = new SQLField(array(
+	"m_strName" => "Latitud",
+	"m_strTable" => "localidad",
+	"m_srcTableName" => "localidad"
+));
+
+$proto30["m_sql"] = "`Latitud`";
+$proto30["m_srcTableName"] = "localidad";
+$proto30["m_expr"]=$obj;
+$proto30["m_alias"] = "";
+$obj = new SQLFieldListItem($proto30);
+
+$proto0["m_fieldlist"][]=$obj;
+						$proto32=array();
+			$obj = new SQLField(array(
+	"m_strName" => "Longitud",
+	"m_strTable" => "localidad",
+	"m_srcTableName" => "localidad"
+));
+
+$proto32["m_sql"] = "`Longitud`";
+$proto32["m_srcTableName"] = "localidad";
+$proto32["m_expr"]=$obj;
+$proto32["m_alias"] = "";
+$obj = new SQLFieldListItem($proto32);
+
+$proto0["m_fieldlist"][]=$obj;
+						$proto34=array();
+			$obj = new SQLField(array(
+	"m_strName" => "Mapa",
+	"m_strTable" => "localidad",
+	"m_srcTableName" => "localidad"
+));
+
+$proto34["m_sql"] = "`Mapa`";
+$proto34["m_srcTableName"] = "localidad";
+$proto34["m_expr"]=$obj;
+$proto34["m_alias"] = "";
+$obj = new SQLFieldListItem($proto34);
+
+$proto0["m_fieldlist"][]=$obj;
+						$proto36=array();
+			$obj = new SQLField(array(
+	"m_strName" => "Direccion",
+	"m_strTable" => "localidad",
+	"m_srcTableName" => "localidad"
+));
+
+$proto36["m_sql"] = "`Direccion`";
+$proto36["m_srcTableName"] = "localidad";
+$proto36["m_expr"]=$obj;
+$proto36["m_alias"] = "";
+$obj = new SQLFieldListItem($proto36);
+
+$proto0["m_fieldlist"][]=$obj;
+						$proto38=array();
+			$obj = new SQLField(array(
+	"m_strName" => "Observaciones",
+	"m_strTable" => "localidad",
+	"m_srcTableName" => "localidad"
+));
+
+$proto38["m_sql"] = "`Observaciones`";
+$proto38["m_srcTableName"] = "localidad";
+$proto38["m_expr"]=$obj;
+$proto38["m_alias"] = "";
+$obj = new SQLFieldListItem($proto38);
+
+$proto0["m_fieldlist"][]=$obj;
+$proto0["m_fromlist"] = array();
+												$proto40=array();
+$proto40["m_link"] = "SQLL_MAIN";
+			$proto41=array();
+$proto41["m_strName"] = "localidad";
+$proto41["m_srcTableName"] = "localidad";
+$proto41["m_columns"] = array();
+$proto41["m_columns"][] = "id_localidad";
+$proto41["m_columns"][] = "Localidad";
+$proto41["m_columns"][] = "Tipo_Olt";
+$proto41["m_columns"][] = "Serial_Olt";
+$proto41["m_columns"][] = "Tipo_Mikrotik";
+$proto41["m_columns"][] = "Serial_Mikrotik";
+$proto41["m_columns"][] = "Serial_Ont_Prueba";
+$proto41["m_columns"][] = "Serial_Raspberry";
+$proto41["m_columns"][] = "Serial_Camara";
+$proto41["m_columns"][] = "Nombre_del_custodio";
+$proto41["m_columns"][] = "Telefono_del_custodio";
+$proto41["m_columns"][] = "Contrato_de_energia";
+$proto41["m_columns"][] = "Latitud";
+$proto41["m_columns"][] = "Longitud";
+$proto41["m_columns"][] = "Mapa";
+$proto41["m_columns"][] = "Direccion";
+$proto41["m_columns"][] = "Observaciones";
+$obj = new SQLTable($proto41);
+
+$proto40["m_table"] = $obj;
+$proto40["m_sql"] = "`localidad`";
+$proto40["m_alias"] = "";
+$proto40["m_srcTableName"] = "localidad";
+$proto42=array();
+$proto42["m_sql"] = "";
+$proto42["m_uniontype"] = "SQLL_UNKNOWN";
 	$obj = new SQLNonParsed(array(
 	"m_sql" => ""
 ));
 
-$proto12["m_column"]=$obj;
-$proto12["m_contained"] = array();
-$proto12["m_strCase"] = "";
-$proto12["m_havingmode"] = false;
-$proto12["m_inBrackets"] = false;
-$proto12["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto12);
+$proto42["m_column"]=$obj;
+$proto42["m_contained"] = array();
+$proto42["m_strCase"] = "";
+$proto42["m_havingmode"] = false;
+$proto42["m_inBrackets"] = false;
+$proto42["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto42);
 
-$proto10["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto10);
+$proto40["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto40);
 
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
 $proto0["m_orderby"] = array();
-												$proto14=array();
+												$proto44=array();
 						$obj = new SQLField(array(
 	"m_strName" => "Localidad",
 	"m_strTable" => "localidad",
 	"m_srcTableName" => "localidad"
 ));
 
-$proto14["m_column"]=$obj;
-$proto14["m_bAsc"] = 1;
-$proto14["m_nColumn"] = 0;
-$obj = new SQLOrderByItem($proto14);
+$proto44["m_column"]=$obj;
+$proto44["m_bAsc"] = 1;
+$proto44["m_nColumn"] = 0;
+$obj = new SQLOrderByItem($proto44);
 
 $proto0["m_orderby"][]=$obj;					
 $proto0["m_srcTableName"]="localidad";		
@@ -730,7 +3202,7 @@ $queryData_localidad = createSqlQuery_localidad();
 	
 		;
 
-		
+																	
 
 $tdatalocalidad[".sqlquery"] = $queryData_localidad;
 

@@ -1,5 +1,7 @@
 <?php
-			$optionsArray = array( 'details' => array( 'spliters' => array( 'displayPreview' => 2,
+			$optionsArray = array( 'details' => array( 'Mapa_General' => array( 'displayPreview' => 2,
+'previewPageId' => '' ),
+'spliters' => array( 'displayPreview' => 2,
 'previewPageId' => '' ) ),
 'master' => array( 'localidad' => array( 'preview' => false ) ),
 'captcha' => array( 'captcha' => false ),
@@ -52,6 +54,7 @@
 'fixedAtClient' => false ) ),
 'width' => 1,
 'height' => 1 ) ) ),
+'loginForm' => array( 'loginForm' => 3 ),
 'page' => array( 'verticalBar' => false,
 'labeledButtons' => array( 'update_records' => array(  ),
 'print_pages' => array(  ),

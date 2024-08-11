@@ -58,6 +58,14 @@
      
          
 
+			<div class="clearfix  r-ori-vert" data-cellId="left_c" data-pageid="{$pageid}" data-page="puertos_cto_list" data-itemid="image" {$item_image} data-topcell-item-type="image" >
+				<img src="{$file_url images/logo-eiasa-new.png}" data-itemtype="image" data-itemid="image" {$item_image} data-pageid="{$pageid}" />
+			</div>
+		
+     
+     
+         
+
 			<div data-cellId="left_c1" data-pageid="{$pageid}" class="clearfix  r-ori-vert " data-itemtype="menu" data-itemid="menu" {$item_menu} data-pageid="{$pageid}">
 				{$menu main}			</div>
 		
@@ -103,20 +111,7 @@
 				<span class="rnr-searchcontrol">{$searchcontrol1}</span>
 		</div>
 		{END searchCtrlBlock}
-																		{BEGIN searchCtrlBlock_Activo}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Activo}" {$filterRow_attrs_Activo}>
-			<label>{$label puertos_cto Activo }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Activo}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Activo}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Activo}</span>
-						</div>
-		{END searchCtrlBlock_Activo}
-																{BEGIN searchCtrlBlock_Spliter}
+																		{BEGIN searchCtrlBlock_Spliter}
 
 
 		<div class="form-group srchPanelRow {$filterRow_class_Spliter}" {$filterRow_attrs_Spliter}>
@@ -129,6 +124,19 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_Spliter}</span>
 						</div>
 		{END searchCtrlBlock_Spliter}
+																{BEGIN searchCtrlBlock_Ocupado}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Ocupado}" {$filterRow_attrs_Ocupado}>
+			<label>{$label puertos_cto Ocupado }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Ocupado}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Ocupado}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Ocupado}</span>
+						</div>
+		{END searchCtrlBlock_Ocupado}
 																{BEGIN searchCtrlBlock_Puerto}
 
 
@@ -155,19 +163,6 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_Localidad}</span>
 						</div>
 		{END searchCtrlBlock_Localidad}
-																{BEGIN searchCtrlBlock_Libre}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Libre}" {$filterRow_attrs_Libre}>
-			<label>{$label puertos_cto Libre }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Libre}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Libre}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Libre}</span>
-						</div>
-		{END searchCtrlBlock_Libre}
 																{BEGIN searchCtrlBlock_Cto}
 
 
@@ -298,14 +293,6 @@
 												<span class="caret"></span>
 		</button>
 		<ul class="dropdown-menu">
-							{BEGIN editselected_link}
-	<li data-itemtype="edit_selected" data-itemid="edit_selected" {$item_edit_selected} data-pageid="{$pageid}" data-small >
-				<a  href="#" {$editselectedlink_attrs} {$editselectedlink_span}  title="" >
-				
-		{mlang_message EDIT_SELECTED}		
-		</a>
-	</li>
-{END editselected_link}
 							{BEGIN exportselected_link}
 	<li data-itemtype="export_selected" data-itemid="export_selected" {$item_export_selected} data-pageid="{$pageid}" data-small >
 				<a  href="#" {$exportselectedlink_attrs} {$exportselectedlink_span}  title="" >
@@ -374,6 +361,55 @@
 	</span>
 </span>
 			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="loginform_login" {$item_loginform_login} data-topcell-item-type="loginform_login" >
+				{BEGIN guestloginbutton}
+<span data-itemtype="loginform_login" data-itemid="loginform_login" {$item_loginform_login} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" href="#" {$guestloginlink_attrs} >
+							{mlang_message LOGIN}			</a>
+</span>
+{END guestloginbutton}
+			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="username_button" {$item_username_button} data-topcell-item-type="username_button" >
+				{BEGIN loggedas_message}
+<span data-itemtype="username_button" data-itemid="username_button" {$item_username_button} data-pageid="{$pageid}" data-small data-button-item>
+	<span class="dropdown ">
+		<button type="button" title="" class="btn btn-default   dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">		
+			{BEGIN userbutton_icon}							<span class="glyphicon glyphicon-user"></span>
+						{END userbutton_icon}{$userbutton_image}			{$username}			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu">
+							{BEGIN userinfo_link}
+	<li data-itemtype="userinfo_link" data-itemid="userinfo_link" {$item_userinfo_link} data-pageid="{$pageid}" data-small >
+				<a  href="userinfo.php"  title="" >
+				
+		{mlang_message USERINFO}		
+		</a>
+	</li>
+{END userinfo_link}
+							{BEGIN logoutbutton}
+	<li data-itemtype="logout_link" data-itemid="logout_link" {$item_logout_link} data-pageid="{$pageid}" data-small >
+				<a  href="#" {$logoutlink_attrs}  title="" >
+				
+		{mlang_message LOG_OUT}		
+		</a>
+	</li>
+{END logoutbutton}
+							{BEGIN adminarea_link}
+	<li data-itemtype="adminarea_link" data-itemid="adminarea_link" {$item_adminarea_link} data-pageid="{$pageid}" data-small >
+				<a  href="admin_rights_list.php"  title="" >
+				
+		{mlang_message AA_ADMINAREA}		
+		</a>
+	</li>
+{END adminarea_link}
+					</ul>
+	</span>
+</span>
+{END loggedas_message}
+			</span>
 								</nav>
 {END supertop_block}
 						{$locking}
@@ -438,22 +474,6 @@
 							{mlang_message INLINE_ADD}			</a>
 </span>
 {END inlineadd_link}
-	 
-		{BEGIN saveall_link}
-<span data-itemtype="inline_save_all" data-itemid="inline_save_all" {$item_inline_save_all} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="" class="btn btn-primary   
-	" {$savealllink_attrs} {$savealllink_span} >
-							{mlang_message SAVE_ALL}			</a>
-</span>
-{END saveall_link}
-	 
-		{BEGIN cancelall_link}
-<span data-itemtype="inline_cancel_all" data-itemid="inline_cancel_all" {$item_inline_cancel_all} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="" class="btn btn-default   
-	" {$cancelalllink_attrs} {$cancelalllink_span} >
-							{mlang_message CANCEL_ALL}			</a>
-</span>
-{END cancelall_link}
 	 
 		{BEGIN deleteselected_link}
 <span data-itemtype="delete" data-itemid="delete" {$item_delete} data-pageid="{$pageid}" data-small data-button-item>
@@ -587,11 +607,8 @@
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Cedula"]:before {
 		content: "{$label puertos_cto Cedula}";
 	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Activo"]:before {
-		content: "{$label puertos_cto Activo}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Libre"]:before {
-		content: "{$label puertos_cto Libre}";
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Ocupado"]:before {
+		content: "{$label puertos_cto Ocupado}";
 	}
 	}
 </style>
@@ -801,50 +818,25 @@
 	{$cell_grid_headcell_field6}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Activo_class}	"
+		 r-ori-vert		 {$Ocupado_class}	"
 
-			data-field="Activo"
+			data-field="Ocupado"
 	
 	data-cellId="grid_headcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Activo_fieldheadercolumn}
-	{BEGIN Activo_fieldheader}
-	<SPAN {$Activo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field14" {$item_simple_grid_field14} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Activo" data-fieldname="Activo">
-	{$label puertos_cto Activo }	{$arrow_icon_Activo}
+		{BEGIN Ocupado_fieldheadercolumn}
+	{BEGIN Ocupado_fieldheader}
+	<SPAN {$Ocupado_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label" {$item_grid_field_label} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Ocupado" data-fieldname="Ocupado">
+	{$label puertos_cto Ocupado }	{$arrow_icon_Ocupado}
 	</SPAN>
-	{END Activo_fieldheader}
-{END Activo_fieldheadercolumn}
+	{END Ocupado_fieldheader}
+{END Ocupado_fieldheadercolumn}
 
 	
 	</th>
 	{END cellblock_grid_headcell_field6}
-									{BEGIN cellblock_grid_headcell_field7}
-	<th
-	
-	{$cell_grid_headcell_field7}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Libre_class}	"
-
-			data-field="Libre"
-	
-	data-cellId="grid_headcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Libre_fieldheadercolumn}
-	{BEGIN Libre_fieldheader}
-	<SPAN {$Libre_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field15" {$item_simple_grid_field15} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Libre" data-fieldname="Libre">
-	{$label puertos_cto Libre }	{$arrow_icon_Libre}
-	</SPAN>
-	{END Libre_fieldheader}
-{END Libre_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field7}
 							</tr>
 															
 					{END grid_header}
@@ -880,26 +872,6 @@
 </span>
 {END edit_link}
 {END edit_column}
-	 
-		{BEGIN inlineedit_column}
-{BEGIN inlineedit_link}
-<span data-itemtype="grid_inline_edit" data-itemid="grid_inline_edit" {$item_grid_inline_edit} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
-	<a type="button" title="{mlang_message INLINE_EDIT}" class="btn-link   
-	 glyphicon glyphicon-edit" {$inlineeditlink_attrs} title="{mlang_message INLINE_EDIT}" >		
-				
-								</a>
-</span>
-{END inlineedit_link}
-{END inlineedit_column}
-	 
-		{BEGIN inline_save}
-<span data-itemtype="grid_inline_save" data-itemid="grid_inline_save" {$item_grid_inline_save} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
-	<a type="button" title="{mlang_message SAVE}" class="btn-link   
-	 glyphicon glyphicon-ok" {$inlinesavelink_attrs} title="{mlang_message SAVE}" >		
-				
-								</a>
-</span>
-{END inline_save}
 	 
 		{BEGIN inline_cancel}
 <span data-itemtype="grid_inline_cancel" data-itemid="grid_inline_cancel" {$item_grid_inline_cancel} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
@@ -1079,42 +1051,21 @@
 	{$cell_grid_cell_field6}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Activo_class}	"
+		 r-ori-vert		 {$Ocupado_class}	"
 
-			data-field="Activo"
+			data-field="Ocupado"
 	
 	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Activo_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Activo" data-fieldname="Activo" data-default-width >
-{$Activo_value}
+		{BEGIN Ocupado_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field" {$item_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Ocupado" data-fieldname="Ocupado" data-default-width >
+{$Ocupado_value}
 </span>
-{END Activo_fieldcolumn}	
+{END Ocupado_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field6}
-									{BEGIN cellblock_grid_cell_field7}
-	<td
-	
-	{$cell_grid_cell_field7}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Libre_class}	"
-
-			data-field="Libre"
-	
-	data-cellId="grid_cell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Libre_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Libre" data-fieldname="Libre" data-default-width >
-{$Libre_value}
-</span>
-{END Libre_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field7}
 							</tr>
 										
 											{END grid_row}
@@ -1252,7 +1203,7 @@
 	{$cell_grid_footcell_field6}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Activo_class}	"
+		 r-ori-vert		 {$Ocupado_class}	"
 
 	
 	data-cellId="grid_footcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="puertos_cto_list"	
@@ -1261,21 +1212,6 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field6}
-									{BEGIN cellblock_grid_footcell_field7}
-	<td
-	
-	{$cell_grid_footcell_field7}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Libre_class}	"
-
-	
-	data-cellId="grid_footcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="puertos_cto_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field7}
 							</tr>
 					
 					</tfoot>

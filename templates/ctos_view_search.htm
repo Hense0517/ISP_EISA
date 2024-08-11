@@ -226,11 +226,33 @@
 
 {END Cable_fieldblock}
 											
+{BEGIN Ubicacion_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Ubicacion}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Ubicacion{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field9" {$item_integrated_search_field9} data-pageid="{$pageid}" data-field="Ubicacion" data-fieldname="Ubicacion" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Ubicacion}">
+		{$label ctos_view Ubicacion }	</label>
+	<div class="r-search-option">
+		{$searchtype_Ubicacion}
+	</div>
+	<div class="r-search-field">
+		{$Ubicacion_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Ubicacion_editcontrol1}
+	</div>
+	
+</div>
+
+{END Ubicacion_fieldblock}
+											
 {BEGIN Localidad_fieldblock}
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_Localidad}  r-horizontal-field form-horizontal" 	
 	data-signal-error-for="Localidad{$id}" 
-	data-itemtype="integrated_search_field" data-itemid="integrated_search_field6" {$item_integrated_search_field6} data-pageid="{$pageid}" data-field="Localidad" data-fieldname="Localidad" >
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field11" {$item_integrated_search_field11} data-pageid="{$pageid}" data-field="Localidad" data-fieldname="Localidad" >
 
 
 	<label class="r-search-label control-label" for="{$labelfor_Localidad}">
@@ -248,27 +270,49 @@
 
 {END Localidad_fieldblock}
 											
-{BEGIN DisplayOnMap_fieldblock}
+{BEGIN puertos_libres_fieldblock}
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_DisplayOnMap}  r-horizontal-field form-horizontal" 	
-	data-signal-error-for="DisplayOnMap{$id}" 
-	data-itemtype="integrated_search_field" data-itemid="integrated_search_field7" {$item_integrated_search_field7} data-pageid="{$pageid}" data-field="DisplayOnMap" data-fieldname="DisplayOnMap" >
+<div class="r-integrated-field form-group clearfix {$fielddispclass_puertos_libres}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="puertos_libres{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field6" {$item_integrated_search_field6} data-pageid="{$pageid}" data-field="puertos_libres" data-fieldname="puertos_libres" >
 
 
-	<label class="r-search-label control-label" for="{$labelfor_DisplayOnMap}">
-		{$label ctos_view DisplayOnMap }	</label>
+	<label class="r-search-label control-label" for="{$labelfor_puertos_libres}">
+		{$label ctos_view puertos_libres }	</label>
 	<div class="r-search-option">
-		{$searchtype_DisplayOnMap}
+		{$searchtype_puertos_libres}
 	</div>
 	<div class="r-search-field">
-		{$DisplayOnMap_editcontrol}	</div>
+		{$puertos_libres_editcontrol}	</div>
 	<div class="r-search-field">
-		{$DisplayOnMap_editcontrol1}
+		{$puertos_libres_editcontrol1}
 	</div>
 	
 </div>
 
-{END DisplayOnMap_fieldblock}
+{END puertos_libres_fieldblock}
+											
+{BEGIN concatenado_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_concatenado}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="concatenado{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field7" {$item_integrated_search_field7} data-pageid="{$pageid}" data-field="concatenado" data-fieldname="concatenado" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_concatenado}">
+		{$label ctos_view concatenado }	</label>
+	<div class="r-search-option">
+		{$searchtype_concatenado}
+	</div>
+	<div class="r-search-field">
+		{$concatenado_editcontrol}	</div>
+	<div class="r-search-field">
+		{$concatenado_editcontrol1}
+	</div>
+	
+</div>
+
+{END concatenado_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c3}

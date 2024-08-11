@@ -80,7 +80,11 @@
 
  
 	 
-												<table 
+												{BEGIN mastertable_block}
+<div data-itemtype="master_info" data-itemid="master_info" {$item_master_info} data-pageid="{$pageid}">
+	{$showmasterfile}
+</div>
+{END mastertable_block}											<table 
 	data-body-align="center"
 	data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" 
 	class="r-edit-form" cellpadding="0" cellspacing="0" 
@@ -232,47 +236,47 @@
 
 {END Cedula_fieldblock}
 											
-{BEGIN Activo_fieldblock}
+{BEGIN Id_puertos_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_Activo}  r-vertical-field" 
-	data-signal-error-for="Activo{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-field="Activo" data-fieldname="Activo" >
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Id_puertos}  r-vertical-field" 
+	data-signal-error-for="Id_puertos{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field8" {$item_integrated_edit_field8} data-pageid="{$pageid}" data-field="Id_puertos" data-fieldname="Id_puertos" >
 
-	<label class="r-edit-label control-label" for="{$labelfor_Activo}">
-		{BEGIN Activo_label}{$label puertos_cto Activo }{END Activo_label}
+	<label class="r-edit-label control-label" for="{$labelfor_Id_puertos}">
+		{BEGIN Id_puertos_label}{$label puertos_cto Id_puertos }{END Id_puertos_label}
 	</label>
 	<div class="r-edit-field">
-		{$Activo_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="Activo">
+		{$Id_puertos_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Id_puertos">
 		<div class="text-muted" >
-		{$tooltip puertos_cto Activo }		</div>
+		{$tooltip puertos_cto Id_puertos }		</div>
 	</div>
 </div>
 
 
-{END Activo_fieldblock}
+{END Id_puertos_fieldblock}
 											
-{BEGIN Libre_fieldblock}
+{BEGIN Ocupado_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_Libre}  r-vertical-field" 
-	data-signal-error-for="Libre{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field7" {$item_integrated_edit_field7} data-pageid="{$pageid}" data-field="Libre" data-fieldname="Libre" >
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Ocupado}  r-vertical-field" 
+	data-signal-error-for="Ocupado{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-field="Ocupado" data-fieldname="Ocupado" >
 
-	<label class="r-edit-label control-label" for="{$labelfor_Libre}">
-		{BEGIN Libre_label}{$label puertos_cto Libre }{END Libre_label}
+	<label class="r-edit-label control-label" for="{$labelfor_Ocupado}">
+		{BEGIN Ocupado_label}{$label puertos_cto Ocupado }{END Ocupado_label}
 	</label>
 	<div class="r-edit-field">
-		{$Libre_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="Libre">
+		{$Ocupado_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Ocupado">
 		<div class="text-muted" >
-		{$tooltip puertos_cto Libre }		</div>
+		{$tooltip puertos_cto Ocupado }		</div>
 	</div>
 </div>
 
 
-{END Libre_fieldblock}
+{END Ocupado_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c3}

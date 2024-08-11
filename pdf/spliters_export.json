@@ -117,6 +117,15 @@ pdfDocument = {
 				
 			{"text":{$id_spliters_pdfvalue},"hidden":"{$item_hide_export_field}"},
 				
+				
+			{"text":{$Numero_de_tarjeta_pdfvalue},"hidden":"{$item_hide_export_field4}"},
+				
+				
+			{"text":{$Numero_de_puerto_pdfvalue},"hidden":"{$item_hide_export_field5}"},
+				
+				
+			{"text":{$Barrio_pdfvalue},"hidden":"{$item_hide_export_field6}"},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

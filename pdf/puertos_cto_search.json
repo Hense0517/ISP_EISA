@@ -187,10 +187,7 @@ pdfDocument = {
 			{"text":{$Cedula_pdfvalue},"hidden":"{$item_hide_integrated_search_field6}"},
 				
 				
-			{"text":{$Activo_pdfvalue},"hidden":"{$item_hide_integrated_search_field7}"},
-				
-				
-			{"text":{$Libre_pdfvalue},"hidden":"{$item_hide_integrated_search_field8}"},
+			{"text":{$Ocupado_pdfvalue},"hidden":"{$item_hide_integrated_search_field7}"},
 				
 		  ],
   "border": [ false, false, false, false ],

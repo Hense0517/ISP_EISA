@@ -106,6 +106,9 @@ pdfDocument = {
 			"text": [
 		
 				
+			{"text":{$id_Ctos_pdfvalue},"hidden":"{$item_hide_export_field}"},
+				
+				
 			{"text":{$Cto_pdfvalue},"hidden":"{$item_hide_export_field1}"},
 				
 				
@@ -121,7 +124,13 @@ pdfDocument = {
 			{"text":{$Cable_pdfvalue},"hidden":"{$item_hide_export_field5}"},
 				
 				
-			{"text":{$Localidad_pdfvalue},"hidden":"{$item_hide_export_field6}"},
+			{"text":{$Ubicacion_pdfvalue},"hidden":"{$item_hide_export_field9}"},
+				
+				
+			{"text":{$Localidad_pdfvalue},"hidden":"{$item_hide_export_field11}"},
+				
+				
+			{"text":{$puertos_libres_pdfvalue},"hidden":"{$item_hide_export_field6}"},
 				
 		  ],
   "border": [ false, false, false, false ],

@@ -275,7 +275,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"hidden":"{$item_hide_map}","stack":[{BEGIN map_ctos_view_map3} {$map ctos_view_map3} {END map_ctos_view_map3}]},
+			{"hidden":"{$item_hide_map}","stack":[{BEGIN map_ctos_view_map5} {$map ctos_view_map5} {END map_ctos_view_map5}]},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -365,7 +365,7 @@ pdfDocument = {
 	cellId: 'headcell_field',
 	col:0,
 	row:0,
-			fieldName: 'id_Ctos',
+			fieldName: 'Localidad',
 				style: 'headcell',
 		
 		
@@ -379,11 +379,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel ctos_view id_Ctos }","hidden":"{$item_hide_simple_grid_field7}","bold":true},
+			{"text":"{$jslabel ctos_view Localidad }","hidden":"{$item_hide_simple_grid_field12}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$id_Ctos_align}',
+              "alignment": '{$Localidad_align}',
      
       
       },
@@ -392,6 +392,64 @@ pdfDocument = {
 																							{BEGIN cellblock_grid_headcell_field1}
 {
 	cellId: 'headcell_field1',
+	col:0,
+	row:0,
+			fieldName: 'Cable',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel ctos_view Cable }","hidden":"{$item_hide_simple_grid_field6}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Cable_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field1}
+																							{BEGIN cellblock_grid_headcell_field2}
+{
+	cellId: 'headcell_field2',
+	col:0,
+	row:0,
+			fieldName: 'Spliter',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel ctos_view Spliter }","hidden":"{$item_hide_simple_grid_field7}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Spliter_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field2}
+																							{BEGIN cellblock_grid_headcell_field3}
+{
+	cellId: 'headcell_field3',
 	col:0,
 	row:0,
 			fieldName: 'Cto',
@@ -417,10 +475,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field1}
-																							{BEGIN cellblock_grid_headcell_field2}
+{END cellblock_grid_headcell_field3}
+																							{BEGIN cellblock_grid_headcell_field4}
 {
-	cellId: 'headcell_field2',
+	cellId: 'headcell_field4',
 	col:0,
 	row:0,
 			fieldName: 'Latitud',
@@ -446,10 +504,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field2}
-																							{BEGIN cellblock_grid_headcell_field3}
+{END cellblock_grid_headcell_field4}
+																							{BEGIN cellblock_grid_headcell_field5}
 {
-	cellId: 'headcell_field3',
+	cellId: 'headcell_field5',
 	col:0,
 	row:0,
 			fieldName: 'Longitud',
@@ -475,71 +533,13 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field3}
-																							{BEGIN cellblock_grid_headcell_field4}
-{
-	cellId: 'headcell_field4',
-	col:0,
-	row:0,
-			fieldName: 'Spliter',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-						
-	
-	
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel ctos_view Spliter }","hidden":"{$item_hide_simple_grid_field11}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Spliter_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field4}
-																							{BEGIN cellblock_grid_headcell_field5}
-{
-	cellId: 'headcell_field5',
-	col:0,
-	row:0,
-			fieldName: 'Cable',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-						
-	
-	
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel ctos_view Cable }","hidden":"{$item_hide_simple_grid_field12}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Cable_align}',
-     
-      
-      },
-
 {END cellblock_grid_headcell_field5}
 																							{BEGIN cellblock_grid_headcell_field6}
 {
 	cellId: 'headcell_field6',
 	col:0,
 	row:0,
-			fieldName: 'Localidad',
+			fieldName: 'puertos_libres',
 				style: 'headcell',
 		
 		
@@ -553,11 +553,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel ctos_view Localidad }","hidden":"{$item_hide_simple_grid_field13}","bold":true},
+			{"text":"{$jslabel ctos_view puertos_libres }","hidden":"{$item_hide_simple_grid_field13}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$Localidad_align}',
+              "alignment": 'left',
      
       
       },
@@ -589,9 +589,6 @@ pdfDocument = {
 	
 			"text": [
 		
-				
-			{"text":"","hidden":"{$item_hide_grid_edit}"},
-				
 				
 			{"text":"","hidden":"{$item_hide_grid_view}"},
 				
@@ -636,7 +633,7 @@ pdfDocument = {
 	cellId: 'cell_field',
 	col:0,
 	row:0,
-			fieldName: 'id_Ctos',
+			fieldName: 'Localidad',
 				style: 'bodycell',
 		
 		
@@ -650,11 +647,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$id_Ctos_pdfvalue},"hidden":"{$item_hide_simple_grid_field}"},
+			{"text":{$Localidad_pdfvalue},"hidden":"{$item_hide_simple_grid_field11}"},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$id_Ctos_align}',
+              "alignment": '{$Localidad_align}',
      
       
       },
@@ -663,122 +660,6 @@ pdfDocument = {
 																							{BEGIN cellblock_grid_cell_field1}
 {
 	cellId: 'cell_field1',
-	col:0,
-	row:0,
-			fieldName: 'Cto',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-						
-	
-	
-	
-			"text": [
-		
-				
-			{"text":{$Cto_pdfvalue},"hidden":"{$item_hide_simple_grid_field1}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Cto_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field1}
-																							{BEGIN cellblock_grid_cell_field2}
-{
-	cellId: 'cell_field2',
-	col:0,
-	row:0,
-			fieldName: 'Latitud',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-						
-	
-	
-	
-			"text": [
-		
-				
-			{"text":{$Latitud_pdfvalue},"hidden":"{$item_hide_simple_grid_field2}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Latitud_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field2}
-																							{BEGIN cellblock_grid_cell_field3}
-{
-	cellId: 'cell_field3',
-	col:0,
-	row:0,
-			fieldName: 'Longitud',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-						
-	
-	
-	
-			"text": [
-		
-				
-			{"text":{$Longitud_pdfvalue},"hidden":"{$item_hide_simple_grid_field3}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Longitud_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field3}
-																							{BEGIN cellblock_grid_cell_field4}
-{
-	cellId: 'cell_field4',
-	col:0,
-	row:0,
-			fieldName: 'Spliter',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-						
-	
-	
-	
-			"text": [
-		
-				
-			{"text":{$Spliter_pdfvalue},"hidden":"{$item_hide_simple_grid_field4}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Spliter_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field4}
-																							{BEGIN cellblock_grid_cell_field5}
-{
-	cellId: 'cell_field5',
 	col:0,
 	row:0,
 			fieldName: 'Cable',
@@ -804,13 +685,13 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field5}
-																							{BEGIN cellblock_grid_cell_field6}
+{END cellblock_grid_cell_field1}
+																							{BEGIN cellblock_grid_cell_field2}
 {
-	cellId: 'cell_field6',
+	cellId: 'cell_field2',
 	col:0,
 	row:0,
-			fieldName: 'Localidad',
+			fieldName: 'Spliter',
 				style: 'bodycell',
 		
 		
@@ -824,11 +705,127 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$Localidad_pdfvalue},"hidden":"{$item_hide_simple_grid_field6}"},
+			{"text":{$Spliter_pdfvalue},"hidden":"{$item_hide_simple_grid_field4}"},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$Localidad_align}',
+              "alignment": '{$Spliter_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field2}
+																							{BEGIN cellblock_grid_cell_field3}
+{
+	cellId: 'cell_field3',
+	col:0,
+	row:0,
+			fieldName: 'Cto',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":{$Cto_pdfvalue},"hidden":"{$item_hide_simple_grid_field1}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Cto_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field3}
+																							{BEGIN cellblock_grid_cell_field4}
+{
+	cellId: 'cell_field4',
+	col:0,
+	row:0,
+			fieldName: 'Latitud',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":{$Latitud_pdfvalue},"hidden":"{$item_hide_simple_grid_field2}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Latitud_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field4}
+																							{BEGIN cellblock_grid_cell_field5}
+{
+	cellId: 'cell_field5',
+	col:0,
+	row:0,
+			fieldName: 'Longitud',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":{$Longitud_pdfvalue},"hidden":"{$item_hide_simple_grid_field3}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Longitud_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field5}
+																							{BEGIN cellblock_grid_cell_field6}
+{
+	cellId: 'cell_field6',
+	col:0,
+	row:0,
+			fieldName: 'puertos_libres',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":{$puertos_libres_pdfvalue},"hidden":"{$item_hide_simple_grid_field}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
      
       
       },

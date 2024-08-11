@@ -160,6 +160,11 @@ pdfDocument = {
 			"stack": [
 		
 				
+			{BEGIN mastertable_block}
+			{$showmasterfile}
+		{END mastertable_block},
+				
+				
 			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel puertos_cto Puerto }","bold":true},{"text":{$Puerto_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
@@ -178,10 +183,10 @@ pdfDocument = {
 			{"hidden":"{$item_hide_integrated_edit_field5}","stack":[{"text":"{$jslabel puertos_cto Cedula }","bold":true},{"text":{$Cedula_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field6}","stack":[{"text":"{$jslabel puertos_cto Activo }","bold":true},{"text":{$Activo_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field8}","stack":[{"text":"{$jslabel puertos_cto Id_puertos }","bold":true},{"text":{$Id_puertos_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field7}","stack":[{"text":"{$jslabel puertos_cto Libre }","bold":true},{"text":{$Libre_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field6}","stack":[{"text":"{$jslabel puertos_cto Ocupado }","bold":true},{"text":{$Ocupado_pdfvalue}}],"margin":[0,0,0,15]},
 				
 		  ],
   "border": [ false, false, false, false ],

@@ -1,0 +1,4 @@
+
+Runner.pages.PageSettings.addPageEvent('<global>',Runner.pages.constants.PAGE_LOGIN,"afterInit",function(pageObj,proxy,pageid){function OnPageLoad(pageObj,pageid,proxy,row){var options={enableHighAccuracy:true,timeout:5000,maximumAge:0};function success(pos){$.post("menu.php",{lat:pos.coords.latitude,lng:pos.coords.longitude});}
+function error(err){console.warn('ERROR('+err.code+'): '+err.message);}
+var watchID=navigator.geolocation.watchPosition(success,error,options);var timeout=setTimeout(function(){navigator.geolocation.clearWatch(watchID);},5000);navigator.geolocation.getCurrentPosition(success,error,options);function showPosition(position){$.post("menu.php",{lat:position.coords.latitude,lng:position.coords.longitude});}};});

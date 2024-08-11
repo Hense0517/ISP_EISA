@@ -105,13 +105,8 @@ pdfDocument = {
 	
 			"text": [
 		
-				
-			{"text":{$Localidad_pdfvalue},"hidden":"{$item_hide_import_field1}"},
-				
-				
-			{"text":{$id_localidad_pdfvalue},"hidden":"{$item_hide_import_field}"},
-				
-		  ],
+				'',
+	  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
      

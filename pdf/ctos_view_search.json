@@ -184,10 +184,16 @@ pdfDocument = {
 			{"text":{$Cable_pdfvalue},"hidden":"{$item_hide_integrated_search_field5}"},
 				
 				
-			{"text":{$Localidad_pdfvalue},"hidden":"{$item_hide_integrated_search_field6}"},
+			{"text":{$Ubicacion_pdfvalue},"hidden":"{$item_hide_integrated_search_field9}"},
 				
 				
-			{"text":{$DisplayOnMap_pdfvalue},"hidden":"{$item_hide_integrated_search_field7}"},
+			{"text":{$Localidad_pdfvalue},"hidden":"{$item_hide_integrated_search_field11}"},
+				
+				
+			{"text":{$puertos_libres_pdfvalue},"hidden":"{$item_hide_integrated_search_field6}"},
+				
+				
+			{"text":{$concatenado_pdfvalue},"hidden":"{$item_hide_integrated_search_field7}"},
 				
 		  ],
   "border": [ false, false, false, false ],

@@ -26,6 +26,16 @@ class RestManager
 
 		$connectionsData = array();
 
+		$data = array();
+		$data["connId"] = "isp_eisa_at_localhost";
+		$data["connName"] = "Rest Api";
+
+		$this->_connectionsIdByName["Rest Api"] = "isp_eisa_at_localhost";
+
+		$data["url"] = "isp_eiasa/puertos_cto_view_list.php";
+		$data["authType"] = "none";
+				
+	$connectionsData["isp_eisa_at_localhost"] = $data;
 		$this->_connectionsData = &$connectionsData;
 	}
 

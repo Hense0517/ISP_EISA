@@ -1023,6 +1023,18 @@ function GetDefaultValue($field, $ptype, $table="")
 	global $strTableName;
 	if(!$table)
 		$table=$strTableName;
+				if($table=="puertos_cto" && $field=="Ocupado")
+	{
+		return No;
+	}
+				if($table=="Vista_Digitadores" && $field=="Latitud")
+	{
+		return $_SESSION["geoLatitude"];
+	}
+				if($table=="Vista_Digitadores" && $field=="Longitud")
+	{
+		return $_SESSION["geoLongitude"];
+	}
 	return "";
 }
 
@@ -1034,6 +1046,18 @@ function GetAutoUpdateValue($field, $ptype, $table="")
 	global $strTableName;
 	if(!$table)
 		$table=$strTableName;
+				if($table=="Ingresar_cliente" && $field=="Ocupado" && $ptype=="edit")
+	{
+		return "SI";
+	}
+				if($table=="Ingresar_cliente" && $field=="Ocupado" && $ptype=="add")
+	{
+		return "SI";
+	}
+				if($table=="Ingresar_cliente" && $field=="Ocupado" && $ptype=="search")
+	{
+		return "SI";
+	}
 	return "";
 }
 

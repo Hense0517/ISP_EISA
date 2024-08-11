@@ -356,6 +356,9 @@ class DB
 		{
 			$dalTables[$conn->connId][] = array("name" => "cables", "varname" => "isp_eisa_at_localhost__cables", "altvarname" => "cables", "connId" => "isp_eisa_at_localhost", "schema" => "", "connName" => "isp_eisa at localhost");
 			$dalTables[$conn->connId][] = array("name" => "ctos", "varname" => "isp_eisa_at_localhost__ctos", "altvarname" => "ctos", "connId" => "isp_eisa_at_localhost", "schema" => "", "connName" => "isp_eisa at localhost");
+			$dalTables[$conn->connId][] = array("name" => "isp_eisa prueba de mapasuggroups", "varname" => "isp_eisa_at_localhost__isp_eisa_prueba_de_mapasuggroups", "altvarname" => "isp_eisa_prueba_de_mapasuggroups", "connId" => "isp_eisa_at_localhost", "schema" => "", "connName" => "isp_eisa at localhost");
+			$dalTables[$conn->connId][] = array("name" => "isp_eisa prueba de mapasugmembers", "varname" => "isp_eisa_at_localhost__isp_eisa_prueba_de_mapasugmembers", "altvarname" => "isp_eisa_prueba_de_mapasugmembers", "connId" => "isp_eisa_at_localhost", "schema" => "", "connName" => "isp_eisa at localhost");
+			$dalTables[$conn->connId][] = array("name" => "isp_eisa prueba de mapasugrights", "varname" => "isp_eisa_at_localhost__isp_eisa_prueba_de_mapasugrights", "altvarname" => "isp_eisa_prueba_de_mapasugrights", "connId" => "isp_eisa_at_localhost", "schema" => "", "connName" => "isp_eisa at localhost");
 			$dalTables[$conn->connId][] = array("name" => "localidad", "varname" => "isp_eisa_at_localhost__localidad", "altvarname" => "localidad", "connId" => "isp_eisa_at_localhost", "schema" => "", "connName" => "isp_eisa at localhost");
 			$dalTables[$conn->connId][] = array("name" => "numero_puertos", "varname" => "isp_eisa_at_localhost__numero_puertos", "altvarname" => "numero_puertos", "connId" => "isp_eisa_at_localhost", "schema" => "", "connName" => "isp_eisa at localhost");
 			$dalTables[$conn->connId][] = array("name" => "numeros_cto", "varname" => "isp_eisa_at_localhost__numeros_cto", "altvarname" => "numeros_cto", "connId" => "isp_eisa_at_localhost", "schema" => "", "connName" => "isp_eisa at localhost");
@@ -363,6 +366,7 @@ class DB
 			$dalTables[$conn->connId][] = array("name" => "numeros_de_spliters", "varname" => "isp_eisa_at_localhost__numeros_de_spliters", "altvarname" => "numeros_de_spliters", "connId" => "isp_eisa_at_localhost", "schema" => "", "connName" => "isp_eisa at localhost");
 			$dalTables[$conn->connId][] = array("name" => "puertos_cto", "varname" => "isp_eisa_at_localhost__puertos_cto", "altvarname" => "puertos_cto", "connId" => "isp_eisa_at_localhost", "schema" => "", "connName" => "isp_eisa at localhost");
 			$dalTables[$conn->connId][] = array("name" => "spliters", "varname" => "isp_eisa_at_localhost__spliters", "altvarname" => "spliters", "connId" => "isp_eisa_at_localhost", "schema" => "", "connName" => "isp_eisa at localhost");
+			$dalTables[$conn->connId][] = array("name" => "usuarios", "varname" => "isp_eisa_at_localhost__usuarios", "altvarname" => "usuarios", "connId" => "isp_eisa_at_localhost", "schema" => "", "connName" => "isp_eisa at localhost");
 		}
 	}
 

@@ -149,7 +149,7 @@ $tdatacables[".isUseAjaxSuggest"] = true;
 
 
 
-
+						
 
 $tdatacables[".ajaxCodeSnippetAdded"] = false;
 
@@ -199,11 +199,13 @@ $tdatacables[".warnLeavingPages"] = true;
 
 
 
-$tstrOrderBy = "ORDER BY `id_cables`";
+$tstrOrderBy = "ORDER BY `id_cables`, `localidad`";
 $tdatacables[".strOrderBy"] = $tstrOrderBy;
 
 $tdatacables[".orderindexes"] = array();
 	$tdatacables[".orderindexes"][] = array(1, (1 ? "ASC" : "DESC"), "`id_cables`");
+
+	$tdatacables[".orderindexes"][] = array(3, (1 ? "ASC" : "DESC"), "`localidad`");
 
 
 
@@ -716,11 +718,46 @@ changeTextControlsToDate( "cables" );
 //if !@TABLE.bReportCrossTab
 
 $detailsTablesData["cables"] = array();
-//	spliters
+//	Mapa_General
 	
 	
 
 		$dIndex = 0;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="Mapa_General";
+		$detailsParam["dOriginalTable"] = "ctos";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "mapa_general";
+	$detailsParam["dCaptionTable"] = GetTableCaption("Mapa_General");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["cables"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["cables"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["cables"][$dIndex]["masterKeys"][]="cable";
+
+	$detailsTablesData["cables"][$dIndex]["masterKeys"][]="localidad";
+
+				$detailsTablesData["cables"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["cables"][$dIndex]["detailKeys"][]="Cable";
+
+		
+	$detailsTablesData["cables"][$dIndex]["detailKeys"][]="Localidad";
+//	spliters
+	
+	
+
+		$dIndex = 1;
 	$detailsParam = array();
 	$detailsParam["dDataSourceTable"]="spliters";
 		$detailsParam["dOriginalTable"] = "spliters";
@@ -799,7 +836,7 @@ $proto0["m_strHead"] = "SELECT";
 $proto0["m_strFieldList"] = "`id_cables`,  `cable`,  `localidad`";
 $proto0["m_strFrom"] = "FROM `cables`";
 $proto0["m_strWhere"] = "";
-$proto0["m_strOrderBy"] = "ORDER BY `id_cables`";
+$proto0["m_strOrderBy"] = "ORDER BY `id_cables`, `localidad`";
 	
 		;
 			$proto0["cipherer"] = null;
@@ -888,6 +925,7 @@ $proto13["m_columns"] = array();
 $proto13["m_columns"][] = "id_cables";
 $proto13["m_columns"][] = "cable";
 $proto13["m_columns"][] = "localidad";
+$proto13["m_columns"][] = "id_localidad";
 $obj = new SQLTable($proto13);
 
 $proto12["m_table"] = $obj;
@@ -926,6 +964,19 @@ $proto16["m_column"]=$obj;
 $proto16["m_bAsc"] = 1;
 $proto16["m_nColumn"] = 0;
 $obj = new SQLOrderByItem($proto16);
+
+$proto0["m_orderby"][]=$obj;					
+												$proto18=array();
+						$obj = new SQLField(array(
+	"m_strName" => "localidad",
+	"m_strTable" => "cables",
+	"m_srcTableName" => "cables"
+));
+
+$proto18["m_column"]=$obj;
+$proto18["m_bAsc"] = 1;
+$proto18["m_nColumn"] = 0;
+$obj = new SQLOrderByItem($proto18);
 
 $proto0["m_orderby"][]=$obj;					
 $proto0["m_srcTableName"]="cables";		

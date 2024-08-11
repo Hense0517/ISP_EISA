@@ -186,6 +186,12 @@ pdfDocument = {
 				
 			{"text":{$id_Ctos_pdfvalue},"hidden":"{$item_hide_integrated_search_field}"},
 				
+				
+			{"text":{$DisplayOnMap_pdfvalue},"hidden":"{$item_hide_integrated_search_field7}"},
+				
+				
+			{"text":{$Ubicacion_pdfvalue},"hidden":"{$item_hide_integrated_search_field8}"},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

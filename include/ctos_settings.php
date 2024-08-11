@@ -6,11 +6,11 @@ $tdatactos[".OwnerID"] = "";
 $tdatactos[".OriginalTable"] = "ctos";
 
 
-$tdatactos[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
+$tdatactos[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
 $tdatactos[".originalPagesByType"] = $tdatactos[".pagesByType"];
-$tdatactos[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
+$tdatactos[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
 $tdatactos[".originalPages"] = $tdatactos[".pages"];
-$tdatactos[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
+$tdatactos[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
 $tdatactos[".originalDefaultPages"] = $tdatactos[".defaultPages"];
 
 //	field labels
@@ -46,6 +46,12 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsctos["Spanish"]["id_Ctos"] = "Id Ctos";
 	$fieldToolTipsctos["Spanish"]["id_Ctos"] = "";
 	$placeHoldersctos["Spanish"]["id_Ctos"] = "";
+	$fieldLabelsctos["Spanish"]["DisplayOnMap"] = "Display On Map";
+	$fieldToolTipsctos["Spanish"]["DisplayOnMap"] = "";
+	$placeHoldersctos["Spanish"]["DisplayOnMap"] = "";
+	$fieldLabelsctos["Spanish"]["Ubicacion"] = "Ubicacion";
+	$fieldToolTipsctos["Spanish"]["Ubicacion"] = "";
+	$placeHoldersctos["Spanish"]["Ubicacion"] = "";
 	if (count($fieldToolTipsctos["Spanish"]))
 		$tdatactos[".isUseToolTips"] = true;
 }
@@ -76,6 +82,12 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelsctos["English"]["Localidad"] = "Localidad";
 	$fieldToolTipsctos["English"]["Localidad"] = "";
 	$placeHoldersctos["English"]["Localidad"] = "";
+	$fieldLabelsctos["English"]["DisplayOnMap"] = "Display On Map";
+	$fieldToolTipsctos["English"]["DisplayOnMap"] = "";
+	$placeHoldersctos["English"]["DisplayOnMap"] = "";
+	$fieldLabelsctos["English"]["Ubicacion"] = "Ubicacion";
+	$fieldToolTipsctos["English"]["Ubicacion"] = "";
+	$placeHoldersctos["English"]["Ubicacion"] = "";
 	if (count($fieldToolTipsctos["English"]))
 		$tdatactos[".isUseToolTips"] = true;
 }
@@ -173,17 +185,18 @@ $tdatactos[".isUseAjaxSuggest"] = true;
 
 
 
-
+						
 
 $tdatactos[".ajaxCodeSnippetAdded"] = false;
 
 $tdatactos[".buttonsAdded"] = false;
 
-$tdatactos[".addPageEvents"] = false;
+$tdatactos[".addPageEvents"] = true;
 
 // use timepicker for search panel
 $tdatactos[".isUseTimeForSearch"] = false;
 
+$tdatactos[".isUseFieldsMaps"] = true;
 
 $tdatactos[".badgeColor"] = "8fbc8b";
 
@@ -200,6 +213,8 @@ $tdatactos[".googleLikeFields"][] = "Longitud";
 $tdatactos[".googleLikeFields"][] = "Spliter";
 $tdatactos[".googleLikeFields"][] = "Cable";
 $tdatactos[".googleLikeFields"][] = "Localidad";
+$tdatactos[".googleLikeFields"][] = "DisplayOnMap";
+$tdatactos[".googleLikeFields"][] = "Ubicacion";
 
 
 
@@ -235,7 +250,7 @@ $tdatactos[".orderindexes"] = array();
 
 
 
-$tdatactos[".sqlHead"] = "SELECT `id_Ctos`,  `Cto`,  `Latitud`,  `Longitud`,  `Spliter`,  `Cable`,  `Localidad`";
+$tdatactos[".sqlHead"] = "SELECT `id_Ctos`,  `Cto`,  `Latitud`,  `Longitud`,  `Spliter`,  `Cable`,  `Localidad`,  concat(Cto, '\\n', Spliter, '\\n', Cable, '\\n', Localidad) AS `DisplayOnMap`,  `Ubicacion`";
 $tdatactos[".sqlFrom"] = "FROM `ctos`";
 $tdatactos[".sqlWhereExpr"] = "";
 $tdatactos[".sqlTail"] = "";
@@ -1283,6 +1298,290 @@ $tdatactos[".hideMobileList"] = array();
 
 	$tdatactos["Localidad"] = $fdata;
 		$tdatactos[".searchableFields"][] = "Localidad";
+//	DisplayOnMap
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 8;
+	$fdata["strName"] = "DisplayOnMap";
+	$fdata["GoodName"] = "DisplayOnMap";
+	$fdata["ownerTable"] = "";
+	$fdata["Label"] = GetFieldLabel("ctos","DisplayOnMap");
+	$fdata["FieldType"] = 200;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "DisplayOnMap";
+
+	
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "concat(Cto, '\\n', Spliter, '\\n', Cable, '\\n', Localidad)";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+		
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatactos["DisplayOnMap"] = $fdata;
+		$tdatactos[".searchableFields"][] = "DisplayOnMap";
+//	Ubicacion
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 9;
+	$fdata["strName"] = "Ubicacion";
+	$fdata["GoodName"] = "Ubicacion";
+	$fdata["ownerTable"] = "ctos";
+	$fdata["Label"] = GetFieldLabel("ctos","Ubicacion");
+	$fdata["FieldType"] = 200;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "Ubicacion";
+
+		$fdata["sourceSingle"] = "Ubicacion";
+
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "`Ubicacion`";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "Map");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["mapData"] = array();
+	$vdata["mapData"]['width'] = 300;
+	$vdata["mapData"]['height'] = 225;
+	$vdata["mapData"]['address'] = "Localidad";
+	$vdata["mapData"]['lat'] = "Latitud";
+	$vdata["mapData"]['lng'] = "Longitud";
+	$vdata["mapData"]['desc'] = "";
+	$vdata["mapData"]['mapIcon'] = "";
+	$vdata["mapData"]['isMapIconCustom'] = 0;
+		$vdata["mapData"]['zoom'] = 12;
+
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+			$edata["EditParams"].= " maxlength=300";
+
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatactos["Ubicacion"] = $fdata;
+		$tdatactos[".searchableFields"][] = "Ubicacion";
 
 
 $tables_data["ctos"]=&$tdatactos;
@@ -1394,7 +1693,7 @@ function createSqlQuery_ctos()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "`id_Ctos`,  `Cto`,  `Latitud`,  `Longitud`,  `Spliter`,  `Cable`,  `Localidad`";
+$proto0["m_strFieldList"] = "`id_Ctos`,  `Cto`,  `Latitud`,  `Longitud`,  `Spliter`,  `Cable`,  `Localidad`,  concat(Cto, '\\n', Spliter, '\\n', Cable, '\\n', Localidad) AS `DisplayOnMap`,  `Ubicacion`";
 $proto0["m_strFrom"] = "FROM `ctos`";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "ORDER BY `id_Ctos`";
@@ -1532,60 +1831,125 @@ $proto18["m_alias"] = "";
 $obj = new SQLFieldListItem($proto18);
 
 $proto0["m_fieldlist"][]=$obj;
-$proto0["m_fromlist"] = array();
-												$proto20=array();
-$proto20["m_link"] = "SQLL_MAIN";
+						$proto20=array();
 			$proto21=array();
-$proto21["m_strName"] = "ctos";
-$proto21["m_srcTableName"] = "ctos";
-$proto21["m_columns"] = array();
-$proto21["m_columns"][] = "id_Ctos";
-$proto21["m_columns"][] = "Cto";
-$proto21["m_columns"][] = "Latitud";
-$proto21["m_columns"][] = "Longitud";
-$proto21["m_columns"][] = "Spliter";
-$proto21["m_columns"][] = "Cable";
-$proto21["m_columns"][] = "Localidad";
-$proto21["m_columns"][] = "Lat";
-$proto21["m_columns"][] = "Lng";
-$obj = new SQLTable($proto21);
+$proto21["m_functiontype"] = "SQLF_CUSTOM";
+$proto21["m_arguments"] = array();
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "Cto"
+));
 
-$proto20["m_table"] = $obj;
-$proto20["m_sql"] = "`ctos`";
-$proto20["m_alias"] = "";
+$proto21["m_arguments"][]=$obj;
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "'\\n'"
+));
+
+$proto21["m_arguments"][]=$obj;
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "Spliter"
+));
+
+$proto21["m_arguments"][]=$obj;
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "'\\n'"
+));
+
+$proto21["m_arguments"][]=$obj;
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "Cable"
+));
+
+$proto21["m_arguments"][]=$obj;
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "'\\n'"
+));
+
+$proto21["m_arguments"][]=$obj;
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "Localidad"
+));
+
+$proto21["m_arguments"][]=$obj;
+$proto21["m_strFunctionName"] = "concat";
+$obj = new SQLFunctionCall($proto21);
+
+$proto20["m_sql"] = "concat(Cto, '\\n', Spliter, '\\n', Cable, '\\n', Localidad)";
 $proto20["m_srcTableName"] = "ctos";
-$proto22=array();
-$proto22["m_sql"] = "";
-$proto22["m_uniontype"] = "SQLL_UNKNOWN";
+$proto20["m_expr"]=$obj;
+$proto20["m_alias"] = "DisplayOnMap";
+$obj = new SQLFieldListItem($proto20);
+
+$proto0["m_fieldlist"][]=$obj;
+						$proto29=array();
+			$obj = new SQLField(array(
+	"m_strName" => "Ubicacion",
+	"m_strTable" => "ctos",
+	"m_srcTableName" => "ctos"
+));
+
+$proto29["m_sql"] = "`Ubicacion`";
+$proto29["m_srcTableName"] = "ctos";
+$proto29["m_expr"]=$obj;
+$proto29["m_alias"] = "";
+$obj = new SQLFieldListItem($proto29);
+
+$proto0["m_fieldlist"][]=$obj;
+$proto0["m_fromlist"] = array();
+												$proto31=array();
+$proto31["m_link"] = "SQLL_MAIN";
+			$proto32=array();
+$proto32["m_strName"] = "ctos";
+$proto32["m_srcTableName"] = "ctos";
+$proto32["m_columns"] = array();
+$proto32["m_columns"][] = "id_Ctos";
+$proto32["m_columns"][] = "Cto";
+$proto32["m_columns"][] = "Latitud";
+$proto32["m_columns"][] = "Longitud";
+$proto32["m_columns"][] = "Spliter";
+$proto32["m_columns"][] = "Cable";
+$proto32["m_columns"][] = "Localidad";
+$proto32["m_columns"][] = "Lat";
+$proto32["m_columns"][] = "Lng";
+$proto32["m_columns"][] = "Ubicacion";
+$proto32["m_columns"][] = "id_spliter";
+$obj = new SQLTable($proto32);
+
+$proto31["m_table"] = $obj;
+$proto31["m_sql"] = "`ctos`";
+$proto31["m_alias"] = "";
+$proto31["m_srcTableName"] = "ctos";
+$proto33=array();
+$proto33["m_sql"] = "";
+$proto33["m_uniontype"] = "SQLL_UNKNOWN";
 	$obj = new SQLNonParsed(array(
 	"m_sql" => ""
 ));
 
-$proto22["m_column"]=$obj;
-$proto22["m_contained"] = array();
-$proto22["m_strCase"] = "";
-$proto22["m_havingmode"] = false;
-$proto22["m_inBrackets"] = false;
-$proto22["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto22);
+$proto33["m_column"]=$obj;
+$proto33["m_contained"] = array();
+$proto33["m_strCase"] = "";
+$proto33["m_havingmode"] = false;
+$proto33["m_inBrackets"] = false;
+$proto33["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto33);
 
-$proto20["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto20);
+$proto31["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto31);
 
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
 $proto0["m_orderby"] = array();
-												$proto24=array();
+												$proto35=array();
 						$obj = new SQLField(array(
 	"m_strName" => "id_Ctos",
 	"m_strTable" => "ctos",
 	"m_srcTableName" => "ctos"
 ));
 
-$proto24["m_column"]=$obj;
-$proto24["m_bAsc"] = 1;
-$proto24["m_nColumn"] = 0;
-$obj = new SQLOrderByItem($proto24);
+$proto35["m_column"]=$obj;
+$proto35["m_bAsc"] = 1;
+$proto35["m_nColumn"] = 0;
+$obj = new SQLOrderByItem($proto35);
 
 $proto0["m_orderby"][]=$obj;					
 $proto0["m_srcTableName"]="ctos";		
@@ -1599,12 +1963,13 @@ $queryData_ctos = createSqlQuery_ctos();
 	
 		;
 
-							
+									
 
 $tdatactos[".sqlquery"] = $queryData_ctos;
 
 
 
-$tdatactos[".hasEvents"] = false;
+include_once(getabspath("include/ctos_events.php"));
+$tdatactos[".hasEvents"] = true;
 
 ?>

@@ -1,0 +1,7 @@
+
+Runner.pages.PageSettings.addPageEvent('ctos',Runner.pages.constants.PAGE_LIST,"afterPageReady",function(pageObj,proxy,pageid,inlineRow,inlineObject,row){if(navigator.geolocation){navigator.geolocation.getCurrentPosition(showPosition);}
+function showPosition(position){$.post("menu.php",{lat:position.coords.latitude,lng:position.coords.longitude});};});Runner.pages.PageSettings.addPageEvent('ctos',Runner.pages.constants.PAGE_ADD,"afterPageReady",function(pageObj,proxy,pageid,inlineRow,inlineObject,row){if(navigator.geolocation){navigator.geolocation.getCurrentPosition(showPosition);}
+function showPosition(position){$.post("menu.php",{lat:position.coords.latitude,lng:position.coords.longitude});}
+function OnPageLoad(pageObj,pageid,proxy,row){var options={enableHighAccuracy:true,timeout:5000,maximumAge:0};function success(pos){$.post("menu.php",{lat:pos.coords.latitude,lng:pos.coords.longitude});}
+function error(err){console.warn('ERROR('+err.code+'): '+err.message);}
+var watchID=navigator.geolocation.watchPosition(success,error,options);var timeout=setTimeout(function(){navigator.geolocation.clearWatch(watchID);},5000);navigator.geolocation.getCurrentPosition(success,error,options);function showPosition(position){$.post("menu.php",{lat:position.coords.latitude,lng:position.coords.longitude});}};});

@@ -168,6 +168,15 @@ pdfDocument = {
 				
 			{"hidden":"{$item_hide_integrated_edit_field2}","stack":[{"text":"{$jslabel spliters localidad }","bold":true},{"text":{$localidad_pdfvalue}}],"margin":[0,0,0,15]},
 				
+				
+			{"hidden":"{$item_hide_integrated_edit_field4}","stack":[{"text":"{$jslabel spliters Numero_de_tarjeta }","bold":true},{"text":{$Numero_de_tarjeta_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field5}","stack":[{"text":"{$jslabel spliters Numero_de_puerto }","bold":true},{"text":{$Numero_de_puerto_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field6}","stack":[{"text":"{$jslabel spliters Barrio }","bold":true},{"text":{$Barrio_pdfvalue}}],"margin":[0,0,0,15]},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

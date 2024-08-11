@@ -1,6 +1,8 @@
 <?php
 			$optionsArray = array( 'pdf' => array( 'pdfView' => false ),
-'details' => array( 'spliters' => array( 'displayPreview' => 2,
+'details' => array( 'Mapa_General' => array( 'displayPreview' => 2,
+'previewPageId' => '' ),
+'spliters' => array( 'displayPreview' => 2,
 'previewPageId' => '' ) ),
 'master' => array( 'localidad' => array( 'preview' => true ) ),
 'totals' => array( 'id_cables' => array( 'totalsType' => '' ),
@@ -70,6 +72,7 @@
 'fixedAtClient' => false ) ),
 'width' => 1,
 'height' => 3 ) ) ),
+'loginForm' => array( 'loginForm' => 3 ),
 'page' => array( 'verticalBar' => false,
 'labeledButtons' => array( 'update_records' => array(  ),
 'print_pages' => array( 'print_pages' => array( 'tag' => 'PRINT_PAGES',

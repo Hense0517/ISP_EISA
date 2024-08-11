@@ -188,7 +188,13 @@ pdfDocument = {
 			{"text":"","hidden":"{$item_hide_inline_add}"},
 				
 				
-			{"text":"","hidden":"{$item_hide_delete}"},
+			{"text":"","hidden":"{$item_hide_inline_save_all}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_inline_cancel_all}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_update_selected}"},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -330,7 +336,6 @@ pdfDocument = {
 	cellId: 'headcell_field',
 	col:0,
 	row:0,
-			fieldName: 'localidad',
 				style: 'headcell',
 		
 		
@@ -343,20 +348,18 @@ pdfDocument = {
 	
 			"text": [
 		
-				
-			{"text":"{$jslabel cables localidad }","hidden":"{$item_hide_grid_field_label}","bold":true},
-				
-		  ],
+				'',
+	  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$localidad_align}',
+              "alignment": 'left',
      
       
       },
 
 {END cellblock_grid_headcell_field}
-																							{BEGIN cellblock_grid_headcell_field1}
+																							{BEGIN cellblock_grid_headcell_field2}
 {
-	cellId: 'headcell_field1',
+	cellId: 'headcell_field2',
 	col:0,
 	row:0,
 				style: 'headcell',
@@ -379,7 +382,7 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field1}
+{END cellblock_grid_headcell_field2}
 											],
 				{END row_grid_0}
 		
@@ -408,6 +411,12 @@ pdfDocument = {
 		
 				
 			{"text":"","hidden":"{$item_hide_grid_edit}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_grid_inline_edit}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_grid_inline_save}"},
 				
 				
 			{"text":"","hidden":"{$item_hide_grid_inline_cancel}"},
@@ -470,7 +479,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$cable_pdfvalue},"hidden":"{$item_hide_simple_grid_field1}"},
+			{"text":{$cable_pdfvalue},"hidden":"{$item_hide_grid_field1}"},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -483,35 +492,6 @@ pdfDocument = {
 																							{BEGIN cellblock_grid_cell_field}
 {
 	cellId: 'cell_field',
-	col:0,
-	row:0,
-			fieldName: 'localidad',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-						
-	
-	
-	
-			"text": [
-		
-				
-			{"text":{$localidad_pdfvalue},"hidden":"{$item_hide_grid_field}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$localidad_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field}
-																							{BEGIN cellblock_grid_cell_field1}
-{
-	cellId: 'cell_field1',
 	col:0,
 	row:0,
 				style: 'bodycell',
@@ -536,7 +516,35 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field1}
+{END cellblock_grid_cell_field}
+																							{BEGIN cellblock_grid_cell_field3}
+{
+	cellId: 'cell_field3',
+	col:0,
+	row:0,
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"","hidden":"{$item_hide_grid_details_link1}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_field3}
 											],
 				{END row_grid_1}
 		
@@ -650,9 +658,9 @@ pdfDocument = {
       },
 
 {END cellblock_grid_footcell_field}
-																							{BEGIN cellblock_grid_footcell_field1}
+																							{BEGIN cellblock_grid_footcell_field2}
 {
-	cellId: 'footcell_field1',
+	cellId: 'footcell_field2',
 	col:0,
 	row:0,
 				style: 'footcell',
@@ -675,7 +683,7 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_footcell_field1}
+{END cellblock_grid_footcell_field2}
 											],
 				{END row_grid_2}
 		

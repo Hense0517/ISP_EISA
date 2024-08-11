@@ -2,7 +2,7 @@
 $tdatanumeros_de_cables1 = array();
 $tdatanumeros_de_cables1[".searchableFields"] = array();
 $tdatanumeros_de_cables1[".ShortName"] = "numeros_de_cables1";
-$tdatanumeros_de_cables1[".OwnerID"] = "";
+$tdatanumeros_de_cables1[".OwnerID"] = "id_Cables";
 $tdatanumeros_de_cables1[".OriginalTable"] = "numeros_de_cables";
 
 
@@ -58,7 +58,7 @@ if(mlang_getcurrentlang()=="English")
 $tdatanumeros_de_cables1[".shortTableName"] = "numeros_de_cables1";
 $tdatanumeros_de_cables1[".nSecOptions"] = 0;
 
-$tdatanumeros_de_cables1[".mainTableOwnerID"] = "";
+$tdatanumeros_de_cables1[".mainTableOwnerID"] = "id_Cables";
 $tdatanumeros_de_cables1[".entityType"] = 0;
 $tdatanumeros_de_cables1[".connId"] = "isp_eisa_at_localhost";
 
@@ -143,7 +143,7 @@ $tdatanumeros_de_cables1[".isUseAjaxSuggest"] = true;
 
 
 
-
+			
 
 $tdatanumeros_de_cables1[".ajaxCodeSnippetAdded"] = false;
 

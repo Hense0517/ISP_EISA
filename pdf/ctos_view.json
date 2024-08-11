@@ -141,6 +141,9 @@ pdfDocument = {
 												{BEGIN col_grid_2}
 						"*", 
 							{END col_grid_2}
+												{BEGIN col_grid_3}
+						"*", 
+							{END col_grid_3}
 					 ],	
 		
 			heights: [
@@ -158,6 +161,11 @@ pdfDocument = {
 						
 			"%",
 						{END row_grid_2}
+			 
+								{BEGIN row_grid_3}
+						
+			"%",
+						{END row_grid_3}
 			 
 				],
 	
@@ -242,6 +250,36 @@ pdfDocument = {
       },
 
 {END cellblock_grid_c8}
+																							{BEGIN cellblock_grid_c10}
+{
+	cellId: 'c10',
+	col:0,
+	row:0,
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+					{BEGIN rowspan_grid_c10}
+			rowSpan: {$rowspan_grid_c10},
+			{END rowspan_grid_c10}
+						
+	
+	
+	
+			"stack": [
+		
+				
+			{"hidden":"{$item_hide_integrated_edit_field7}","stack":[{"text":"{$jslabel ctos Ubicacion }","bold":true},{"text":{$Ubicacion_pdfvalue}}],"margin":[0,0,0,15]},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_c10}
 											],
 				{END row_grid_0}
 						{BEGIN row_grid_1}
@@ -267,7 +305,7 @@ pdfDocument = {
 				
 		  ],
   "border": [ false, false, false, false ],
-              "alignment": 'left',
+              "alignment": 'center',
      
       
       },
@@ -294,7 +332,7 @@ pdfDocument = {
 				
 		  ],
   "border": [ false, false, false, false ],
-              "alignment": 'left',
+              "alignment": 'center',
      
       
       },
@@ -321,13 +359,19 @@ pdfDocument = {
 				
 		  ],
   "border": [ false, false, false, false ],
-              "alignment": 'left',
+              "alignment": 'center',
      
       
       },
 
 {END cellblock_grid_c}
-											],
+																		{ 
+				cellId: 'c10',
+				row:  1,
+				col:  0,
+				text: ''
+			},
+							],
 				{END row_grid_1}
 						{BEGIN row_grid_2}
 				[
@@ -352,7 +396,7 @@ pdfDocument = {
 				
 		  ],
   "border": [ false, false, false, false ],
-              "alignment": 'left',
+              "alignment": 'center',
      
       
       },
@@ -379,7 +423,7 @@ pdfDocument = {
 				
 		  ],
   "border": [ false, false, false, false ],
-              "alignment": 'left',
+              "alignment": 'center',
      
       
       },
@@ -406,14 +450,74 @@ pdfDocument = {
 				
 		  ],
   "border": [ false, false, false, false ],
-              "alignment": 'left',
+              "alignment": 'center',
      
       
       },
 
 {END cellblock_grid_c5}
-											],
+																		{ 
+				cellId: 'c10',
+				row:  2,
+				col:  0,
+				text: ''
+			},
+							],
 				{END row_grid_2}
+						{BEGIN row_grid_3}
+				[
+																{BEGIN cellblock_grid_c9}
+{
+	cellId: 'c9',
+	col:0,
+	row:0,
+			
+		
+	//	dynamic colspan/rowspan
+
+					{BEGIN colspan_grid_c9}
+			colSpan: {$colspan_grid_c9},
+			{END colspan_grid_c9}
+		
+						
+	
+	
+	
+			"stack": [
+		
+				
+			 {BEGIN details_puertos_cto}
+			{$displayDetailTable_puertos_cto }
+		{END details_puertos_cto},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_c9}
+																		{ 
+				cellId: 'c9',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+														{ 
+				cellId: 'c9',
+				row:  0,
+				col:  2,
+				text: ''
+			},
+														{ 
+				cellId: 'c9',
+				row:  0,
+				col:  3,
+				text: ''
+			},
+							],
+				{END row_grid_3}
 		
 		]
 	}

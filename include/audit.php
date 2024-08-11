@@ -392,7 +392,47 @@ class AuditTrailTable
 		{
 			return false;
 		}
-		if($table=="ctos_view")
+		if($table=="Mapa_General")
+		{
+			return false;
+		}
+		if($table=="Mapa_ctos")
+		{
+			return false;
+		}
+		if($table=="Mapa Puertos Libres")
+		{
+			return false;
+		}
+		if($table=="Mapa Ventas")
+		{
+			return false;
+		}
+		if($table=="Puertos_Libres")
+		{
+			return false;
+		}
+		if($table=="usuarios")
+		{
+			return false;
+		}
+		if($table=="admin_rights")
+		{
+			return false;
+		}
+		if($table=="admin_members")
+		{
+			return false;
+		}
+		if($table=="admin_users")
+		{
+			return false;
+		}
+		if($table=="Vista_Digitadores")
+		{
+			return false;
+		}
+		if($table=="Ingresar_cliente")
 		{
 			return false;
 		}
@@ -740,7 +780,47 @@ class AuditTrailFile
 		{
 			return false;
 		}
-		if($table=="ctos_view")
+		if($table=="Mapa_General")
+		{
+			return false;
+		}
+		if($table=="Mapa_ctos")
+		{
+			return false;
+		}
+		if($table=="Mapa Puertos Libres")
+		{
+			return false;
+		}
+		if($table=="Mapa Ventas")
+		{
+			return false;
+		}
+		if($table=="Puertos_Libres")
+		{
+			return false;
+		}
+		if($table=="usuarios")
+		{
+			return false;
+		}
+		if($table=="admin_rights")
+		{
+			return false;
+		}
+		if($table=="admin_members")
+		{
+			return false;
+		}
+		if($table=="admin_users")
+		{
+			return false;
+		}
+		if($table=="Vista_Digitadores")
+		{
+			return false;
+		}
+		if($table=="Ingresar_cliente")
 		{
 			return false;
 		}

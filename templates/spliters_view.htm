@@ -30,7 +30,7 @@
 							{BEGIN top_block}
 <div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}"
 		data-v-width="4"
-	data-v-margin="1"
+	data-v-margin="0"
 	
 >		
 	 
@@ -48,7 +48,7 @@
 									{BEGIN above-grid_block}
 <div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}"
 		data-v-width="4"
-	data-v-margin="1"
+	data-v-margin="0"
 	
 >		
 	 
@@ -68,16 +68,12 @@
 
  
 	 
-												{BEGIN mastertable_block}
-<div data-itemtype="master_info" data-itemid="master_info" {$item_master_info} data-pageid="{$pageid}">
-	{$showmasterfile}
-</div>
-{END mastertable_block}											<table 
+												<table 
 	data-body-align="center"
 	data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" 
 	class="r-edit-form" cellpadding="0" cellspacing="0" 
 	{$grid_hiddenattr} 
-		data-form-width="1"
+		data-form-width="2"
 		
 		data-v-width="4"
 	>
@@ -85,15 +81,54 @@
 										<tr {$row_grid_0} >
 										
 
-{BEGIN cellblock_grid_c3}
+{BEGIN cellblock_grid_c}
 <td
-	{$cell_grid_c3}
+	{$cell_grid_c}
 	class=" r-ori-vert"
 	
-				data-fullwidth
+			data-single
+			
+			data-cellId="grid_c" data-pageid="{$pageid}"
+		data-v-cell="2"
 		
-			data-cellId="grid_c3" data-pageid="{$pageid}"
-		data-v-cell="4"
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN id_spliters_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_id_spliters}  r-vertical-field" data-fieldname="id_spliters" data-signal-error-for="id_spliters{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="id_spliters" data-fieldname="id_spliters" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_id_spliters}">
+		
+		{BEGIN id_spliters_label}{$label spliters id_spliters }{END id_spliters_label}
+	</label>
+	<div class="" >
+		{$id_spliters_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END id_spliters_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c}
+			 
+																
+
+{BEGIN cellblock_grid_c6}
+<td
+	{$cell_grid_c6}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="grid_c6" data-pageid="{$pageid}"
+		data-v-cell="2"
 		
 >
 	<div edit-form-cell class="clearfix">
@@ -103,86 +138,278 @@
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_spliter}  r-vertical-field" data-fieldname="spliter" data-signal-error-for="spliter{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="spliter" data-fieldname="spliter" >
 
+		<div class="col-md-12">
 	
-	<label class="col-md-offset-3 col-md-6" for="{$labelfor_spliter}">
+	<label class="" for="{$labelfor_spliter}">
 		
 		{BEGIN spliter_label}{$label spliters spliter }{END spliter_label}
 	</label>
-	<div class="col-md-offset-3 col-md-6" >
+	<div class="" >
 		{$spliter_value}	</div>
 
+		</div>
 		
 </div>
 
 
 {END spliter_fieldblock}
-											
+	
+								</td>
+			{END cellblock_grid_c6}
+								</tr>
+	 
+	 
+														<tr {$row_grid_1} >
+										
+
+{BEGIN cellblock_grid_c4}
+<td
+	{$cell_grid_c4}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="grid_c4" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
 {BEGIN cable_fieldblock}
 
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_cable}  r-vertical-field" data-fieldname="cable" data-signal-error-for="cable{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="cable" data-fieldname="cable" >
 
+		<div class="col-md-12">
 	
-	<label class="col-md-offset-3 col-md-6" for="{$labelfor_cable}">
+	<label class="" for="{$labelfor_cable}">
 		
 		{BEGIN cable_label}{$label spliters cable }{END cable_label}
 	</label>
-	<div class="col-md-offset-3 col-md-6" >
+	<div class="" >
 		{$cable_value}	</div>
 
+		</div>
 		
 </div>
 
 
 {END cable_fieldblock}
-											
+	
+								</td>
+			{END cellblock_grid_c4}
+			 
+																
+
+{BEGIN cellblock_grid_c7}
+<td
+	{$cell_grid_c7}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="grid_c7" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
 {BEGIN localidad_fieldblock}
 
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_localidad}  r-vertical-field" data-fieldname="localidad" data-signal-error-for="localidad{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="localidad" data-fieldname="localidad" >
 
+		<div class="col-md-12">
 	
-	<label class="col-md-offset-3 col-md-6" for="{$labelfor_localidad}">
+	<label class="" for="{$labelfor_localidad}">
 		
 		{BEGIN localidad_label}{$label spliters localidad }{END localidad_label}
 	</label>
-	<div class="col-md-offset-3 col-md-6" >
+	<div class="" >
 		{$localidad_value}	</div>
 
+		</div>
 		
 </div>
 
 
 {END localidad_fieldblock}
-											
-{BEGIN id_spliters_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_id_spliters}  r-vertical-field" data-fieldname="id_spliters" data-signal-error-for="id_spliters{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="id_spliters" data-fieldname="id_spliters" >
-
 	
-	<label class="col-md-offset-3 col-md-6" for="{$labelfor_id_spliters}">
-		
-		{BEGIN id_spliters_label}{$label spliters id_spliters }{END id_spliters_label}
-	</label>
-	<div class="col-md-offset-3 col-md-6" >
-		{$id_spliters_value}	</div>
+								</td>
+			{END cellblock_grid_c7}
+								</tr>
+	 
+	 
+														<tr {$row_grid_2} >
+										
 
+{BEGIN cellblock_grid_c5}
+<td
+	{$cell_grid_c5}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="grid_c5" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN Numero_de_tarjeta_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Numero_de_tarjeta}  r-vertical-field" data-fieldname="Numero_de_tarjeta" data-signal-error-for="Numero_de_tarjeta{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="Numero_de_tarjeta" data-fieldname="Numero_de_tarjeta" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Numero_de_tarjeta}">
+		
+		{BEGIN Numero_de_tarjeta_label}{$label spliters Numero_de_tarjeta }{END Numero_de_tarjeta_label}
+	</label>
+	<div class="" >
+		{$Numero_de_tarjeta_value}	</div>
+
+		</div>
 		
 </div>
 
 
-{END id_spliters_fieldblock}
+{END Numero_de_tarjeta_fieldblock}
 	
 								</td>
-			{END cellblock_grid_c3}
+			{END cellblock_grid_c5}
+			 
+																
+
+{BEGIN cellblock_grid_c8}
+<td
+	{$cell_grid_c8}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="grid_c8" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN Numero_de_puerto_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Numero_de_puerto}  r-vertical-field" data-fieldname="Numero_de_puerto" data-signal-error-for="Numero_de_puerto{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field5" {$item_integrated_edit_field5} data-pageid="{$pageid}" data-field="Numero_de_puerto" data-fieldname="Numero_de_puerto" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Numero_de_puerto}">
+		
+		{BEGIN Numero_de_puerto_label}{$label spliters Numero_de_puerto }{END Numero_de_puerto_label}
+	</label>
+	<div class="" >
+		{$Numero_de_puerto_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Numero_de_puerto_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c8}
 								</tr>
-			</tbody></table>
-{END grid_block}
+	 
+	 
+														<tr {$row_grid_3} >
+										
+
+{BEGIN cellblock_grid_c10}
+<td
+	{$cell_grid_c10}
+	class=" r-ori-vert"
+	
+			data-single
+				data-fullwidth
+		
+	ocolspan="2"		data-cellId="grid_c10" data-pageid="{$pageid}"
+		data-v-cell="4"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN Barrio_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Barrio}  r-vertical-field" data-fieldname="Barrio" data-signal-error-for="Barrio{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-field="Barrio" data-fieldname="Barrio" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Barrio}">
+		
+		{BEGIN Barrio_label}{$label spliters Barrio }{END Barrio_label}
+	</label>
+	<div class="" >
+		{$Barrio_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Barrio_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c10}
+								</tr>
+	 
+	 
+																</tbody></table>
+				
+{BEGIN details_ctos}
+<div data-itemtype="details_preview" data-itemid="details_preview1" {$item_details_preview1} data-pageid="{$pageid}" class="bs-details"> 
+	<div class="panel panel-info details-grid">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+							{$details_pagetitle_ctos}			
+							<span>
+					{$detailslButtons_ctos}
+																				</span>
+			</h4>
+		</div>
+		<div class="panel-body">
+			{$displayDetailTable_ctos}
+		</div>
+	</div>
+</div>
+{END details_ctos}
+	
+				 
+	 
+												
+{BEGIN details_vista_digitadores}
+<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" class="bs-details"> 
+	<div class="panel panel-info details-grid">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+							{$details_pagetitle_vista_digitadores}			
+							<span>
+					{$detailslButtons_vista_digitadores}
+																				</span>
+			</h4>
+		</div>
+		<div class="panel-body">
+			{$displayDetailTable_vista_digitadores}
+		</div>
+	</div>
+</div>
+{END details_vista_digitadores}
+	
+				{END grid_block}
 									{BEGIN below-grid_block}
 <div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}"
 		data-v-width="4"
-	data-v-margin="1"
+	data-v-margin="0"
 	
 >		
 	 
@@ -229,21 +456,6 @@
 		</a>
 	</li>
 {END edit_page_button}
-								<li data-itemtype="view_pdf" data-itemid="view_pdf" {$item_view_pdf} data-pageid="{$pageid}" data-small >
-				<a class="pdflink" data-pdfpage="view" 
-data-scope="0" 
-data-split="0" 
-data-records="10" 
-data-orientation="portrait" 
-data-scale="100" 
-data-filename="Spliters.pdf" 
-data-pagesize="LETTER" 
-data-pagetype="view" 
-{$pdflink_attrs}  title="" >
-				
-		{mlang_message PDF_VIEW}		
-		</a>
-	</li>
 					</ul>
 	</span>
 </span>

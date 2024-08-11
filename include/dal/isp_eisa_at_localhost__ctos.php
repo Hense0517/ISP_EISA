@@ -9,6 +9,8 @@ $dalTablectos["Cable"] = array("type"=>200,"varname"=>"Cable", "name" => "Cable"
 $dalTablectos["Localidad"] = array("type"=>200,"varname"=>"Localidad", "name" => "Localidad", "autoInc" => "0");
 $dalTablectos["Lat"] = array("type"=>14,"varname"=>"Lat", "name" => "Lat", "autoInc" => "0");
 $dalTablectos["Lng"] = array("type"=>14,"varname"=>"Lng", "name" => "Lng", "autoInc" => "0");
+$dalTablectos["Ubicacion"] = array("type"=>200,"varname"=>"Ubicacion", "name" => "Ubicacion", "autoInc" => "0");
+$dalTablectos["id_spliter"] = array("type"=>3,"varname"=>"id_spliter", "name" => "id_spliter", "autoInc" => "0");
 $dalTablectos["id_Ctos"]["key"]=true;
 
 $dal_info["isp_eisa_at_localhost__ctos"] = &$dalTablectos;

@@ -175,6 +175,9 @@ pdfDocument = {
 			{"hidden":"{$item_hide_integrated_edit_field4}","stack":[{"text":"{$jslabel ctos_view Cable }","bold":true},{"text":{$Cable_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
+			{"hidden":"{$item_hide_integrated_edit_field8}","stack":[{"text":"{$jslabel ctos_view Ubicacion }","bold":true},{"text":{$Ubicacion_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
 			{"hidden":"{$item_hide_integrated_edit_field5}","stack":[{"text":"{$jslabel ctos_view Localidad }","bold":true},{"text":{$Localidad_pdfvalue}}],"margin":[0,0,0,15]},
 				
 		  ],

@@ -37,6 +37,15 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsspliters["Spanish"]["id_spliters"] = "Id Spliters";
 	$fieldToolTipsspliters["Spanish"]["id_spliters"] = "";
 	$placeHoldersspliters["Spanish"]["id_spliters"] = "";
+	$fieldLabelsspliters["Spanish"]["Numero_de_tarjeta"] = "Numero De Tarjeta";
+	$fieldToolTipsspliters["Spanish"]["Numero_de_tarjeta"] = "";
+	$placeHoldersspliters["Spanish"]["Numero_de_tarjeta"] = "";
+	$fieldLabelsspliters["Spanish"]["Numero_de_puerto"] = "Numero De Puerto";
+	$fieldToolTipsspliters["Spanish"]["Numero_de_puerto"] = "";
+	$placeHoldersspliters["Spanish"]["Numero_de_puerto"] = "";
+	$fieldLabelsspliters["Spanish"]["Barrio"] = "Barrio";
+	$fieldToolTipsspliters["Spanish"]["Barrio"] = "";
+	$placeHoldersspliters["Spanish"]["Barrio"] = "";
 	if (count($fieldToolTipsspliters["Spanish"]))
 		$tdataspliters[".isUseToolTips"] = true;
 }
@@ -58,6 +67,15 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelsspliters["English"]["id_spliters"] = "Id Spliters";
 	$fieldToolTipsspliters["English"]["id_spliters"] = "";
 	$placeHoldersspliters["English"]["id_spliters"] = "";
+	$fieldLabelsspliters["English"]["Numero_de_tarjeta"] = "Numero De Tarjeta";
+	$fieldToolTipsspliters["English"]["Numero_de_tarjeta"] = "";
+	$placeHoldersspliters["English"]["Numero_de_tarjeta"] = "";
+	$fieldLabelsspliters["English"]["Numero_de_puerto"] = "Numero De Puerto";
+	$fieldToolTipsspliters["English"]["Numero_de_puerto"] = "";
+	$placeHoldersspliters["English"]["Numero_de_puerto"] = "";
+	$fieldLabelsspliters["English"]["Barrio"] = "Barrio";
+	$fieldToolTipsspliters["English"]["Barrio"] = "";
+	$placeHoldersspliters["English"]["Barrio"] = "";
 	if (count($fieldToolTipsspliters["English"]))
 		$tdataspliters[".isUseToolTips"] = true;
 }
@@ -155,7 +173,7 @@ $tdataspliters[".isUseAjaxSuggest"] = true;
 
 
 
-
+						
 
 $tdataspliters[".ajaxCodeSnippetAdded"] = false;
 
@@ -179,6 +197,9 @@ $tdataspliters[".googleLikeFields"][] = "id_spliters";
 $tdataspliters[".googleLikeFields"][] = "spliter";
 $tdataspliters[".googleLikeFields"][] = "cable";
 $tdataspliters[".googleLikeFields"][] = "localidad";
+$tdataspliters[".googleLikeFields"][] = "Numero_de_tarjeta";
+$tdataspliters[".googleLikeFields"][] = "Numero_de_puerto";
+$tdataspliters[".googleLikeFields"][] = "Barrio";
 
 
 
@@ -214,7 +235,7 @@ $tdataspliters[".orderindexes"] = array();
 
 
 
-$tdataspliters[".sqlHead"] = "SELECT `id_spliters`,  `spliter`,  `cable`,  `localidad`";
+$tdataspliters[".sqlHead"] = "SELECT `id_spliters`,  `spliter`,  `cable`,  `localidad`,  `Numero_de_tarjeta`,  `Numero_de_puerto`,  `Barrio`";
 $tdataspliters[".sqlFrom"] = "FROM `spliters`";
 $tdataspliters[".sqlWhereExpr"] = "";
 $tdataspliters[".sqlTail"] = "";
@@ -844,6 +865,466 @@ $tdataspliters[".hideMobileList"] = array();
 
 	$tdataspliters["localidad"] = $fdata;
 		$tdataspliters[".searchableFields"][] = "localidad";
+//	Numero_de_tarjeta
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 5;
+	$fdata["strName"] = "Numero_de_tarjeta";
+	$fdata["GoodName"] = "Numero_de_tarjeta";
+	$fdata["ownerTable"] = "spliters";
+	$fdata["Label"] = GetFieldLabel("spliters","Numero_de_tarjeta");
+	$fdata["FieldType"] = 3;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "Numero_de_tarjeta";
+
+		$fdata["sourceSingle"] = "Numero_de_tarjeta";
+
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "`Numero_de_tarjeta`";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Lookup wizard");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+// Begin Lookup settings
+		$edata["LookupType"] = 0;
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+	
+		$edata["LookupValues"] = array();
+	$edata["LookupValues"][] = "1";
+	$edata["LookupValues"][] = "2";
+	$edata["LookupValues"][] = "3";
+	$edata["LookupValues"][] = "4";
+	$edata["LookupValues"][] = "5";
+	$edata["LookupValues"][] = "6";
+	$edata["LookupValues"][] = "7";
+	$edata["LookupValues"][] = "8";
+	$edata["LookupValues"][] = "9";
+
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+	
+	
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+							
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Equals";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdataspliters["Numero_de_tarjeta"] = $fdata;
+		$tdataspliters[".searchableFields"][] = "Numero_de_tarjeta";
+//	Numero_de_puerto
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 6;
+	$fdata["strName"] = "Numero_de_puerto";
+	$fdata["GoodName"] = "Numero_de_puerto";
+	$fdata["ownerTable"] = "spliters";
+	$fdata["Label"] = GetFieldLabel("spliters","Numero_de_puerto");
+	$fdata["FieldType"] = 3;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "Numero_de_puerto";
+
+		$fdata["sourceSingle"] = "Numero_de_puerto";
+
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "`Numero_de_puerto`";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Lookup wizard");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+// Begin Lookup settings
+		$edata["LookupType"] = 0;
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+	
+		$edata["LookupValues"] = array();
+	$edata["LookupValues"][] = "0";
+	$edata["LookupValues"][] = "1";
+	$edata["LookupValues"][] = "2";
+	$edata["LookupValues"][] = "3";
+	$edata["LookupValues"][] = "4";
+	$edata["LookupValues"][] = "5";
+	$edata["LookupValues"][] = "6";
+	$edata["LookupValues"][] = "7";
+	$edata["LookupValues"][] = "8";
+	$edata["LookupValues"][] = "9";
+	$edata["LookupValues"][] = "10";
+	$edata["LookupValues"][] = "11";
+	$edata["LookupValues"][] = "12";
+	$edata["LookupValues"][] = "13";
+	$edata["LookupValues"][] = "14";
+
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+	
+	
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+							
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Equals";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdataspliters["Numero_de_puerto"] = $fdata;
+		$tdataspliters[".searchableFields"][] = "Numero_de_puerto";
+//	Barrio
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 7;
+	$fdata["strName"] = "Barrio";
+	$fdata["GoodName"] = "Barrio";
+	$fdata["ownerTable"] = "spliters";
+	$fdata["Label"] = GetFieldLabel("spliters","Barrio");
+	$fdata["FieldType"] = 200;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "Barrio";
+
+		$fdata["sourceSingle"] = "Barrio";
+
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "`Barrio`";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+			$edata["EditParams"].= " maxlength=100";
+
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdataspliters["Barrio"] = $fdata;
+		$tdataspliters[".searchableFields"][] = "Barrio";
 
 
 $tables_data["spliters"]=&$tdataspliters;
@@ -876,6 +1357,86 @@ $detailsTablesData["spliters"] = array();
 		$detailsParam["dType"]=PAGE_LIST;
 	$detailsParam["dShortTable"] = "ctos";
 	$detailsParam["dCaptionTable"] = GetTableCaption("ctos");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["spliters"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["spliters"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["spliters"][$dIndex]["masterKeys"][]="spliter";
+
+	$detailsTablesData["spliters"][$dIndex]["masterKeys"][]="cable";
+
+	$detailsTablesData["spliters"][$dIndex]["masterKeys"][]="localidad";
+
+				$detailsTablesData["spliters"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["spliters"][$dIndex]["detailKeys"][]="Spliter";
+
+		
+	$detailsTablesData["spliters"][$dIndex]["detailKeys"][]="Cable";
+
+		
+	$detailsTablesData["spliters"][$dIndex]["detailKeys"][]="Localidad";
+//	Mapa_General
+	
+	
+
+		$dIndex = 1;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="Mapa_General";
+		$detailsParam["dOriginalTable"] = "ctos";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "mapa_general";
+	$detailsParam["dCaptionTable"] = GetTableCaption("Mapa_General");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["spliters"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["spliters"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["spliters"][$dIndex]["masterKeys"][]="spliter";
+
+	$detailsTablesData["spliters"][$dIndex]["masterKeys"][]="cable";
+
+	$detailsTablesData["spliters"][$dIndex]["masterKeys"][]="localidad";
+
+				$detailsTablesData["spliters"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["spliters"][$dIndex]["detailKeys"][]="Spliter";
+
+		
+	$detailsTablesData["spliters"][$dIndex]["detailKeys"][]="Cable";
+
+		
+	$detailsTablesData["spliters"][$dIndex]["detailKeys"][]="Localidad";
+//	Vista_Digitadores
+	
+	
+
+		$dIndex = 2;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="Vista_Digitadores";
+		$detailsParam["dOriginalTable"] = "ctos";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "vista_digitadores";
+	$detailsParam["dCaptionTable"] = GetTableCaption("Vista_Digitadores");
 	$detailsParam["masterKeys"] =array();
 	$detailsParam["detailKeys"] =array();
 
@@ -948,7 +1509,7 @@ function createSqlQuery_spliters()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "`id_spliters`,  `spliter`,  `cable`,  `localidad`";
+$proto0["m_strFieldList"] = "`id_spliters`,  `spliter`,  `cable`,  `localidad`,  `Numero_de_tarjeta`,  `Numero_de_puerto`,  `Barrio`";
 $proto0["m_strFrom"] = "FROM `spliters`";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "ORDER BY `id_spliters`";
@@ -1044,55 +1605,101 @@ $proto12["m_alias"] = "";
 $obj = new SQLFieldListItem($proto12);
 
 $proto0["m_fieldlist"][]=$obj;
-$proto0["m_fromlist"] = array();
-												$proto14=array();
-$proto14["m_link"] = "SQLL_MAIN";
-			$proto15=array();
-$proto15["m_strName"] = "spliters";
-$proto15["m_srcTableName"] = "spliters";
-$proto15["m_columns"] = array();
-$proto15["m_columns"][] = "id_spliters";
-$proto15["m_columns"][] = "spliter";
-$proto15["m_columns"][] = "cable";
-$proto15["m_columns"][] = "localidad";
-$obj = new SQLTable($proto15);
+						$proto14=array();
+			$obj = new SQLField(array(
+	"m_strName" => "Numero_de_tarjeta",
+	"m_strTable" => "spliters",
+	"m_srcTableName" => "spliters"
+));
 
-$proto14["m_table"] = $obj;
-$proto14["m_sql"] = "`spliters`";
-$proto14["m_alias"] = "";
+$proto14["m_sql"] = "`Numero_de_tarjeta`";
 $proto14["m_srcTableName"] = "spliters";
-$proto16=array();
-$proto16["m_sql"] = "";
-$proto16["m_uniontype"] = "SQLL_UNKNOWN";
+$proto14["m_expr"]=$obj;
+$proto14["m_alias"] = "";
+$obj = new SQLFieldListItem($proto14);
+
+$proto0["m_fieldlist"][]=$obj;
+						$proto16=array();
+			$obj = new SQLField(array(
+	"m_strName" => "Numero_de_puerto",
+	"m_strTable" => "spliters",
+	"m_srcTableName" => "spliters"
+));
+
+$proto16["m_sql"] = "`Numero_de_puerto`";
+$proto16["m_srcTableName"] = "spliters";
+$proto16["m_expr"]=$obj;
+$proto16["m_alias"] = "";
+$obj = new SQLFieldListItem($proto16);
+
+$proto0["m_fieldlist"][]=$obj;
+						$proto18=array();
+			$obj = new SQLField(array(
+	"m_strName" => "Barrio",
+	"m_strTable" => "spliters",
+	"m_srcTableName" => "spliters"
+));
+
+$proto18["m_sql"] = "`Barrio`";
+$proto18["m_srcTableName"] = "spliters";
+$proto18["m_expr"]=$obj;
+$proto18["m_alias"] = "";
+$obj = new SQLFieldListItem($proto18);
+
+$proto0["m_fieldlist"][]=$obj;
+$proto0["m_fromlist"] = array();
+												$proto20=array();
+$proto20["m_link"] = "SQLL_MAIN";
+			$proto21=array();
+$proto21["m_strName"] = "spliters";
+$proto21["m_srcTableName"] = "spliters";
+$proto21["m_columns"] = array();
+$proto21["m_columns"][] = "id_spliters";
+$proto21["m_columns"][] = "spliter";
+$proto21["m_columns"][] = "cable";
+$proto21["m_columns"][] = "localidad";
+$proto21["m_columns"][] = "id_cable";
+$proto21["m_columns"][] = "Numero_de_tarjeta";
+$proto21["m_columns"][] = "Numero_de_puerto";
+$proto21["m_columns"][] = "Barrio";
+$obj = new SQLTable($proto21);
+
+$proto20["m_table"] = $obj;
+$proto20["m_sql"] = "`spliters`";
+$proto20["m_alias"] = "";
+$proto20["m_srcTableName"] = "spliters";
+$proto22=array();
+$proto22["m_sql"] = "";
+$proto22["m_uniontype"] = "SQLL_UNKNOWN";
 	$obj = new SQLNonParsed(array(
 	"m_sql" => ""
 ));
 
-$proto16["m_column"]=$obj;
-$proto16["m_contained"] = array();
-$proto16["m_strCase"] = "";
-$proto16["m_havingmode"] = false;
-$proto16["m_inBrackets"] = false;
-$proto16["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto16);
+$proto22["m_column"]=$obj;
+$proto22["m_contained"] = array();
+$proto22["m_strCase"] = "";
+$proto22["m_havingmode"] = false;
+$proto22["m_inBrackets"] = false;
+$proto22["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto22);
 
-$proto14["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto14);
+$proto20["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto20);
 
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
 $proto0["m_orderby"] = array();
-												$proto18=array();
+												$proto24=array();
 						$obj = new SQLField(array(
 	"m_strName" => "id_spliters",
 	"m_strTable" => "spliters",
 	"m_srcTableName" => "spliters"
 ));
 
-$proto18["m_column"]=$obj;
-$proto18["m_bAsc"] = 1;
-$proto18["m_nColumn"] = 0;
-$obj = new SQLOrderByItem($proto18);
+$proto24["m_column"]=$obj;
+$proto24["m_bAsc"] = 1;
+$proto24["m_nColumn"] = 0;
+$obj = new SQLOrderByItem($proto24);
 
 $proto0["m_orderby"][]=$obj;					
 $proto0["m_srcTableName"]="spliters";		
@@ -1106,7 +1713,7 @@ $queryData_spliters = createSqlQuery_spliters();
 	
 		;
 
-				
+							
 
 $tdataspliters[".sqlquery"] = $queryData_spliters;
 

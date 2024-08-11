@@ -1,0 +1,505 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+			
+	</head>
+
+	<body class="{$stylename} function-view" >
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{$locking}
+		<div class="r-small-page" 
+			data-body-align="center"
+			data-body-width="standard"
+		>
+							{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}"
+		data-v-width="8"
+	data-v-margin="0"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		<h2 data-itemtype="view_header" data-itemid="view_header" {$item_view_header} data-pageid="{$pageid}" >{$pagetitlelabel Mapa_General_2 view}</h2>
+	</div>					</div>
+	</div>		
+{END top_block}
+									{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}"
+		data-v-width="8"
+	data-v-margin="0"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	</div>					</div>
+	</div>		
+{END above-grid_block}
+									{BEGIN grid_block}
+
+
+
+
+ 
+	 
+												{BEGIN mastertable_block}
+<div data-itemtype="master_info" data-itemid="master_info" {$item_master_info} data-pageid="{$pageid}">
+	{$showmasterfile}
+</div>
+{END mastertable_block}	
+				 
+	 
+												<table 
+	data-body-align="center"
+	data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="4"
+		
+		data-v-width="8"
+	>
+	<tbody>
+										<tr {$row_grid_1} >
+										
+
+{BEGIN cellblock_grid_c12}
+<td
+	{$cell_grid_c12}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="grid_c12" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN Localidad_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Localidad}  r-vertical-field" data-fieldname="Localidad" data-signal-error-for="Localidad{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-page="mapa_general_2_view" data-field="Localidad" data-fieldname="Localidad" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Localidad}">
+		
+		{BEGIN Localidad_label}{$label Mapa_General_2 Localidad }{END Localidad_label}
+	</label>
+	<div class="" >
+		{$Localidad_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Localidad_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c12}
+			 
+																
+
+{BEGIN cellblock_grid_c13}
+<td
+	{$cell_grid_c13}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="grid_c13" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN Cable_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Cable}  r-vertical-field" data-fieldname="Cable" data-signal-error-for="Cable{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field5" {$item_integrated_edit_field5} data-pageid="{$pageid}" data-page="mapa_general_2_view" data-field="Cable" data-fieldname="Cable" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Cable}">
+		
+		{BEGIN Cable_label}{$label Mapa_General_2 Cable }{END Cable_label}
+	</label>
+	<div class="" >
+		{$Cable_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Cable_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c13}
+			 
+																
+
+{BEGIN cellblock_grid_c14}
+<td
+	{$cell_grid_c14}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="grid_c14" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN Spliter_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Spliter}  r-vertical-field" data-fieldname="Spliter" data-signal-error-for="Spliter{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-page="mapa_general_2_view" data-field="Spliter" data-fieldname="Spliter" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Spliter}">
+		
+		{BEGIN Spliter_label}{$label Mapa_General_2 Spliter }{END Spliter_label}
+	</label>
+	<div class="" >
+		{$Spliter_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Spliter_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c14}
+			 
+																
+
+{BEGIN cellblock_grid_c16}
+<td
+	{$cell_grid_c16}
+	class="r-align-center r-ori-vert"
+	
+			data-single
+			
+		orowspan="2"	data-cellId="grid_c16" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN Ubicacion_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Ubicacion}  r-vertical-field" data-fieldname="Ubicacion" data-signal-error-for="Ubicacion{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-page="mapa_general_2_view" data-field="Ubicacion" data-fieldname="Ubicacion" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Ubicacion}">
+		
+		{BEGIN Ubicacion_label}{$label Mapa_General_2 Ubicacion }{END Ubicacion_label}
+	</label>
+	<div class="" >
+		{$Ubicacion_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Ubicacion_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c16}
+								</tr>
+	 
+	 
+														<tr {$row_grid_2} >
+										
+
+{BEGIN cellblock_grid_c9}
+<td
+	{$cell_grid_c9}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="grid_c9" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN Cto_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Cto}  r-vertical-field" data-fieldname="Cto" data-signal-error-for="Cto{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-page="mapa_general_2_view" data-field="Cto" data-fieldname="Cto" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Cto}">
+		
+		{BEGIN Cto_label}{$label Mapa_General_2 Cto }{END Cto_label}
+	</label>
+	<div class="" >
+		{$Cto_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Cto_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c9}
+			 
+																
+
+{BEGIN cellblock_grid_c10}
+<td
+	{$cell_grid_c10}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="grid_c10" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN Latitud_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Latitud}  r-vertical-field" data-fieldname="Latitud" data-signal-error-for="Latitud{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-page="mapa_general_2_view" data-field="Latitud" data-fieldname="Latitud" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Latitud}">
+		
+		{BEGIN Latitud_label}{$label Mapa_General_2 Latitud }{END Latitud_label}
+	</label>
+	<div class="" >
+		{$Latitud_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Latitud_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c10}
+			 
+																
+
+{BEGIN cellblock_grid_c11}
+<td
+	{$cell_grid_c11}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="grid_c11" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN Longitud_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Longitud}  r-vertical-field" data-fieldname="Longitud" data-signal-error-for="Longitud{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-page="mapa_general_2_view" data-field="Longitud" data-fieldname="Longitud" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Longitud}">
+		
+		{BEGIN Longitud_label}{$label Mapa_General_2 Longitud }{END Longitud_label}
+	</label>
+	<div class="" >
+		{$Longitud_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Longitud_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c11}
+								</tr>
+	 
+	 
+																</tbody></table>
+				
+{BEGIN details_puertos_cto}
+<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" class="bs-details"> 
+	<div class="panel panel-info details-grid">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+							{$details_pagetitle_puertos_cto}			
+							<span>
+					{$detailslButtons_puertos_cto}
+																				</span>
+			</h4>
+		</div>
+		<div class="panel-body">
+			{$displayDetailTable_puertos_cto}
+		</div>
+	</div>
+</div>
+{END details_puertos_cto}
+	
+				 
+	 
+		
+					<table 
+	data-body-align="center"
+	data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="4"
+		
+		data-v-width="8"
+	>
+	<tbody>
+						<tr>
+						
+
+{BEGIN cellblock_grid_c}
+<td
+	{$cell_grid_c}
+	class=" r-ori-vert"
+	
+			data-single
+			
+	ocolspan="3"		data-cellId="grid_c" data-pageid="{$pageid}"
+		data-v-cell="6"
+		
+>
+	<div edit-form-cell class="clearfix">
+									</td>
+			{END cellblock_grid_c}
+			 
+		
+							
+
+{BEGIN cellblock_grid_c20}
+<td
+	{$cell_grid_c20}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="grid_c20" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+									</td>
+			{END cellblock_grid_c20}
+								</tr>
+			</tbody></table>
+{END grid_block}
+									{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}"
+		data-v-width="8"
+	data-v-margin="0"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="			col-md-6
+	">
+	 
+		{BEGIN back_button}
+<span data-itemtype="view_back_list" data-itemid="view_back_list" {$item_view_back_list} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$backbutton_attrs} >
+							{mlang_message BACK_TO_LIST}			</a>
+</span>
+{END back_button}
+	 
+		{BEGIN close_button}
+<span data-itemtype="view_close" data-itemid="view_close" {$item_view_close} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" href="#" {$closebutton_attrs} >
+							{mlang_message CLOSE_WINDOW}			</a>
+</span>
+{END close_button}
+	</div>			 
+				<div 
+	data-cellId="below-grid_c2" data-pageid="{$pageid}"	{$cell_below-grid_c2}
+	class="r-align-right r-ori-vert			col-md-6
+	">
+	 
+		<span data-itemtype="hamburger" data-itemid="hamburger" {$item_hamburger} data-pageid="{$pageid}" data-small data-button-item>
+	<span class="dropdown dropup">
+		<button type="button" title="" class="btn btn-default   dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">		
+										<span class="glyphicon glyphicon-menu-hamburger"></span>
+												<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu">
+								<li data-itemtype="view_pdf" data-itemid="view_pdf" {$item_view_pdf} data-pageid="{$pageid}" data-small >
+				<a class="pdflink" data-pdfpage="view" 
+data-scope="0" 
+data-split="0" 
+data-records="10" 
+data-orientation="portrait" 
+data-scale="100" 
+data-filename="Mapa General 2.pdf" 
+data-pagesize="LETTER" 
+data-pagetype="view" 
+{$pdflink_attrs}  title="" >
+				
+		{mlang_message PDF_VIEW}		
+		</a>
+	</li>
+					</ul>
+	</span>
+</span>
+	</div>					</div>
+	</div>		
+{END below-grid_block}
+			</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

@@ -105,19 +105,8 @@ pdfDocument = {
 	
 			"text": [
 		
-				
-			{"text":{$spliter_pdfvalue},"hidden":"{$item_hide_import_field1}"},
-				
-				
-			{"text":{$cable_pdfvalue},"hidden":"{$item_hide_import_field2}"},
-				
-				
-			{"text":{$localidad_pdfvalue},"hidden":"{$item_hide_import_field3}"},
-				
-				
-			{"text":{$id_spliters_pdfvalue},"hidden":"{$item_hide_import_field}"},
-				
-		  ],
+				'',
+	  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
      

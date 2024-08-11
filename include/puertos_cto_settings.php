@@ -46,12 +46,9 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelspuertos_cto["Spanish"]["Cedula"] = "Cedula";
 	$fieldToolTipspuertos_cto["Spanish"]["Cedula"] = "";
 	$placeHolderspuertos_cto["Spanish"]["Cedula"] = "";
-	$fieldLabelspuertos_cto["Spanish"]["Activo"] = "Activo";
-	$fieldToolTipspuertos_cto["Spanish"]["Activo"] = "";
-	$placeHolderspuertos_cto["Spanish"]["Activo"] = "";
-	$fieldLabelspuertos_cto["Spanish"]["Libre"] = "Libre";
-	$fieldToolTipspuertos_cto["Spanish"]["Libre"] = "";
-	$placeHolderspuertos_cto["Spanish"]["Libre"] = "";
+	$fieldLabelspuertos_cto["Spanish"]["Ocupado"] = "Ocupado";
+	$fieldToolTipspuertos_cto["Spanish"]["Ocupado"] = "";
+	$placeHolderspuertos_cto["Spanish"]["Ocupado"] = "";
 	if (count($fieldToolTipspuertos_cto["Spanish"]))
 		$tdatapuertos_cto[".isUseToolTips"] = true;
 }
@@ -82,12 +79,9 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelspuertos_cto["English"]["Cedula"] = "Cedula";
 	$fieldToolTipspuertos_cto["English"]["Cedula"] = "";
 	$placeHolderspuertos_cto["English"]["Cedula"] = "";
-	$fieldLabelspuertos_cto["English"]["Activo"] = "Activo";
-	$fieldToolTipspuertos_cto["English"]["Activo"] = "";
-	$placeHolderspuertos_cto["English"]["Activo"] = "";
-	$fieldLabelspuertos_cto["English"]["Libre"] = "Libre";
-	$fieldToolTipspuertos_cto["English"]["Libre"] = "";
-	$placeHolderspuertos_cto["English"]["Libre"] = "";
+	$fieldLabelspuertos_cto["English"]["Ocupado"] = "Ocupado";
+	$fieldToolTipspuertos_cto["English"]["Ocupado"] = "";
+	$placeHolderspuertos_cto["English"]["Ocupado"] = "";
 	if (count($fieldToolTipspuertos_cto["English"]))
 		$tdatapuertos_cto[".isUseToolTips"] = true;
 }
@@ -185,7 +179,7 @@ $tdatapuertos_cto[".isUseAjaxSuggest"] = true;
 
 
 
-
+									
 
 $tdatapuertos_cto[".ajaxCodeSnippetAdded"] = false;
 
@@ -212,8 +206,7 @@ $tdatapuertos_cto[".googleLikeFields"][] = "Spliter";
 $tdatapuertos_cto[".googleLikeFields"][] = "Cable";
 $tdatapuertos_cto[".googleLikeFields"][] = "Localidad";
 $tdatapuertos_cto[".googleLikeFields"][] = "Cedula";
-$tdatapuertos_cto[".googleLikeFields"][] = "Activo";
-$tdatapuertos_cto[".googleLikeFields"][] = "Libre";
+$tdatapuertos_cto[".googleLikeFields"][] = "Ocupado";
 
 
 
@@ -247,7 +240,7 @@ $tdatapuertos_cto[".strOrderBy"] = $tstrOrderBy;
 $tdatapuertos_cto[".orderindexes"] = array();
 
 
-$tdatapuertos_cto[".sqlHead"] = "SELECT `Id_puertos`,  	`Puerto`,  	`Cto`,  	`Spliter`,  	`Cable`,  	`Localidad`,  	`Cedula`,  	`Activo`,  	`Libre`";
+$tdatapuertos_cto[".sqlHead"] = "SELECT `Id_puertos`,  `Puerto`,  `Cto`,  `Spliter`,  `Cable`,  `Localidad`,  `Cedula`,  `Ocupado`";
 $tdatapuertos_cto[".sqlFrom"] = "FROM `puertos_cto`";
 $tdatapuertos_cto[".sqlWhereExpr"] = "";
 $tdatapuertos_cto[".sqlTail"] = "";
@@ -1289,14 +1282,14 @@ $tdatapuertos_cto[".hideMobileList"] = array();
 
 	$tdatapuertos_cto["Cedula"] = $fdata;
 		$tdatapuertos_cto[".searchableFields"][] = "Cedula";
-//	Activo
+//	Ocupado
 //	Custom field settings
 	$fdata = array();
 	$fdata["Index"] = 8;
-	$fdata["strName"] = "Activo";
-	$fdata["GoodName"] = "Activo";
+	$fdata["strName"] = "Ocupado";
+	$fdata["GoodName"] = "Ocupado";
 	$fdata["ownerTable"] = "puertos_cto";
-	$fdata["Label"] = GetFieldLabel("puertos_cto","Activo");
+	$fdata["Label"] = GetFieldLabel("puertos_cto","Ocupado");
 	$fdata["FieldType"] = 200;
 
 
@@ -1304,12 +1297,12 @@ $tdatapuertos_cto[".hideMobileList"] = array();
 	
 			
 
-		$fdata["strField"] = "Activo";
+		$fdata["strField"] = "Ocupado";
 
-		$fdata["sourceSingle"] = "Activo";
+		$fdata["sourceSingle"] = "Ocupado";
 
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "`Activo`";
+	$fdata["FullName"] = "`Ocupado`";
 
 	
 	
@@ -1318,7 +1311,7 @@ $tdatapuertos_cto[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "Checkbox");
+	$vdata = array("ViewFormat" => "");
 
 	
 	
@@ -1334,7 +1327,8 @@ $tdatapuertos_cto[".hideMobileList"] = array();
 	
 	
 	
-	
+		$vdata["NeedEncode"] = true;
+
 	
 		$vdata["truncateText"] = true;
 	$vdata["NumberOfChars"] = 80;
@@ -1345,7 +1339,7 @@ $tdatapuertos_cto[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Checkbox");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -1355,6 +1349,22 @@ $tdatapuertos_cto[".hideMobileList"] = array();
 	
 	
 
+// Begin Lookup settings
+		$edata["LookupType"] = 0;
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+	
+		$edata["LookupValues"] = array();
+	$edata["LookupValues"][] = "SI";
+	$edata["LookupValues"][] = "NO";
+
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
 
 
 	
@@ -1421,142 +1431,8 @@ $tdatapuertos_cto[".hideMobileList"] = array();
 //end of Filters settings
 
 
-	$tdatapuertos_cto["Activo"] = $fdata;
-		$tdatapuertos_cto[".searchableFields"][] = "Activo";
-//	Libre
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 9;
-	$fdata["strName"] = "Libre";
-	$fdata["GoodName"] = "Libre";
-	$fdata["ownerTable"] = "puertos_cto";
-	$fdata["Label"] = GetFieldLabel("puertos_cto","Libre");
-	$fdata["FieldType"] = 200;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "Libre";
-
-		$fdata["sourceSingle"] = "Libre";
-
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "`Libre`";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "Checkbox");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Checkbox");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-	
-	
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-	
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Equals";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdatapuertos_cto["Libre"] = $fdata;
-		$tdatapuertos_cto[".searchableFields"][] = "Libre";
+	$tdatapuertos_cto["Ocupado"] = $fdata;
+		$tdatapuertos_cto[".searchableFields"][] = "Ocupado";
 
 
 $tables_data["puertos_cto"]=&$tdatapuertos_cto;
@@ -1605,6 +1481,30 @@ $masterTablesData["puertos_cto"] = array();
 				$masterTablesData["puertos_cto"][0]["detailKeys"][]="Localidad";
 		
 	//endif
+	
+	//if !@t.bReportCrossTab
+			$strOriginalDetailsTable="ctos";
+	$masterParams = array();
+	$masterParams["mDataSourceTable"]="Mapa_General";
+	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
+	$masterParams["mShortTable"]= "mapa_general";
+	$masterParams["masterKeys"]= array();
+	$masterParams["detailKeys"]= array();
+
+	$masterParams["type"] = PAGE_LIST;
+					$masterTablesData["puertos_cto"][1] = $masterParams;
+				$masterTablesData["puertos_cto"][1]["masterKeys"] = array();
+	$masterTablesData["puertos_cto"][1]["masterKeys"][]="Cto";
+				$masterTablesData["puertos_cto"][1]["masterKeys"][]="Localidad";
+				$masterTablesData["puertos_cto"][1]["masterKeys"][]="Cable";
+				$masterTablesData["puertos_cto"][1]["masterKeys"][]="Spliter";
+				$masterTablesData["puertos_cto"][1]["detailKeys"] = array();
+	$masterTablesData["puertos_cto"][1]["detailKeys"][]="Cto";
+				$masterTablesData["puertos_cto"][1]["detailKeys"][]="Localidad";
+				$masterTablesData["puertos_cto"][1]["detailKeys"][]="Cable";
+				$masterTablesData["puertos_cto"][1]["detailKeys"][]="Spliter";
+		
+	//endif
 // -----------------end  prepare master-details data arrays ------------------------------//
 
 
@@ -1625,7 +1525,7 @@ function createSqlQuery_puertos_cto()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "`Id_puertos`,  	`Puerto`,  	`Cto`,  	`Spliter`,  	`Cable`,  	`Localidad`,  	`Cedula`,  	`Activo`,  	`Libre`";
+$proto0["m_strFieldList"] = "`Id_puertos`,  `Puerto`,  `Cto`,  `Spliter`,  `Cable`,  `Localidad`,  `Cedula`,  `Ocupado`";
 $proto0["m_strFrom"] = "FROM `puertos_cto`";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
@@ -1765,71 +1665,57 @@ $obj = new SQLFieldListItem($proto18);
 $proto0["m_fieldlist"][]=$obj;
 						$proto20=array();
 			$obj = new SQLField(array(
-	"m_strName" => "Activo",
+	"m_strName" => "Ocupado",
 	"m_strTable" => "puertos_cto",
 	"m_srcTableName" => "puertos_cto"
 ));
 
-$proto20["m_sql"] = "`Activo`";
+$proto20["m_sql"] = "`Ocupado`";
 $proto20["m_srcTableName"] = "puertos_cto";
 $proto20["m_expr"]=$obj;
 $proto20["m_alias"] = "";
 $obj = new SQLFieldListItem($proto20);
 
 $proto0["m_fieldlist"][]=$obj;
-						$proto22=array();
-			$obj = new SQLField(array(
-	"m_strName" => "Libre",
-	"m_strTable" => "puertos_cto",
-	"m_srcTableName" => "puertos_cto"
-));
-
-$proto22["m_sql"] = "`Libre`";
-$proto22["m_srcTableName"] = "puertos_cto";
-$proto22["m_expr"]=$obj;
-$proto22["m_alias"] = "";
-$obj = new SQLFieldListItem($proto22);
-
-$proto0["m_fieldlist"][]=$obj;
 $proto0["m_fromlist"] = array();
-												$proto24=array();
-$proto24["m_link"] = "SQLL_MAIN";
-			$proto25=array();
-$proto25["m_strName"] = "puertos_cto";
-$proto25["m_srcTableName"] = "puertos_cto";
-$proto25["m_columns"] = array();
-$proto25["m_columns"][] = "Id_puertos";
-$proto25["m_columns"][] = "Puerto";
-$proto25["m_columns"][] = "Cto";
-$proto25["m_columns"][] = "Spliter";
-$proto25["m_columns"][] = "Cable";
-$proto25["m_columns"][] = "Localidad";
-$proto25["m_columns"][] = "Cedula";
-$proto25["m_columns"][] = "Activo";
-$proto25["m_columns"][] = "Libre";
-$obj = new SQLTable($proto25);
+												$proto22=array();
+$proto22["m_link"] = "SQLL_MAIN";
+			$proto23=array();
+$proto23["m_strName"] = "puertos_cto";
+$proto23["m_srcTableName"] = "puertos_cto";
+$proto23["m_columns"] = array();
+$proto23["m_columns"][] = "Id_puertos";
+$proto23["m_columns"][] = "Puerto";
+$proto23["m_columns"][] = "Cto";
+$proto23["m_columns"][] = "Spliter";
+$proto23["m_columns"][] = "Cable";
+$proto23["m_columns"][] = "Localidad";
+$proto23["m_columns"][] = "Cedula";
+$proto23["m_columns"][] = "Activo";
+$proto23["m_columns"][] = "Ocupado";
+$obj = new SQLTable($proto23);
 
-$proto24["m_table"] = $obj;
-$proto24["m_sql"] = "`puertos_cto`";
-$proto24["m_alias"] = "";
-$proto24["m_srcTableName"] = "puertos_cto";
-$proto26=array();
-$proto26["m_sql"] = "";
-$proto26["m_uniontype"] = "SQLL_UNKNOWN";
+$proto22["m_table"] = $obj;
+$proto22["m_sql"] = "`puertos_cto`";
+$proto22["m_alias"] = "";
+$proto22["m_srcTableName"] = "puertos_cto";
+$proto24=array();
+$proto24["m_sql"] = "";
+$proto24["m_uniontype"] = "SQLL_UNKNOWN";
 	$obj = new SQLNonParsed(array(
 	"m_sql" => ""
 ));
 
-$proto26["m_column"]=$obj;
-$proto26["m_contained"] = array();
-$proto26["m_strCase"] = "";
-$proto26["m_havingmode"] = false;
-$proto26["m_inBrackets"] = false;
-$proto26["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto26);
+$proto24["m_column"]=$obj;
+$proto24["m_contained"] = array();
+$proto24["m_strCase"] = "";
+$proto24["m_havingmode"] = false;
+$proto24["m_inBrackets"] = false;
+$proto24["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto24);
 
-$proto24["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto24);
+$proto22["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto22);
 
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
@@ -1845,7 +1731,7 @@ $queryData_puertos_cto = createSqlQuery_puertos_cto();
 	
 		;
 
-									
+								
 
 $tdatapuertos_cto[".sqlquery"] = $queryData_puertos_cto;
 

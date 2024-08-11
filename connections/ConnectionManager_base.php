@@ -252,7 +252,17 @@ class ConnectionManager_Base
 		$connectionsIds["numeros_cto"] = "isp_eisa_at_localhost";
 		$connectionsIds["numero_puertos"] = "isp_eisa_at_localhost";
 		$connectionsIds["puertos_cto"] = "isp_eisa_at_localhost";
-		$connectionsIds["ctos_view"] = "isp_eisa_at_localhost";
+		$connectionsIds["Mapa_General"] = "isp_eisa_at_localhost";
+		$connectionsIds["Mapa_ctos"] = "isp_eisa_at_localhost";
+		$connectionsIds["Mapa Puertos Libres"] = "isp_eisa_at_localhost";
+		$connectionsIds["Mapa Ventas"] = "isp_eisa_at_localhost";
+		$connectionsIds["Puertos_Libres"] = "isp_eisa_at_localhost";
+		$connectionsIds["usuarios"] = "isp_eisa_at_localhost";
+		$connectionsIds["admin_rights"] = "isp_eisa_at_localhost";
+		$connectionsIds["admin_members"] = "isp_eisa_at_localhost";
+		$connectionsIds["admin_users"] = "isp_eisa_at_localhost";
+		$connectionsIds["Vista_Digitadores"] = "isp_eisa_at_localhost";
+		$connectionsIds["Ingresar_cliente"] = "isp_eisa_at_localhost";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}

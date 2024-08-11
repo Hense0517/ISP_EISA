@@ -611,6 +611,7 @@ $adNestedPermissions = false;
 
 $ajaxSearchStartsWith = true;
 
+$globalSettings["staticGuestLogin"] = true;
 
 
 $globalSettings["LandingPageType"] = 1;
@@ -621,7 +622,7 @@ $globalSettings["LandingPageId"] = "list";
 
 $globalSettings["ProjectLogo"] = array();
 $globalSettings["ProjectLogo"]["English"] = "ISP_EISA";
-$globalSettings["ProjectLogo"]["Spanish"] = "ISP_EISA";
+$globalSettings["ProjectLogo"]["Spanish"] = "ISP EISA";
 
 $globalSettings["CookieBanner"] = array();
 
@@ -630,6 +631,8 @@ $globalSettings["useCookieBanner"] = 0 != 0;
 $globalSettings["htmlEmailTemplates"] = array();
 
 
+$globalSettings["createLoginPage"] = true;
+$globalSettings["userGroupCount"] = 2;
 
 
 $globalSettings["apiGoogleMapsCode"] = "AIzaSyBuiX5yYrOyl95mLlv2FfqFQoSRSvGPmz0";
@@ -676,10 +679,10 @@ $styleOverrides = array();
 $globalSettings["mapProvider"]=0;
 
 $globalSettings["CaptchaSettings"] = array();
-$globalSettings["CaptchaSettings"]["type"] = 0;
-$globalSettings["CaptchaSettings"]["siteKey"] = "";
-$globalSettings["CaptchaSettings"]["secretKey"] = "";
-$globalSettings["CaptchaSettings"]["captchaPassesCount"] = "5";
+$globalSettings["CaptchaSettings"]["type"] = 1;
+$globalSettings["CaptchaSettings"]["siteKey"] = "6LcvBxcqAAAAABZpXtHDLkIPdVpTJFpxtIE7WLVo";
+$globalSettings["CaptchaSettings"]["secretKey"] = "6LcvBxcqAAAAALEbAPalymbrl_QUF5Ri0R_Vd70j";
+$globalSettings["CaptchaSettings"]["captchaPassesCount"] = "3";
 
 
 
@@ -698,14 +701,25 @@ $WRAdminPagePassword = "";
  * Legacy variables for pre-10.6 business templates only.
  * DEPRECATED
  */
-$cLoginTable = "";
-$cDisplayNameField = "";
-$cUserNameField	= "";
-$cPasswordField	= "";
-$cUserGroupField = "";
+$cLoginTable = "usuarios";
+$cDisplayNameField = "Nombre";
+$cUserNameField	= "Nombre";
+$cPasswordField	= "Clave";
+$cUserGroupField = "Nombre";
 $cEmailField = "";
 $cUserpicField = "";
 $loginKeyFields= array();
+$loginKeyFields[] = "Id";
+
+//	legacy use only
+$cKeyFields = $loginKeyFields;
+
+/**
+ * End Legacy csection
+ */
+
+
+$globalSettings["usersDatasourceTable"] = "usuarios";
 
 
 $globalSettings["jwtSecret"] = "kMvsDKNeGc7oXnqQBYK3";
@@ -726,9 +740,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "206_1720735787";
+$projectBuildKey = "595_1723227451";
 $wizardBuildKey = "39558";
-$projectBuildNumber = "206";
+$projectBuildNumber = "595";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -760,7 +774,17 @@ $tableCaptions["Spanish"]["spliters"] = "Spliters";
 $tableCaptions["Spanish"]["numeros_cto"] = "Numeros Cto";
 $tableCaptions["Spanish"]["numero_puertos"] = "Numero Puertos";
 $tableCaptions["Spanish"]["puertos_cto"] = "Puertos Cto";
-$tableCaptions["Spanish"]["ctos_view"] = "Ctos View";
+$tableCaptions["Spanish"]["Mapa_General"] = "Mapa General";
+$tableCaptions["Spanish"]["Mapa_ctos"] = "Mapa Ctos";
+$tableCaptions["Spanish"]["Mapa_Puertos_Libres"] = "Mapa Puertos Libres";
+$tableCaptions["Spanish"]["Mapa_Ventas"] = "Mapa Ventas";
+$tableCaptions["Spanish"]["Puertos_Libres"] = "Puertos Libres";
+$tableCaptions["Spanish"]["usuarios"] = "Usuarios";
+$tableCaptions["Spanish"]["admin_rights"] = "Admin Rights";
+$tableCaptions["Spanish"]["admin_members"] = "Admin Members";
+$tableCaptions["Spanish"]["admin_users"] = "Admin Users";
+$tableCaptions["Spanish"]["Vista_Digitadores"] = "Vista Digitadores";
+$tableCaptions["Spanish"]["Ingresar_cliente"] = "Ingresar Cliente";
 $tableCaptions["English"] = array();
 $tableCaptions["English"][""] = "";
 $tableCaptions["English"]["numeros_de_cables"] = "Numeros De Cables";
@@ -772,7 +796,17 @@ $tableCaptions["English"]["spliters"] = "Spliters";
 $tableCaptions["English"]["numeros_cto"] = "Numeros Cto";
 $tableCaptions["English"]["numero_puertos"] = "Numero Puertos";
 $tableCaptions["English"]["puertos_cto"] = "Puertos Cto";
-$tableCaptions["English"]["ctos_view"] = "Ctos View";
+$tableCaptions["English"]["Mapa_General"] = "Mapa General";
+$tableCaptions["English"]["Mapa_ctos"] = "Mapa Ctos";
+$tableCaptions["English"]["Mapa_Puertos_Libres"] = "Mapa Puertos Libres";
+$tableCaptions["English"]["Mapa_Ventas"] = "Mapa Ventas";
+$tableCaptions["English"]["Puertos_Libres"] = "Puertos Libres";
+$tableCaptions["English"]["usuarios"] = "Usuarios";
+$tableCaptions["English"]["admin_rights"] = "Admin Rights";
+$tableCaptions["English"]["admin_members"] = "Admin Members";
+$tableCaptions["English"]["admin_users"] = "Admin Users";
+$tableCaptions["English"]["Vista_Digitadores"] = "Vista Digitadores";
+$tableCaptions["English"]["Ingresar_cliente"] = "Ingresar Cliente";
 
 
 $globalEvents = new class_GlobalEvents;
@@ -859,6 +893,8 @@ if(mlang_getcurrentlang()=="English")
 $globalSettings["showDetailedError"] = true;
 
 
+$globalSettings["restCreate"] = true;
+$globalSettings["restAuth"] = REST_BASIC;
 
 $globalSettings["mapMarkerCount"] = 50;
 
@@ -884,10 +920,34 @@ $gReadPermissions = true;
 $resizeImagesOnClient = false;
 
 
+// here goes EVENT_INIT_APP event
+
+
+// Place event code here.
+// Use "Add Action" button to add code snippets.
+
+if(postvalue("lat") && postvalue("lng")){
+    $_SESSION["geoLatitude"] = postvalue("lat");
+    $_SESSION["geoLongitude"] = postvalue("lng");
+    exit();
+}
+;
 
 
 // default connection link #9875
 $conn = $cman->getDefault()->conn;
+
+
+//	delete old username & password cookies
+if( $_COOKIE["password"] ) {
+	runner_setcookie("username", "", time() - 1, "", "", false, false);
+	runner_setcookie("password", "", time() - 1, "", "", false, false);
+}
+
+
+$logoutPerformed = false;
+Security::autoLoginAsGuest();
+Security::updateCSRFCookie();
 
 
 $isUseRTEBasic = true;

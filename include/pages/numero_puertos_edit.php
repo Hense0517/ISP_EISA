@@ -47,6 +47,7 @@
 'fixedAtClient' => false ) ),
 'width' => 1,
 'height' => 1 ) ) ),
+'loginForm' => array( 'loginForm' => 3 ),
 'page' => array( 'verticalBar' => false,
 'labeledButtons' => array( 'update_records' => array( 'update_records' => array( 'tag' => 'UPDATE_N_RECORDS',
 'type' => 2 ) ),

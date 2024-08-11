@@ -222,7 +222,27 @@ function checkTableName($shortTName )
 		return true;
 	if ("puertos_cto" == $shortTName )
 		return true;
-	if ("ctos_view" == $shortTName )
+	if ("mapa_general" == $shortTName )
+		return true;
+	if ("mapa_ctos" == $shortTName )
+		return true;
+	if ("mapa_puertos_libres" == $shortTName )
+		return true;
+	if ("mapa_ventas" == $shortTName )
+		return true;
+	if ("puertos_libres" == $shortTName )
+		return true;
+	if ("usuarios" == $shortTName )
+		return true;
+	if ("admin_rights" == $shortTName )
+		return true;
+	if ("admin_members" == $shortTName )
+		return true;
+	if ("admin_users" == $shortTName )
+		return true;
+	if ("vista_digitadores" == $shortTName )
+		return true;
+	if ("ingresar_cliente" == $shortTName )
 		return true;
 	return false;
 }
@@ -357,12 +377,102 @@ function GetTablesList($pdfMode = false)
 	}
 	$tableAvailable = true;
 	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("ctos_view");
+		$strPerm = GetUserPermissions("Mapa_General");
 		$tableAvailable = ( strpos($strPerm, "P") !== false
 			|| $pdfMode && strpos($strPerm, "S") !== false );
 	}
 	if( $tableAvailable ) {
-		$arr[]="ctos_view";
+		$arr[]="Mapa_General";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("Mapa_ctos");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="Mapa_ctos";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("Mapa Puertos Libres");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="Mapa Puertos Libres";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("Mapa Ventas");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="Mapa Ventas";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("Puertos_Libres");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="Puertos_Libres";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("usuarios");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="usuarios";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("admin_rights");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="admin_rights";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("admin_members");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="admin_members";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("admin_users");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="admin_users";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("Vista_Digitadores");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="Vista_Digitadores";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("Ingresar_cliente");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="Ingresar_cliente";
 	}
 	return $arr;
 }
@@ -382,7 +492,17 @@ function GetTablesListWithoutSecurity()
 	$arr[]="numeros_cto";
 	$arr[]="numero_puertos";
 	$arr[]="puertos_cto";
-	$arr[]="ctos_view";
+	$arr[]="Mapa_General";
+	$arr[]="Mapa_ctos";
+	$arr[]="Mapa Puertos Libres";
+	$arr[]="Mapa Ventas";
+	$arr[]="Puertos_Libres";
+	$arr[]="usuarios";
+	$arr[]="admin_rights";
+	$arr[]="admin_members";
+	$arr[]="admin_users";
+	$arr[]="Vista_Digitadores";
+	$arr[]="Ingresar_cliente";
 	return $arr;
 }
 
@@ -987,6 +1107,12 @@ function GetUserPermissionsDynamic( $table )
 	global $gPermissionsRefreshTime,$gPermissionsRead;
 	if( Security::isAdmin() )
 	{
+		if($table=="admin_rights")
+			return "ADESPIM";
+		if($table=="admin_members")
+			return "ADESPIM";
+		if($table=="admin_users")
+			return "ADESPIM";
 	}
 
 	$userRights = &Security::dynamicUserRights();
@@ -1006,62 +1132,182 @@ function GetUserPermissionsStatic( $table )
 	$extraPerm = "";
 	if( $table=="numeros_de_cables" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "S".$extraPerm;
+		}
 //	default permissions
-		// grant all by default
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="numeros_de_spliters" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "S".$extraPerm;
+		}
 //	default permissions
-		// grant all by default
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="ctos" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "S".$extraPerm;
+		}
 //	default permissions
-		// grant all by default
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="localidad" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "S".$extraPerm;
+		}
 //	default permissions
-		// grant all by default
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="cables" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "S".$extraPerm;
+		}
 //	default permissions
-		// grant all by default
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="spliters" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "S".$extraPerm;
+		}
 //	default permissions
-		// grant all by default
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="numeros_cto" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "S".$extraPerm;
+		}
 //	default permissions
-		// grant all by default
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="numero_puertos" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "S".$extraPerm;
+		}
 //	default permissions
-		// grant all by default
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="puertos_cto" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "S".$extraPerm;
+		}
 //	default permissions
-		// grant all by default
 		return "ADESPI".$extraPerm;
 	}
-	if( $table=="ctos_view" )
+	if( $table=="Mapa_General" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "S".$extraPerm;
+		}
 //	default permissions
-		// grant all by default
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="Mapa_ctos" )
+	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "S".$extraPerm;
+		}
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="Mapa Puertos Libres" )
+	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "S".$extraPerm;
+		}
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="Mapa Ventas" )
+	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "S".$extraPerm;
+		}
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="Puertos_Libres" )
+	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "S".$extraPerm;
+		}
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="usuarios" )
+	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "S".$extraPerm;
+		}
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="admin_rights" )
+	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "S".$extraPerm;
+		}
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="admin_members" )
+	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "S".$extraPerm;
+		}
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="admin_users" )
+	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "S".$extraPerm;
+		}
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="Vista_Digitadores" )
+	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "S".$extraPerm;
+		}
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="Ingresar_cliente" )
+	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "S".$extraPerm;
+		}
+//	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	// grant nothing by default

@@ -91,9 +91,6 @@ pdfDocument = {
 										{BEGIN col_grid_8}
 					"%",
 					{END col_grid_8}
-										{BEGIN col_grid_9}
-					"%",
-					{END col_grid_9}
 															],
 											heights: [ // first height for header part
 					"%",
@@ -201,12 +198,6 @@ pdfDocument = {
 				
 				
 			{"text":"","hidden":"{$item_hide_inline_add}"},
-				
-				
-			{"text":"","hidden":"{$item_hide_inline_save_all}"},
-				
-				
-			{"text":"","hidden":"{$item_hide_inline_cancel_all}"},
 				
 				
 			{"text":"","hidden":"{$item_hide_delete}"},
@@ -499,7 +490,7 @@ pdfDocument = {
 	cellId: 'headcell_field6',
 	col:0,
 	row:0,
-			fieldName: 'Activo',
+			fieldName: 'Ocupado',
 				style: 'headcell',
 		
 		
@@ -513,45 +504,16 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel puertos_cto Activo }","hidden":"{$item_hide_simple_grid_field14}","bold":true},
+			{"text":"{$jslabel puertos_cto Ocupado }","hidden":"{$item_hide_grid_field_label}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$Activo_align}',
+              "alignment": '{$Ocupado_align}',
      
       
       },
 
 {END cellblock_grid_headcell_field6}
-																							{BEGIN cellblock_grid_headcell_field7}
-{
-	cellId: 'headcell_field7',
-	col:0,
-	row:0,
-			fieldName: 'Libre',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-						
-	
-	
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel puertos_cto Libre }","hidden":"{$item_hide_simple_grid_field15}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Libre_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field7}
 											],
 				{END row_grid_0}
 		
@@ -580,12 +542,6 @@ pdfDocument = {
 		
 				
 			{"text":"","hidden":"{$item_hide_grid_edit}"},
-				
-				
-			{"text":"","hidden":"{$item_hide_grid_inline_edit}"},
-				
-				
-			{"text":"","hidden":"{$item_hide_grid_inline_save}"},
 				
 				
 			{"text":"","hidden":"{$item_hide_grid_inline_cancel}"},
@@ -808,7 +764,7 @@ pdfDocument = {
 	cellId: 'cell_field6',
 	col:0,
 	row:0,
-			fieldName: 'Activo',
+			fieldName: 'Ocupado',
 				style: 'bodycell',
 		
 		
@@ -822,45 +778,16 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$Activo_pdfvalue},"hidden":"{$item_hide_simple_grid_field7}"},
+			{"text":{$Ocupado_pdfvalue},"hidden":"{$item_hide_grid_field}"},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$Activo_align}',
+              "alignment": '{$Ocupado_align}',
      
       
       },
 
 {END cellblock_grid_cell_field6}
-																							{BEGIN cellblock_grid_cell_field7}
-{
-	cellId: 'cell_field7',
-	col:0,
-	row:0,
-			fieldName: 'Libre',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-						
-	
-	
-	
-			"text": [
-		
-				
-			{"text":{$Libre_pdfvalue},"hidden":"{$item_hide_simple_grid_field8}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Libre_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field7}
 											],
 				{END row_grid_1}
 		
@@ -1104,32 +1031,6 @@ pdfDocument = {
       },
 
 {END cellblock_grid_footcell_field6}
-																							{BEGIN cellblock_grid_footcell_field7}
-{
-	cellId: 'footcell_field7',
-	col:0,
-	row:0,
-				style: 'footcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-						
-	
-	
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_footcell_field7}
 											],
 				{END row_grid_2}
 		

@@ -109,7 +109,49 @@ pdfDocument = {
 			{"text":{$Localidad_pdfvalue},"hidden":"{$item_hide_export_field1}"},
 				
 				
-			{"text":{$id_localidad_pdfvalue},"hidden":"{$item_hide_export_field}"},
+			{"text":{$Tipo_Olt_pdfvalue},"hidden":"{$item_hide_export_field2}"},
+				
+				
+			{"text":{$Serial_Olt_pdfvalue},"hidden":"{$item_hide_export_field3}"},
+				
+				
+			{"text":{$Tipo_Mikrotik_pdfvalue},"hidden":"{$item_hide_export_field4}"},
+				
+				
+			{"text":{$Serial_Mikrotik_pdfvalue},"hidden":"{$item_hide_export_field5}"},
+				
+				
+			{"text":{$Serial_Ont_Prueba_pdfvalue},"hidden":"{$item_hide_export_field6}"},
+				
+				
+			{"text":{$Serial_Raspberry_pdfvalue},"hidden":"{$item_hide_export_field7}"},
+				
+				
+			{"text":{$Serial_Camara_pdfvalue},"hidden":"{$item_hide_export_field8}"},
+				
+				
+			{"text":{$Nombre_del_custodio_pdfvalue},"hidden":"{$item_hide_export_field9}"},
+				
+				
+			{"text":{$Telefono_del_custodio_pdfvalue},"hidden":"{$item_hide_export_field10}"},
+				
+				
+			{"text":{$Contrato_de_energia_pdfvalue},"hidden":"{$item_hide_export_field11}"},
+				
+				
+			{"text":{$Latitud_pdfvalue},"hidden":"{$item_hide_export_field12}"},
+				
+				
+			{"text":{$Longitud_pdfvalue},"hidden":"{$item_hide_export_field13}"},
+				
+				
+			{"text":{$Mapa_pdfvalue},"hidden":"{$item_hide_export_field14}"},
+				
+				
+			{"text":{$Direccion_pdfvalue},"hidden":"{$item_hide_export_field15}"},
+				
+				
+			{"text":{$Observaciones_pdfvalue},"hidden":"{$item_hide_export_field16}"},
 				
 		  ],
   "border": [ false, false, false, false ],
