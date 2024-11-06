@@ -216,6 +216,12 @@ pdfDocument = {
 				
 			{"text":{$Observaciones_pdfvalue},"hidden":"{$item_hide_integrated_search_field16}"},
 				
+				
+			{"text":{$Foto_pdfvalue},"hidden":"{$item_hide_integrated_search_field17}"},
+				
+				
+			{"text":{$qr_pdfvalue},"hidden":"{$item_hide_integrated_search_field18}"},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

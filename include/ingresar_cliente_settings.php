@@ -52,6 +52,18 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsingresar_cliente["Spanish"]["Ocupado"] = "Ocupado";
 	$fieldToolTipsingresar_cliente["Spanish"]["Ocupado"] = "";
 	$placeHoldersingresar_cliente["Spanish"]["Ocupado"] = "";
+	$fieldLabelsingresar_cliente["Spanish"]["id_cto"] = "Id Cto";
+	$fieldToolTipsingresar_cliente["Spanish"]["id_cto"] = "";
+	$placeHoldersingresar_cliente["Spanish"]["id_cto"] = "";
+	$fieldLabelsingresar_cliente["Spanish"]["id_spliter"] = "Id Spliter";
+	$fieldToolTipsingresar_cliente["Spanish"]["id_spliter"] = "";
+	$placeHoldersingresar_cliente["Spanish"]["id_spliter"] = "";
+	$fieldLabelsingresar_cliente["Spanish"]["id_cable"] = "Id Cable";
+	$fieldToolTipsingresar_cliente["Spanish"]["id_cable"] = "";
+	$placeHoldersingresar_cliente["Spanish"]["id_cable"] = "";
+	$fieldLabelsingresar_cliente["Spanish"]["id_localidad"] = "Id Localidad";
+	$fieldToolTipsingresar_cliente["Spanish"]["id_localidad"] = "";
+	$placeHoldersingresar_cliente["Spanish"]["id_localidad"] = "";
 	$pageTitlesingresar_cliente["Spanish"]["view"] = "Id Puerto {%Id_puertos}";
 	if (count($fieldToolTipsingresar_cliente["Spanish"]))
 		$tdataingresar_cliente[".isUseToolTips"] = true;
@@ -89,6 +101,18 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelsingresar_cliente["English"]["Ocupado"] = "Ocupado";
 	$fieldToolTipsingresar_cliente["English"]["Ocupado"] = "";
 	$placeHoldersingresar_cliente["English"]["Ocupado"] = "";
+	$fieldLabelsingresar_cliente["English"]["id_cto"] = "Id Cto";
+	$fieldToolTipsingresar_cliente["English"]["id_cto"] = "";
+	$placeHoldersingresar_cliente["English"]["id_cto"] = "";
+	$fieldLabelsingresar_cliente["English"]["id_spliter"] = "Id Spliter";
+	$fieldToolTipsingresar_cliente["English"]["id_spliter"] = "";
+	$placeHoldersingresar_cliente["English"]["id_spliter"] = "";
+	$fieldLabelsingresar_cliente["English"]["id_cable"] = "Id Cable";
+	$fieldToolTipsingresar_cliente["English"]["id_cable"] = "";
+	$placeHoldersingresar_cliente["English"]["id_cable"] = "";
+	$fieldLabelsingresar_cliente["English"]["id_localidad"] = "Id Localidad";
+	$fieldToolTipsingresar_cliente["English"]["id_localidad"] = "";
+	$placeHoldersingresar_cliente["English"]["id_localidad"] = "";
 	if (count($fieldToolTipsingresar_cliente["English"]))
 		$tdataingresar_cliente[".isUseToolTips"] = true;
 }
@@ -215,6 +239,10 @@ $tdataingresar_cliente[".googleLikeFields"][] = "Localidad";
 $tdataingresar_cliente[".googleLikeFields"][] = "Cedula";
 $tdataingresar_cliente[".googleLikeFields"][] = "Activo";
 $tdataingresar_cliente[".googleLikeFields"][] = "Ocupado";
+$tdataingresar_cliente[".googleLikeFields"][] = "id_cto";
+$tdataingresar_cliente[".googleLikeFields"][] = "id_spliter";
+$tdataingresar_cliente[".googleLikeFields"][] = "id_cable";
+$tdataingresar_cliente[".googleLikeFields"][] = "id_localidad";
 
 
 
@@ -249,7 +277,7 @@ $tdataingresar_cliente[".strOrderBy"] = $tstrOrderBy;
 $tdataingresar_cliente[".orderindexes"] = array();
 
 
-$tdataingresar_cliente[".sqlHead"] = "SELECT `Id_puertos`,  	`Puerto`,  	`Cto`,  	`Spliter`,  	`Cable`,  	`Localidad`,  	`Cedula`,  	`Activo`,  	`Ocupado`";
+$tdataingresar_cliente[".sqlHead"] = "SELECT `Id_puertos`,  	`Puerto`,  	`Cto`,  	`Spliter`,  	`Cable`,  	`Localidad`,  	`Cedula`,  	`Activo`,  	`Ocupado`,  	`id_cto`,  	`id_spliter`,  	`id_cable`,  	`id_localidad`";
 $tdataingresar_cliente[".sqlFrom"] = "FROM `puertos_cto`";
 $tdataingresar_cliente[".sqlWhereExpr"] = "";
 $tdataingresar_cliente[".sqlTail"] = "";
@@ -2725,6 +2753,558 @@ $tdataingresar_cliente[".hideMobileList"] = array();
 
 	$tdataingresar_cliente["Ocupado"] = $fdata;
 		$tdataingresar_cliente[".searchableFields"][] = "Ocupado";
+//	id_cto
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 10;
+	$fdata["strName"] = "id_cto";
+	$fdata["GoodName"] = "id_cto";
+	$fdata["ownerTable"] = "puertos_cto";
+	$fdata["Label"] = GetFieldLabel("Ingresar_cliente","id_cto");
+	$fdata["FieldType"] = 3;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "id_cto";
+
+		$fdata["sourceSingle"] = "id_cto";
+
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "`id_cto`";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+		
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
+							
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdataingresar_cliente["id_cto"] = $fdata;
+		$tdataingresar_cliente[".searchableFields"][] = "id_cto";
+//	id_spliter
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 11;
+	$fdata["strName"] = "id_spliter";
+	$fdata["GoodName"] = "id_spliter";
+	$fdata["ownerTable"] = "puertos_cto";
+	$fdata["Label"] = GetFieldLabel("Ingresar_cliente","id_spliter");
+	$fdata["FieldType"] = 3;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "id_spliter";
+
+		$fdata["sourceSingle"] = "id_spliter";
+
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "`id_spliter`";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+		
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
+							
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdataingresar_cliente["id_spliter"] = $fdata;
+		$tdataingresar_cliente[".searchableFields"][] = "id_spliter";
+//	id_cable
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 12;
+	$fdata["strName"] = "id_cable";
+	$fdata["GoodName"] = "id_cable";
+	$fdata["ownerTable"] = "puertos_cto";
+	$fdata["Label"] = GetFieldLabel("Ingresar_cliente","id_cable");
+	$fdata["FieldType"] = 3;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "id_cable";
+
+		$fdata["sourceSingle"] = "id_cable";
+
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "`id_cable`";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+		
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
+							
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdataingresar_cliente["id_cable"] = $fdata;
+		$tdataingresar_cliente[".searchableFields"][] = "id_cable";
+//	id_localidad
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 13;
+	$fdata["strName"] = "id_localidad";
+	$fdata["GoodName"] = "id_localidad";
+	$fdata["ownerTable"] = "puertos_cto";
+	$fdata["Label"] = GetFieldLabel("Ingresar_cliente","id_localidad");
+	$fdata["FieldType"] = 3;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "id_localidad";
+
+		$fdata["sourceSingle"] = "id_localidad";
+
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "`id_localidad`";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+		
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
+							
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdataingresar_cliente["id_localidad"] = $fdata;
+		$tdataingresar_cliente[".searchableFields"][] = "id_localidad";
 
 
 $tables_data["Ingresar_cliente"]=&$tdataingresar_cliente;
@@ -2769,12 +3349,12 @@ function createSqlQuery_ingresar_cliente()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "`Id_puertos`,  	`Puerto`,  	`Cto`,  	`Spliter`,  	`Cable`,  	`Localidad`,  	`Cedula`,  	`Activo`,  	`Ocupado`";
+$proto0["m_strFieldList"] = "`Id_puertos`,  	`Puerto`,  	`Cto`,  	`Spliter`,  	`Cable`,  	`Localidad`,  	`Cedula`,  	`Activo`,  	`Ocupado`,  	`id_cto`,  	`id_spliter`,  	`id_cable`,  	`id_localidad`";
 $proto0["m_strFrom"] = "FROM `puertos_cto`";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
 	
-		;
+										;
 			$proto0["cipherer"] = null;
 $proto2=array();
 $proto2["m_sql"] = "";
@@ -2935,45 +3515,105 @@ $proto22["m_alias"] = "";
 $obj = new SQLFieldListItem($proto22);
 
 $proto0["m_fieldlist"][]=$obj;
-$proto0["m_fromlist"] = array();
-												$proto24=array();
-$proto24["m_link"] = "SQLL_MAIN";
-			$proto25=array();
-$proto25["m_strName"] = "puertos_cto";
-$proto25["m_srcTableName"] = "Ingresar_cliente";
-$proto25["m_columns"] = array();
-$proto25["m_columns"][] = "Id_puertos";
-$proto25["m_columns"][] = "Puerto";
-$proto25["m_columns"][] = "Cto";
-$proto25["m_columns"][] = "Spliter";
-$proto25["m_columns"][] = "Cable";
-$proto25["m_columns"][] = "Localidad";
-$proto25["m_columns"][] = "Cedula";
-$proto25["m_columns"][] = "Activo";
-$proto25["m_columns"][] = "Ocupado";
-$obj = new SQLTable($proto25);
+						$proto24=array();
+			$obj = new SQLField(array(
+	"m_strName" => "id_cto",
+	"m_strTable" => "puertos_cto",
+	"m_srcTableName" => "Ingresar_cliente"
+));
 
-$proto24["m_table"] = $obj;
-$proto24["m_sql"] = "`puertos_cto`";
-$proto24["m_alias"] = "";
+$proto24["m_sql"] = "`id_cto`";
 $proto24["m_srcTableName"] = "Ingresar_cliente";
-$proto26=array();
-$proto26["m_sql"] = "";
-$proto26["m_uniontype"] = "SQLL_UNKNOWN";
+$proto24["m_expr"]=$obj;
+$proto24["m_alias"] = "";
+$obj = new SQLFieldListItem($proto24);
+
+$proto0["m_fieldlist"][]=$obj;
+						$proto26=array();
+			$obj = new SQLField(array(
+	"m_strName" => "id_spliter",
+	"m_strTable" => "puertos_cto",
+	"m_srcTableName" => "Ingresar_cliente"
+));
+
+$proto26["m_sql"] = "`id_spliter`";
+$proto26["m_srcTableName"] = "Ingresar_cliente";
+$proto26["m_expr"]=$obj;
+$proto26["m_alias"] = "";
+$obj = new SQLFieldListItem($proto26);
+
+$proto0["m_fieldlist"][]=$obj;
+						$proto28=array();
+			$obj = new SQLField(array(
+	"m_strName" => "id_cable",
+	"m_strTable" => "puertos_cto",
+	"m_srcTableName" => "Ingresar_cliente"
+));
+
+$proto28["m_sql"] = "`id_cable`";
+$proto28["m_srcTableName"] = "Ingresar_cliente";
+$proto28["m_expr"]=$obj;
+$proto28["m_alias"] = "";
+$obj = new SQLFieldListItem($proto28);
+
+$proto0["m_fieldlist"][]=$obj;
+						$proto30=array();
+			$obj = new SQLField(array(
+	"m_strName" => "id_localidad",
+	"m_strTable" => "puertos_cto",
+	"m_srcTableName" => "Ingresar_cliente"
+));
+
+$proto30["m_sql"] = "`id_localidad`";
+$proto30["m_srcTableName"] = "Ingresar_cliente";
+$proto30["m_expr"]=$obj;
+$proto30["m_alias"] = "";
+$obj = new SQLFieldListItem($proto30);
+
+$proto0["m_fieldlist"][]=$obj;
+$proto0["m_fromlist"] = array();
+												$proto32=array();
+$proto32["m_link"] = "SQLL_MAIN";
+			$proto33=array();
+$proto33["m_strName"] = "puertos_cto";
+$proto33["m_srcTableName"] = "Ingresar_cliente";
+$proto33["m_columns"] = array();
+$proto33["m_columns"][] = "Id_puertos";
+$proto33["m_columns"][] = "Puerto";
+$proto33["m_columns"][] = "Cto";
+$proto33["m_columns"][] = "Spliter";
+$proto33["m_columns"][] = "Cable";
+$proto33["m_columns"][] = "Localidad";
+$proto33["m_columns"][] = "Cedula";
+$proto33["m_columns"][] = "Activo";
+$proto33["m_columns"][] = "Ocupado";
+$proto33["m_columns"][] = "id_cto";
+$proto33["m_columns"][] = "id_spliter";
+$proto33["m_columns"][] = "id_cable";
+$proto33["m_columns"][] = "id_localidad";
+$obj = new SQLTable($proto33);
+
+$proto32["m_table"] = $obj;
+$proto32["m_sql"] = "`puertos_cto`";
+$proto32["m_alias"] = "";
+$proto32["m_srcTableName"] = "Ingresar_cliente";
+$proto34=array();
+$proto34["m_sql"] = "";
+$proto34["m_uniontype"] = "SQLL_UNKNOWN";
 	$obj = new SQLNonParsed(array(
 	"m_sql" => ""
 ));
 
-$proto26["m_column"]=$obj;
-$proto26["m_contained"] = array();
-$proto26["m_strCase"] = "";
-$proto26["m_havingmode"] = false;
-$proto26["m_inBrackets"] = false;
-$proto26["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto26);
+$proto34["m_column"]=$obj;
+$proto34["m_contained"] = array();
+$proto34["m_strCase"] = "";
+$proto34["m_havingmode"] = false;
+$proto34["m_inBrackets"] = false;
+$proto34["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto34);
 
-$proto24["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto24);
+$proto32["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto32);
 
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
@@ -2987,9 +3627,9 @@ $queryData_ingresar_cliente = createSqlQuery_ingresar_cliente();
 
 
 	
-		;
+										;
 
-									
+													
 
 $tdataingresar_cliente[".sqlquery"] = $queryData_ingresar_cliente;
 

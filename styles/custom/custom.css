@@ -1,0 +1,149 @@
+/* Estilos generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7f9fc;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #004080; /* Azul empresarial */
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* Contenedores */
+.container {
+    margin-top: 2rem;
+}
+
+.panel {
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    border: none;
+}
+
+.panel-heading {
+    background-color: #004080; /* Azul oscuro */
+    color: white;
+    padding: 1rem;
+    border-radius: 10px 10px 0 0;
+    font-size: 1.25rem;
+}
+
+/* Navegación por pestañas */
+.nav-tabs .nav-link {
+    color: #004080;
+    border: none;
+    border-bottom: 2px solid transparent;
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+    transition: color 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
+}
+
+.nav-tabs .nav-link.active {
+    color: #0073e6; /* Azul brillante */
+    border-bottom: 2px solid #0073e6;
+}
+
+/* Cuerpo del panel */
+.panel-body {
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 0 0 10px 10px;
+}
+
+/* Tablas */
+table.r-edit-form {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5rem;
+}
+
+table.r-edit-form td {
+    padding: 1rem;
+    vertical-align: middle;
+    border-bottom: 1px solid #dee2e6;
+}
+
+table.r-edit-form tr:last-child td {
+    border-bottom: none;
+}
+
+/* Etiquetas y campos de formulario */
+label {
+    font-weight: bold;
+    color: #004080;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.form-group .col-md-12 {
+    padding: 0;
+}
+
+.form-group .col-md-12 div {
+    font-size: 1.125rem;
+    color: #555;
+}
+
+/* Botones */
+.btn-primary {
+    background-color: #0073e6; /* Azul brillante */
+    border-color: #0073e6;
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+    background-color: #005bb5; /* Azul más oscuro al hacer hover */
+    border-color: #005bb5;
+}
+
+/* Campos y formularios */
+.form-control {
+    border-radius: 5px;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ced4da;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.form-control:focus {
+    border-color: #0073e6;
+    box-shadow: none;
+}
+
+/* Formularios integrados */
+.r-integrated-field.form-group {
+    margin-bottom: 1.5rem;
+}
+
+/* Margen en formularios integrados */
+.r-integrated-field {
+    margin-bottom: 1rem;
+}
+
+/* Ajustes de alineación y espaciado */
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.col-md-12 {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+@media (min-width: 768px) {
+    .col-md-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}

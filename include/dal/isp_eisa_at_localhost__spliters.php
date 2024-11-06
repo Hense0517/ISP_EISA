@@ -8,6 +8,7 @@ $dalTablespliters["id_cable"] = array("type"=>3,"varname"=>"id_cable", "name" =>
 $dalTablespliters["Numero_de_tarjeta"] = array("type"=>3,"varname"=>"Numero_de_tarjeta", "name" => "Numero_de_tarjeta", "autoInc" => "0");
 $dalTablespliters["Numero_de_puerto"] = array("type"=>3,"varname"=>"Numero_de_puerto", "name" => "Numero_de_puerto", "autoInc" => "0");
 $dalTablespliters["Barrio"] = array("type"=>200,"varname"=>"Barrio", "name" => "Barrio", "autoInc" => "0");
+$dalTablespliters["id_localidad"] = array("type"=>3,"varname"=>"id_localidad", "name" => "id_localidad", "autoInc" => "0");
 $dalTablespliters["id_spliters"]["key"]=true;
 
 $dal_info["isp_eisa_at_localhost__spliters"] = &$dalTablespliters;

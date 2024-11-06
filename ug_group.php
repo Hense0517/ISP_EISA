@@ -35,6 +35,13 @@ $nonAdminTablesArr[] = "Puertos_Libres";
 $nonAdminTablesArr[] = "usuarios";
 $nonAdminTablesArr[] = "Vista_Digitadores";
 $nonAdminTablesArr[] = "Ingresar_cliente";
+$nonAdminTablesArr[] = "reporte_afectaciones";
+$nonAdminTablesArr[] = "reporte_afectaciones_view";
+$nonAdminTablesArr[] = "tarjeta_olt";
+$nonAdminTablesArr[] = "puertos_olt";
+$nonAdminTablesArr[] = "Clientes_por_puerto";
+$nonAdminTablesArr[] = "Departamentos";
+$nonAdminTablesArr[] = "Ciudades";
 
 $ug_connection = $cman->getForUserGroups();
 

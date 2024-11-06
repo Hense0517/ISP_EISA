@@ -2151,7 +2151,7 @@ $proto0["m_strFrom"] = "FROM `ctos`";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
 	
-		;
+										;
 			$proto0["cipherer"] = null;
 $proto2=array();
 $proto2["m_sql"] = "";
@@ -2407,6 +2407,8 @@ $proto38["m_columns"][] = "Lat";
 $proto38["m_columns"][] = "Lng";
 $proto38["m_columns"][] = "Ubicacion";
 $proto38["m_columns"][] = "id_spliter";
+$proto38["m_columns"][] = "id_cable";
+$proto38["m_columns"][] = "id_localidad";
 $obj = new SQLTable($proto38);
 
 $proto37["m_table"] = $obj;
@@ -2443,7 +2445,7 @@ $queryData_vista_digitadores = createSqlQuery_vista_digitadores();
 
 
 	
-		;
+										;
 
 												
 

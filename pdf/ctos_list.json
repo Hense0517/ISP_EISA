@@ -91,6 +91,9 @@ pdfDocument = {
 										{BEGIN col_grid_8}
 					"%",
 					{END col_grid_8}
+										{BEGIN col_grid_9}
+					"%",
+					{END col_grid_9}
 															],
 											heights: [ // first height for header part
 					"%",
@@ -245,15 +248,6 @@ pdfDocument = {
 			{"text":"","hidden":"{$item_hide_add}"},
 				
 				
-			{"text":"","hidden":"{$item_hide_inline_add}"},
-				
-				
-			{"text":"","hidden":"{$item_hide_inline_save_all}"},
-				
-				
-			{"text":"","hidden":"{$item_hide_inline_cancel_all}"},
-				
-				
 			{"text":"","hidden":"{$item_hide_delete}"},
 				
 				
@@ -370,12 +364,14 @@ pdfDocument = {
 	cellId: 'headcell_details',
 	col:0,
 	row:0,
-			fieldName: 'Cto',
 				style: 'headcell',
 		
 		
 	//	dynamic colspan/rowspan
 
+					{BEGIN colspan_grid_headcell_details}
+			colSpan: {$colspan_grid_headcell_details},
+			{END colspan_grid_headcell_details}
 		
 						
 	
@@ -388,13 +384,19 @@ pdfDocument = {
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$Cto_align}',
+              "alignment": 'center',
      
       
       },
 
 {END cellblock_grid_headcell_details}
-																							{BEGIN cellblock_grid_headcell_field}
+																		{ 
+				cellId: 'headcell_details',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+																			{BEGIN cellblock_grid_headcell_field}
 {
 	cellId: 'headcell_field',
 	col:0,
@@ -595,15 +597,6 @@ pdfDocument = {
 			{"text":"","hidden":"{$item_hide_grid_edit}"},
 				
 				
-			{"text":"","hidden":"{$item_hide_grid_inline_edit}"},
-				
-				
-			{"text":"","hidden":"{$item_hide_grid_inline_save}"},
-				
-				
-			{"text":"","hidden":"{$item_hide_grid_inline_cancel}"},
-				
-				
 			{"text":"","hidden":"{$item_hide_grid_view}"},
 				
 		  ],
@@ -647,7 +640,34 @@ pdfDocument = {
 	cellId: 'cell_details',
 	col:0,
 	row:0,
-			fieldName: 'Cto',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":{$pdf_image images/red%20(2).png undefined 0},"hidden":"{$item_hide_image1}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_details}
+																							{BEGIN cellblock_grid_cell_details1}
+{
+	cellId: 'cell_details1',
+	col:0,
+	row:0,
 				style: 'bodycell',
 		
 		
@@ -665,12 +685,12 @@ pdfDocument = {
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$Cto_align}',
+              "alignment": 'left',
      
       
       },
 
-{END cellblock_grid_cell_details}
+{END cellblock_grid_cell_details1}
 																							{BEGIN cellblock_grid_cell_field}
 {
 	cellId: 'cell_field',
@@ -834,7 +854,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"","hidden":"{$item_hide_grid_details_link}"},
+			{"text":"","pageBreak":"after","hidden":"{$item_hide_grid_details_link}"},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -915,6 +935,9 @@ pdfDocument = {
 		
 	//	dynamic colspan/rowspan
 
+					{BEGIN colspan_grid_footcell_details}
+			colSpan: {$colspan_grid_footcell_details},
+			{END colspan_grid_footcell_details}
 		
 						
 	
@@ -931,11 +954,18 @@ pdfDocument = {
       },
 
 {END cellblock_grid_footcell_details}
-																							{BEGIN cellblock_grid_footcell_field}
+																		{ 
+				cellId: 'footcell_details',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+																			{BEGIN cellblock_grid_footcell_field}
 {
 	cellId: 'footcell_field',
 	col:0,
 	row:0,
+			fieldName: 'Spliter',
 				style: 'footcell',
 		
 		
@@ -951,7 +981,7 @@ pdfDocument = {
 				'',
 	  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$Spliter_align}',
      
       
       },
@@ -962,6 +992,7 @@ pdfDocument = {
 	cellId: 'footcell_field1',
 	col:0,
 	row:0,
+			fieldName: 'Cable',
 				style: 'footcell',
 		
 		
@@ -977,7 +1008,7 @@ pdfDocument = {
 				'',
 	  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$Cable_align}',
      
       
       },
@@ -988,6 +1019,7 @@ pdfDocument = {
 	cellId: 'footcell_field2',
 	col:0,
 	row:0,
+			fieldName: 'Localidad',
 				style: 'footcell',
 		
 		
@@ -1003,7 +1035,7 @@ pdfDocument = {
 				'',
 	  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$Localidad_align}',
      
       
       },
@@ -1014,6 +1046,7 @@ pdfDocument = {
 	cellId: 'footcell_field3',
 	col:0,
 	row:0,
+			fieldName: 'Latitud',
 				style: 'footcell',
 		
 		
@@ -1029,7 +1062,7 @@ pdfDocument = {
 				'',
 	  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$Latitud_align}',
      
       
       },
@@ -1040,6 +1073,7 @@ pdfDocument = {
 	cellId: 'footcell_field4',
 	col:0,
 	row:0,
+			fieldName: 'Longitud',
 				style: 'footcell',
 		
 		
@@ -1055,7 +1089,7 @@ pdfDocument = {
 				'',
 	  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$Longitud_align}',
      
       
       },

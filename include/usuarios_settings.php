@@ -37,6 +37,9 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsusuarios["Spanish"]["Clave"] = "Clave";
 	$fieldToolTipsusuarios["Spanish"]["Clave"] = "";
 	$placeHoldersusuarios["Spanish"]["Clave"] = "";
+	$fieldLabelsusuarios["Spanish"]["apikey"] = "Apikey";
+	$fieldToolTipsusuarios["Spanish"]["apikey"] = "";
+	$placeHoldersusuarios["Spanish"]["apikey"] = "";
 	if (count($fieldToolTipsusuarios["Spanish"]))
 		$tdatausuarios[".isUseToolTips"] = true;
 }
@@ -58,6 +61,9 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelsusuarios["English"]["Clave"] = "Clave";
 	$fieldToolTipsusuarios["English"]["Clave"] = "";
 	$placeHoldersusuarios["English"]["Clave"] = "";
+	$fieldLabelsusuarios["English"]["apikey"] = "Apikey";
+	$fieldToolTipsusuarios["English"]["apikey"] = "";
+	$placeHoldersusuarios["English"]["apikey"] = "";
 	if (count($fieldToolTipsusuarios["English"]))
 		$tdatausuarios[".isUseToolTips"] = true;
 }
@@ -212,7 +218,7 @@ $tdatausuarios[".strOrderBy"] = $tstrOrderBy;
 $tdatausuarios[".orderindexes"] = array();
 
 
-$tdatausuarios[".sqlHead"] = "SELECT `Id`,  	`Nombre`,  	`Perfil`,  	`Clave`";
+$tdatausuarios[".sqlHead"] = "SELECT `Id`,  	`Nombre`,  	`Perfil`,  	`Clave`,  	`apikey`";
 $tdatausuarios[".sqlFrom"] = "FROM `usuarios`";
 $tdatausuarios[".sqlWhereExpr"] = "";
 $tdatausuarios[".sqlTail"] = "";
@@ -815,6 +821,144 @@ $tdatausuarios[".hideMobileList"] = array();
 
 	$tdatausuarios["Clave"] = $fdata;
 		$tdatausuarios[".searchableFields"][] = "Clave";
+//	apikey
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 5;
+	$fdata["strName"] = "apikey";
+	$fdata["GoodName"] = "apikey";
+	$fdata["ownerTable"] = "usuarios";
+	$fdata["Label"] = GetFieldLabel("usuarios","apikey");
+	$fdata["FieldType"] = 200;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "apikey";
+
+		$fdata["sourceSingle"] = "apikey";
+
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "`apikey`";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+			$edata["EditParams"].= " maxlength=50";
+
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatausuarios["apikey"] = $fdata;
+		$tdatausuarios[".searchableFields"][] = "apikey";
 
 
 $tables_data["usuarios"]=&$tdatausuarios;
@@ -859,12 +1003,12 @@ function createSqlQuery_usuarios()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "`Id`,  	`Nombre`,  	`Perfil`,  	`Clave`";
+$proto0["m_strFieldList"] = "`Id`,  	`Nombre`,  	`Perfil`,  	`Clave`,  	`apikey`";
 $proto0["m_strFrom"] = "FROM `usuarios`";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
 	
-		;
+										;
 			$proto0["cipherer"] = null;
 $proto2=array();
 $proto2["m_sql"] = "";
@@ -955,40 +1099,55 @@ $proto12["m_alias"] = "";
 $obj = new SQLFieldListItem($proto12);
 
 $proto0["m_fieldlist"][]=$obj;
-$proto0["m_fromlist"] = array();
-												$proto14=array();
-$proto14["m_link"] = "SQLL_MAIN";
-			$proto15=array();
-$proto15["m_strName"] = "usuarios";
-$proto15["m_srcTableName"] = "usuarios";
-$proto15["m_columns"] = array();
-$proto15["m_columns"][] = "Id";
-$proto15["m_columns"][] = "Nombre";
-$proto15["m_columns"][] = "Perfil";
-$proto15["m_columns"][] = "Clave";
-$obj = new SQLTable($proto15);
+						$proto14=array();
+			$obj = new SQLField(array(
+	"m_strName" => "apikey",
+	"m_strTable" => "usuarios",
+	"m_srcTableName" => "usuarios"
+));
 
-$proto14["m_table"] = $obj;
-$proto14["m_sql"] = "`usuarios`";
-$proto14["m_alias"] = "";
+$proto14["m_sql"] = "`apikey`";
 $proto14["m_srcTableName"] = "usuarios";
-$proto16=array();
-$proto16["m_sql"] = "";
-$proto16["m_uniontype"] = "SQLL_UNKNOWN";
+$proto14["m_expr"]=$obj;
+$proto14["m_alias"] = "";
+$obj = new SQLFieldListItem($proto14);
+
+$proto0["m_fieldlist"][]=$obj;
+$proto0["m_fromlist"] = array();
+												$proto16=array();
+$proto16["m_link"] = "SQLL_MAIN";
+			$proto17=array();
+$proto17["m_strName"] = "usuarios";
+$proto17["m_srcTableName"] = "usuarios";
+$proto17["m_columns"] = array();
+$proto17["m_columns"][] = "Id";
+$proto17["m_columns"][] = "Nombre";
+$proto17["m_columns"][] = "Perfil";
+$proto17["m_columns"][] = "Clave";
+$proto17["m_columns"][] = "apikey";
+$obj = new SQLTable($proto17);
+
+$proto16["m_table"] = $obj;
+$proto16["m_sql"] = "`usuarios`";
+$proto16["m_alias"] = "";
+$proto16["m_srcTableName"] = "usuarios";
+$proto18=array();
+$proto18["m_sql"] = "";
+$proto18["m_uniontype"] = "SQLL_UNKNOWN";
 	$obj = new SQLNonParsed(array(
 	"m_sql" => ""
 ));
 
-$proto16["m_column"]=$obj;
-$proto16["m_contained"] = array();
-$proto16["m_strCase"] = "";
-$proto16["m_havingmode"] = false;
-$proto16["m_inBrackets"] = false;
-$proto16["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto16);
+$proto18["m_column"]=$obj;
+$proto18["m_contained"] = array();
+$proto18["m_strCase"] = "";
+$proto18["m_havingmode"] = false;
+$proto18["m_inBrackets"] = false;
+$proto18["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto18);
 
-$proto14["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto14);
+$proto16["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto16);
 
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
@@ -1002,9 +1161,9 @@ $queryData_usuarios = createSqlQuery_usuarios();
 
 
 	
-		;
+										;
 
-				
+					
 
 $tdatausuarios[".sqlquery"] = $queryData_usuarios;
 

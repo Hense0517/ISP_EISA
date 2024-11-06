@@ -1613,7 +1613,7 @@ $proto0["m_strFrom"] = "FROM `puertos_cto`";
 $proto0["m_strWhere"] = "(`Ocupado` ='No')";
 $proto0["m_strOrderBy"] = "";
 	
-		;
+										;
 			$proto0["cipherer"] = null;
 $proto2=array();
 $proto2["m_sql"] = "`Ocupado` ='No'";
@@ -1792,6 +1792,10 @@ $proto25["m_columns"][] = "Localidad";
 $proto25["m_columns"][] = "Cedula";
 $proto25["m_columns"][] = "Activo";
 $proto25["m_columns"][] = "Ocupado";
+$proto25["m_columns"][] = "id_cto";
+$proto25["m_columns"][] = "id_spliter";
+$proto25["m_columns"][] = "id_cable";
+$proto25["m_columns"][] = "id_localidad";
 $obj = new SQLTable($proto25);
 
 $proto24["m_table"] = $obj;
@@ -1828,7 +1832,7 @@ $queryData_puertos_libres = createSqlQuery_puertos_libres();
 
 
 	
-		;
+										;
 
 									
 

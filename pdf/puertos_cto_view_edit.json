@@ -160,28 +160,28 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel puertos_cto_view Puerto }","bold":true},{"text":{$Puerto_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel puertos_cto_view Puerto }","bold":true},{"text":{$Puerto_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field2}","stack":[{"text":"{$jslabel puertos_cto_view Cto }","bold":true},{"text":{$Cto_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel puertos_cto_view Cto }","bold":true},{"text":{$Cto_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field3}","stack":[{"text":"{$jslabel puertos_cto_view Spliter }","bold":true},{"text":{$Spliter_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field2}","stack":[{"text":"{$jslabel puertos_cto_view Spliter }","bold":true},{"text":{$Spliter_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field4}","stack":[{"text":"{$jslabel puertos_cto_view Cable }","bold":true},{"text":{$Cable_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field3}","stack":[{"text":"{$jslabel puertos_cto_view Cable }","bold":true},{"text":{$Cable_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field5}","stack":[{"text":"{$jslabel puertos_cto_view Localidad }","bold":true},{"text":{$Localidad_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field4}","stack":[{"text":"{$jslabel puertos_cto_view Localidad }","bold":true},{"text":{$Localidad_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field6}","stack":[{"text":"{$jslabel puertos_cto_view Cedula }","bold":true},{"text":{$Cedula_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field5}","stack":[{"text":"{$jslabel puertos_cto_view Cedula }","bold":true},{"text":{$Cedula_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field7}","stack":[{"text":"{$jslabel puertos_cto_view Activo }","bold":true},{"text":{$Activo_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field6}","stack":[{"text":"{$jslabel puertos_cto_view Activo }","bold":true},{"text":{$Activo_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field8}","stack":[{"text":"{$jslabel puertos_cto_view Ocupado }","bold":true},{"text":{$Ocupado_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field7}","stack":[{"text":"{$jslabel puertos_cto_view Ocupado }","bold":true},{"text":{$Ocupado_pdfvalue}}],"margin":[0,0,0,15]},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -231,9 +231,6 @@ pdfDocument = {
 		
 				
 			{"text":"","hidden":"{$item_hide_edit_save}"},
-				
-				
-			{"text":"","hidden":"{$item_hide_update_records}"},
 				
 				
 			{"text":"","hidden":"{$item_hide_edit_back_list}"},

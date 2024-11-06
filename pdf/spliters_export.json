@@ -115,9 +115,6 @@ pdfDocument = {
 			{"text":{$localidad_pdfvalue},"hidden":"{$item_hide_export_field3}"},
 				
 				
-			{"text":{$id_spliters_pdfvalue},"hidden":"{$item_hide_export_field}"},
-				
-				
 			{"text":{$Numero_de_tarjeta_pdfvalue},"hidden":"{$item_hide_export_field4}"},
 				
 				
@@ -125,6 +122,9 @@ pdfDocument = {
 				
 				
 			{"text":{$Barrio_pdfvalue},"hidden":"{$item_hide_export_field6}"},
+				
+				
+			{"text":{$id_spliters_pdfvalue},"hidden":"{$item_hide_export_field}"},
 				
 		  ],
   "border": [ false, false, false, false ],

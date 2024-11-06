@@ -3540,16 +3540,30 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "puertos_libres" ] = "Puertos_Libres";
 	$projectEntities[ "usuarios" ] = array( "url" => "usuarios", "type" => 0 );
 	$projectEntitiesReverse[ "usuarios" ] = "usuarios";
+	$projectEntities[ "Vista_Digitadores" ] = array( "url" => "vista_digitadores", "type" => 1 );
+	$projectEntitiesReverse[ "vista_digitadores" ] = "Vista_Digitadores";
+	$projectEntities[ "Ingresar_cliente" ] = array( "url" => "ingresar_cliente", "type" => 1 );
+	$projectEntitiesReverse[ "ingresar_cliente" ] = "Ingresar_cliente";
+	$projectEntities[ "reporte_afectaciones" ] = array( "url" => "reporte_afectaciones", "type" => 0 );
+	$projectEntitiesReverse[ "reporte_afectaciones" ] = "reporte_afectaciones";
+	$projectEntities[ "reporte_afectaciones_view" ] = array( "url" => "reporte_afectaciones_view", "type" => 1 );
+	$projectEntitiesReverse[ "reporte_afectaciones_view" ] = "reporte_afectaciones_view";
+	$projectEntities[ "tarjeta_olt" ] = array( "url" => "tarjeta_olt", "type" => 0 );
+	$projectEntitiesReverse[ "tarjeta_olt" ] = "tarjeta_olt";
+	$projectEntities[ "puertos_olt" ] = array( "url" => "puertos_olt", "type" => 0 );
+	$projectEntitiesReverse[ "puertos_olt" ] = "puertos_olt";
+	$projectEntities[ "Clientes_por_puerto" ] = array( "url" => "clientes_por_puerto", "type" => 1 );
+	$projectEntitiesReverse[ "clientes_por_puerto" ] = "Clientes_por_puerto";
+	$projectEntities[ "Departamentos" ] = array( "url" => "departamentos", "type" => 7 );
+	$projectEntitiesReverse[ "departamentos" ] = "Departamentos";
+	$projectEntities[ "Ciudades" ] = array( "url" => "ciudades", "type" => 7 );
+	$projectEntitiesReverse[ "ciudades" ] = "Ciudades";
 	$projectEntities[ "admin_rights" ] = array( "url" => "admin_rights", "type" => 1 );
 	$projectEntitiesReverse[ "admin_rights" ] = "admin_rights";
 	$projectEntities[ "admin_members" ] = array( "url" => "admin_members", "type" => 1 );
 	$projectEntitiesReverse[ "admin_members" ] = "admin_members";
 	$projectEntities[ "admin_users" ] = array( "url" => "admin_users", "type" => 1 );
 	$projectEntitiesReverse[ "admin_users" ] = "admin_users";
-	$projectEntities[ "Vista_Digitadores" ] = array( "url" => "vista_digitadores", "type" => 1 );
-	$projectEntitiesReverse[ "vista_digitadores" ] = "Vista_Digitadores";
-	$projectEntities[ "Ingresar_cliente" ] = array( "url" => "ingresar_cliente", "type" => 1 );
-	$projectEntitiesReverse[ "ingresar_cliente" ] = "Ingresar_cliente";
 }
 
 function findTable( $table ) {

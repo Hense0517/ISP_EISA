@@ -174,7 +174,7 @@ pdfDocument = {
 			location: 'section',
 			widths: ['*'],
 			body: [
-				[{text: 'Datos Gegnerales', style: 'tableHeader'}],
+				[{text: 'Datos Generales', style: 'tableHeader'}],
 				[{
 					table: {
 						tableForm: true,
@@ -358,6 +358,89 @@ pdfDocument = {
 {END cellblock_section_c5}
 											],
 				{END row_section_1}
+						{BEGIN row_section_2}
+				[
+																{BEGIN cellblock_section_c10}
+{
+	cellId: 'c10',
+	col:0,
+	row:0,
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"stack": [
+		
+				
+			{"hidden":"{$item_hide_integrated_edit_field14}","bold":true,"stack":[{"text":"{$jslabel localidad Foto }","bold":true},{"text":{$Foto_pdfvalue}}],"margin":[0,0,0,15]},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_section_c10}
+																							{BEGIN cellblock_section_c11}
+{
+	cellId: 'c11',
+	col:0,
+	row:0,
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"stack": [
+		
+				
+			{"hidden":"{$item_hide_integrated_edit_field17}","bold":true,"stack":[{"text":"{$jslabel localidad qr }","bold":true},{"text":{$qr_pdfvalue}}],"margin":[0,0,0,15]},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_section_c11}
+																							{BEGIN cellblock_section_c12}
+{
+	cellId: 'c12',
+	col:0,
+	row:0,
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"stack": [
+		
+				'',
+	  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_section_c12}
+											],
+				{END row_section_2}
 		
 						]
 					}
@@ -894,6 +977,11 @@ pdfDocument = {
 		},
 		margin: [0,0,0,15],
 	},
+				
+				
+			 {BEGIN details_tarjeta_olt}
+			{$displayDetailTable_tarjeta_olt }
+		{END details_tarjeta_olt},
 				
 		  ],
   "border": [ false, false, false, false ],

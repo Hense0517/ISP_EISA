@@ -1,12 +1,17 @@
 <!doctype html>
 <html  {$html_attrs}>
 	<head>
-				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+			<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>{$pagetitle}</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<base href="{$projectPath}">
-		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	
+    <head profile="http://www.w3.org/2005/10/profile">
+
+    <link rel="icon" type="image/png" href="eia.png" />
+
+    </head>		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
 	{BEGIN rtlCSS}
 	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
 	{END rtlCSS}
@@ -247,7 +252,6 @@
 	{$cell_grid_c10}
 	class=" r-ori-vert"
 	
-			data-single
 			
 			data-cellId="grid_c10" data-pageid="{$pageid}"
 		data-v-cell="2"
@@ -275,6 +279,27 @@
 
 
 {END Puerto_fieldblock}
+											
+{BEGIN id_spliter_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_id_spliter}  r-vertical-field" data-fieldname="id_spliter" data-signal-error-for="id_spliter{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field7" {$item_integrated_edit_field7} data-pageid="{$pageid}" data-field="id_spliter" data-fieldname="id_spliter" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_id_spliter}">
+		
+		{BEGIN id_spliter_label}{$label Ingresar_cliente id_spliter }{END id_spliter_label}
+	</label>
+	<div class="" >
+		{$id_spliter_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END id_spliter_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c10}
@@ -286,7 +311,6 @@
 	{$cell_grid_c11}
 	class=" r-ori-vert"
 	
-			data-single
 			
 			data-cellId="grid_c11" data-pageid="{$pageid}"
 		data-v-cell="2"
@@ -314,6 +338,27 @@
 
 
 {END Cedula_fieldblock}
+											
+{BEGIN id_cable_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_id_cable}  r-vertical-field" data-fieldname="id_cable" data-signal-error-for="id_cable{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field9" {$item_integrated_edit_field9} data-pageid="{$pageid}" data-field="id_cable" data-fieldname="id_cable" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_id_cable}">
+		
+		{BEGIN id_cable_label}{$label Ingresar_cliente id_cable }{END id_cable_label}
+	</label>
+	<div class="" >
+		{$id_cable_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END id_cable_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c11}
@@ -325,7 +370,6 @@
 	{$cell_grid_c12}
 	class=" r-ori-vert"
 	
-			data-single
 			
 			data-cellId="grid_c12" data-pageid="{$pageid}"
 		data-v-cell="2"
@@ -353,12 +397,32 @@
 
 
 {END Ocupado_fieldblock}
+											
+{BEGIN id_localidad_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_id_localidad}  r-vertical-field" data-fieldname="id_localidad" data-signal-error-for="id_localidad{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field10" {$item_integrated_edit_field10} data-pageid="{$pageid}" data-field="id_localidad" data-fieldname="id_localidad" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_id_localidad}">
+		
+		{BEGIN id_localidad_label}{$label Ingresar_cliente id_localidad }{END id_localidad_label}
+	</label>
+	<div class="" >
+		{$id_localidad_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END id_localidad_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c12}
 			 
-		
-							
+																
 
 {BEGIN cellblock_grid_c13}
 <td
@@ -372,7 +436,29 @@
 		
 >
 	<div edit-form-cell class="clearfix">
-									</td>
+				
+{BEGIN id_cto_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_id_cto}  r-vertical-field" data-fieldname="id_cto" data-signal-error-for="id_cto{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="id_cto" data-fieldname="id_cto" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_id_cto}">
+		
+		{BEGIN id_cto_label}{$label Ingresar_cliente id_cto }{END id_cto_label}
+	</label>
+	<div class="" >
+		{$id_cto_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END id_cto_fieldblock}
+	
+								</td>
 			{END cellblock_grid_c13}
 								</tr>
 			</tbody></table>

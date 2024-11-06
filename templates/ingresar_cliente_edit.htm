@@ -1,12 +1,17 @@
 <!doctype html>
 <html  {$html_attrs}>
 	<head>
-				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+			<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>{$pagetitle}</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<base href="{$projectPath}">
-		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	
+    <head profile="http://www.w3.org/2005/10/profile">
+
+    <link rel="icon" type="image/png" href="eia.png" />
+
+    </head>		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
 	{BEGIN rtlCSS}
 	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
 	{END rtlCSS}
@@ -338,7 +343,6 @@
 	{$cell_grid_c3}
 	class=" r-ori-vert"
 	
-			data-single
 			
 			data-cellId="grid_c3" data-pageid="{$pageid}"
 		data-v-cell="2"
@@ -366,30 +370,91 @@
 
 
 {END Ocupado_fieldblock}
+											
+{BEGIN id_cable_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_id_cable}  r-vertical-field" 
+	data-signal-error-for="id_cable{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field9" {$item_integrated_edit_field9} data-pageid="{$pageid}" data-field="id_cable" data-fieldname="id_cable" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_id_cable}">
+		{BEGIN id_cable_label}{$label Ingresar_cliente id_cable }{END id_cable_label}
+	</label>
+	<div class="r-edit-field">
+		{$id_cable_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="id_cable">
+		<div class="text-muted" >
+		{$tooltip Ingresar_cliente id_cable }		</div>
+	</div>
+</div>
+
+
+{END id_cable_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c3}
 			 
-		
-							
+																
 
 {BEGIN cellblock_grid_c4}
 <td
 	{$cell_grid_c4}
 	class=" r-ori-vert"
 	
-			data-single
 			
 			data-cellId="grid_c4" data-pageid="{$pageid}"
 		data-v-cell="2"
 		
 >
 	<div edit-form-cell class="clearfix">
-									</td>
+				
+{BEGIN id_cto_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_id_cto}  r-vertical-field" 
+	data-signal-error-for="id_cto{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-field="id_cto" data-fieldname="id_cto" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_id_cto}">
+		{BEGIN id_cto_label}{$label Ingresar_cliente id_cto }{END id_cto_label}
+	</label>
+	<div class="r-edit-field">
+		{$id_cto_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="id_cto">
+		<div class="text-muted" >
+		{$tooltip Ingresar_cliente id_cto }		</div>
+	</div>
+</div>
+
+
+{END id_cto_fieldblock}
+											
+{BEGIN id_localidad_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_id_localidad}  r-vertical-field" 
+	data-signal-error-for="id_localidad{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field10" {$item_integrated_edit_field10} data-pageid="{$pageid}" data-field="id_localidad" data-fieldname="id_localidad" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_id_localidad}">
+		{BEGIN id_localidad_label}{$label Ingresar_cliente id_localidad }{END id_localidad_label}
+	</label>
+	<div class="r-edit-field">
+		{$id_localidad_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="id_localidad">
+		<div class="text-muted" >
+		{$tooltip Ingresar_cliente id_localidad }		</div>
+	</div>
+</div>
+
+
+{END id_localidad_fieldblock}
+	
+								</td>
 			{END cellblock_grid_c4}
 			 
-		
-							
+																
 
 {BEGIN cellblock_grid_c}
 <td
@@ -403,7 +468,29 @@
 		
 >
 	<div edit-form-cell class="clearfix">
-									</td>
+				
+{BEGIN id_spliter_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_id_spliter}  r-vertical-field" 
+	data-signal-error-for="id_spliter{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field8" {$item_integrated_edit_field8} data-pageid="{$pageid}" data-field="id_spliter" data-fieldname="id_spliter" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_id_spliter}">
+		{BEGIN id_spliter_label}{$label Ingresar_cliente id_spliter }{END id_spliter_label}
+	</label>
+	<div class="r-edit-field">
+		{$id_spliter_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="id_spliter">
+		<div class="text-muted" >
+		{$tooltip Ingresar_cliente id_spliter }		</div>
+	</div>
+</div>
+
+
+{END id_spliter_fieldblock}
+	
+								</td>
 			{END cellblock_grid_c}
 								</tr>
 			</tbody></table>

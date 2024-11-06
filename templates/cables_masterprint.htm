@@ -75,19 +75,19 @@
 	{$cell_grid_headcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$id_cables_class}	"
+		 r-ori-vert		 {$cable_class}	"
 
-			data-field="id_cables"
+			data-field="cable"
 	
 	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN id_cables_fieldheadercolumn}
+		{BEGIN cable_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="id_cables" data-fieldname="id_cables">
-	{$label cables id_cables }	</span>
-{END id_cables_fieldheadercolumn}
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="cable" data-fieldname="cable">
+	{$label cables cable }	</span>
+{END cable_fieldheadercolumn}
 
 	
 	</th>
@@ -98,19 +98,19 @@
 	{$cell_grid_headcell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$cable_class}	"
+		 r-ori-vert		 {$id_cables_class}	"
 
-			data-field="cable"
+			data-field="id_cables"
 	
 	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN cable_fieldheadercolumn}
+		{BEGIN id_cables_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="cable" data-fieldname="cable">
-	{$label cables cable }	</span>
-{END cable_fieldheadercolumn}
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="id_cables" data-fieldname="id_cables">
+	{$label cables id_cables }	</span>
+{END id_cables_fieldheadercolumn}
 
 	
 	</th>
@@ -121,19 +121,19 @@
 	{$cell_grid_headcell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$localidad_class}	"
+		 r-ori-vert		 {$id_localidad_class}	"
 
-			data-field="localidad"
+			data-field="id_localidad"
 	
 	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN localidad_fieldheadercolumn}
+		{BEGIN id_localidad_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="localidad" data-fieldname="localidad">
-	{$label cables localidad }	</span>
-{END localidad_fieldheadercolumn}
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="id_localidad" data-fieldname="id_localidad">
+	{$label cables id_localidad }	</span>
+{END id_localidad_fieldheadercolumn}
 
 	
 	</th>
@@ -180,32 +180,11 @@
 	{$cell_grid_cell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$id_cables_class}	"
-
-			data-field="id_cables"
-	
-	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN id_cables_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="id_cables" data-fieldname="id_cables" data-default-width >
-{$id_cables_value}
-</span>
-{END id_cables_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field}
-									{BEGIN cellblock_grid_cell_field1}
-	<td
-	
-	{$cell_grid_cell_field1}
-	{$recordattrs}
-	class="
 		 r-ori-vert		 {$cable_class}	"
 
 			data-field="cable"
 	
-	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -215,6 +194,27 @@
 </span>
 {END cable_fieldcolumn}	
 	</td>
+	{END cellblock_grid_cell_field}
+									{BEGIN cellblock_grid_cell_field1}
+	<td
+	
+	{$cell_grid_cell_field1}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$id_cables_class}	"
+
+			data-field="id_cables"
+	
+	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN id_cables_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="id_cables" data-fieldname="id_cables" data-default-width >
+{$id_cables_value}
+</span>
+{END id_cables_fieldcolumn}	
+	</td>
 	{END cellblock_grid_cell_field1}
 									{BEGIN cellblock_grid_cell_field2}
 	<td
@@ -222,19 +222,19 @@
 	{$cell_grid_cell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$localidad_class}	"
+		 r-ori-vert		 {$id_localidad_class}	"
 
-			data-field="localidad"
+			data-field="id_localidad"
 	
 	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN localidad_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="localidad" data-fieldname="localidad" data-default-width >
-{$localidad_value}
+		{BEGIN id_localidad_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="id_localidad" data-fieldname="id_localidad" data-default-width >
+{$id_localidad_value}
 </span>
-{END localidad_fieldcolumn}	
+{END id_localidad_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field2}
 							</tr>
@@ -269,7 +269,7 @@
 	{$cell_grid_footcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$id_cables_class}	"
+		 r-ori-vert		 {$cable_class}	"
 
 	
 	data-cellId="grid_footcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="cables_masterprint"	
@@ -284,7 +284,7 @@
 	{$cell_grid_footcell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$cable_class}	"
+		 r-ori-vert		 {$id_cables_class}	"
 
 	
 	data-cellId="grid_footcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="cables_masterprint"	
@@ -299,7 +299,7 @@
 	{$cell_grid_footcell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$localidad_class}	"
+		 r-ori-vert		 {$id_localidad_class}	"
 
 	
 	data-cellId="grid_footcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="cables_masterprint"	

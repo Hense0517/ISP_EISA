@@ -1,12 +1,17 @@
 <!doctype html>
 <html  {$html_attrs}>
 	<head>
-				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+			<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>{$pagetitle}</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<base href="{$projectPath}">
-		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	
+    <head profile="http://www.w3.org/2005/10/profile">
+
+    <link rel="icon" type="image/png" href="eia.png" />
+
+    </head>		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
 	{BEGIN rtlCSS}
 	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
 	{END rtlCSS}
@@ -144,19 +149,19 @@ data-pagetype="print"
 	{$cell_grid_headcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$id_Ctos_class}	"
+		 r-ori-vert		 {$Cto_class}	"
 
-			data-field="id_Ctos"
+			data-field="Cto"
 	
 	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN id_Ctos_fieldheadercolumn}
+		{BEGIN Cto_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="id_Ctos" data-fieldname="id_Ctos">
-	{$label ctos id_Ctos }	</span>
-{END id_Ctos_fieldheadercolumn}
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Cto" data-fieldname="Cto">
+	{$label ctos Cto }	</span>
+{END Cto_fieldheadercolumn}
 
 	
 	</th>
@@ -167,19 +172,19 @@ data-pagetype="print"
 	{$cell_grid_headcell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Cto_class}	"
+		 r-ori-vert		 {$Latitud_class}	"
 
-			data-field="Cto"
+			data-field="Latitud"
 	
 	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Cto_fieldheadercolumn}
+		{BEGIN Latitud_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Cto" data-fieldname="Cto">
-	{$label ctos Cto }	</span>
-{END Cto_fieldheadercolumn}
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Latitud" data-fieldname="Latitud">
+	{$label ctos Latitud }	</span>
+{END Latitud_fieldheadercolumn}
 
 	
 	</th>
@@ -190,19 +195,19 @@ data-pagetype="print"
 	{$cell_grid_headcell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Latitud_class}	"
+		 r-ori-vert		 {$Longitud_class}	"
 
-			data-field="Latitud"
+			data-field="Longitud"
 	
 	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Latitud_fieldheadercolumn}
+		{BEGIN Longitud_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Latitud" data-fieldname="Latitud">
-	{$label ctos Latitud }	</span>
-{END Latitud_fieldheadercolumn}
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Longitud" data-fieldname="Longitud">
+	{$label ctos Longitud }	</span>
+{END Longitud_fieldheadercolumn}
 
 	
 	</th>
@@ -213,19 +218,19 @@ data-pagetype="print"
 	{$cell_grid_headcell_field3}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Longitud_class}	"
+		 r-ori-vert		 {$Spliter_class}	"
 
-			data-field="Longitud"
+			data-field="Spliter"
 	
 	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Longitud_fieldheadercolumn}
+		{BEGIN Spliter_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Longitud" data-fieldname="Longitud">
-	{$label ctos Longitud }	</span>
-{END Longitud_fieldheadercolumn}
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Spliter" data-fieldname="Spliter">
+	{$label ctos Spliter }	</span>
+{END Spliter_fieldheadercolumn}
 
 	
 	</th>
@@ -236,19 +241,19 @@ data-pagetype="print"
 	{$cell_grid_headcell_field4}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Spliter_class}	"
+		 r-ori-vert		 {$Cable_class}	"
 
-			data-field="Spliter"
+			data-field="Cable"
 	
 	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Spliter_fieldheadercolumn}
+		{BEGIN Cable_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Spliter" data-fieldname="Spliter">
-	{$label ctos Spliter }	</span>
-{END Spliter_fieldheadercolumn}
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Cable" data-fieldname="Cable">
+	{$label ctos Cable }	</span>
+{END Cable_fieldheadercolumn}
 
 	
 	</th>
@@ -259,19 +264,19 @@ data-pagetype="print"
 	{$cell_grid_headcell_field5}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Cable_class}	"
+		 r-ori-vert		 {$Localidad_class}	"
 
-			data-field="Cable"
+			data-field="Localidad"
 	
 	data-cellId="grid_headcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Cable_fieldheadercolumn}
+		{BEGIN Localidad_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field12" {$item_simple_grid_field12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Cable" data-fieldname="Cable">
-	{$label ctos Cable }	</span>
-{END Cable_fieldheadercolumn}
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field12" {$item_simple_grid_field12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Localidad" data-fieldname="Localidad">
+	{$label ctos Localidad }	</span>
+{END Localidad_fieldheadercolumn}
 
 	
 	</th>
@@ -282,19 +287,19 @@ data-pagetype="print"
 	{$cell_grid_headcell_field6}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Localidad_class}	"
+		 r-ori-vert		 {$id_Ctos_class}	"
 
-			data-field="Localidad"
+			data-field="id_Ctos"
 	
 	data-cellId="grid_headcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Localidad_fieldheadercolumn}
+		{BEGIN id_Ctos_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field13" {$item_simple_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Localidad" data-fieldname="Localidad">
-	{$label ctos Localidad }	</span>
-{END Localidad_fieldheadercolumn}
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field13" {$item_simple_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="id_Ctos" data-fieldname="id_Ctos">
+	{$label ctos id_Ctos }	</span>
+{END id_Ctos_fieldheadercolumn}
 
 	
 	</th>
@@ -316,32 +321,11 @@ data-pagetype="print"
 	{$cell_grid_cell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$id_Ctos_class}	"
-
-			data-field="id_Ctos"
-	
-	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN id_Ctos_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="id_Ctos" data-fieldname="id_Ctos" data-default-width >
-{$id_Ctos_value}
-</span>
-{END id_Ctos_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field}
-									{BEGIN cellblock_grid_cell_field1}
-	<td
-	
-	{$cell_grid_cell_field1}
-	{$recordattrs}
-	class="
 		 r-ori-vert		 {$Cto_class}	"
 
 			data-field="Cto"
 	
-	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -351,18 +335,18 @@ data-pagetype="print"
 </span>
 {END Cto_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field1}
-									{BEGIN cellblock_grid_cell_field2}
+	{END cellblock_grid_cell_field}
+									{BEGIN cellblock_grid_cell_field1}
 	<td
 	
-	{$cell_grid_cell_field2}
+	{$cell_grid_cell_field1}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Latitud_class}	"
 
 			data-field="Latitud"
 	
-	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -372,18 +356,18 @@ data-pagetype="print"
 </span>
 {END Latitud_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field2}
-									{BEGIN cellblock_grid_cell_field3}
+	{END cellblock_grid_cell_field1}
+									{BEGIN cellblock_grid_cell_field2}
 	<td
 	
-	{$cell_grid_cell_field3}
+	{$cell_grid_cell_field2}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Longitud_class}	"
 
 			data-field="Longitud"
 	
-	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -393,18 +377,18 @@ data-pagetype="print"
 </span>
 {END Longitud_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field3}
-									{BEGIN cellblock_grid_cell_field4}
+	{END cellblock_grid_cell_field2}
+									{BEGIN cellblock_grid_cell_field3}
 	<td
 	
-	{$cell_grid_cell_field4}
+	{$cell_grid_cell_field3}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Spliter_class}	"
 
 			data-field="Spliter"
 	
-	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -414,18 +398,18 @@ data-pagetype="print"
 </span>
 {END Spliter_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field4}
-									{BEGIN cellblock_grid_cell_field5}
+	{END cellblock_grid_cell_field3}
+									{BEGIN cellblock_grid_cell_field4}
 	<td
 	
-	{$cell_grid_cell_field5}
+	{$cell_grid_cell_field4}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Cable_class}	"
 
 			data-field="Cable"
 	
-	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -435,18 +419,18 @@ data-pagetype="print"
 </span>
 {END Cable_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field5}
-									{BEGIN cellblock_grid_cell_field6}
+	{END cellblock_grid_cell_field4}
+									{BEGIN cellblock_grid_cell_field5}
 	<td
 	
-	{$cell_grid_cell_field6}
+	{$cell_grid_cell_field5}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Localidad_class}	"
 
 			data-field="Localidad"
 	
-	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -455,6 +439,27 @@ data-pagetype="print"
 {$Localidad_value}
 </span>
 {END Localidad_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field5}
+									{BEGIN cellblock_grid_cell_field6}
+	<td
+	
+	{$cell_grid_cell_field6}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$id_Ctos_class}	"
+
+			data-field="id_Ctos"
+	
+	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN id_Ctos_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="id_Ctos" data-fieldname="id_Ctos" data-default-width >
+{$id_Ctos_value}
+</span>
+{END id_Ctos_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field6}
 							</tr>
@@ -474,7 +479,7 @@ data-pagetype="print"
 	{$cell_grid_footcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$id_Ctos_class}	"
+		 r-ori-vert		 {$Cto_class}	"
 
 	
 	data-cellId="grid_footcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="ctos_print"	
@@ -489,7 +494,7 @@ data-pagetype="print"
 	{$cell_grid_footcell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Cto_class}	"
+		 r-ori-vert		 {$Latitud_class}	"
 
 	
 	data-cellId="grid_footcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="ctos_print"	
@@ -504,7 +509,7 @@ data-pagetype="print"
 	{$cell_grid_footcell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Latitud_class}	"
+		 r-ori-vert		 {$Longitud_class}	"
 
 	
 	data-cellId="grid_footcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="ctos_print"	
@@ -519,7 +524,7 @@ data-pagetype="print"
 	{$cell_grid_footcell_field3}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Longitud_class}	"
+		 r-ori-vert		 {$Spliter_class}	"
 
 	
 	data-cellId="grid_footcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="ctos_print"	
@@ -534,7 +539,7 @@ data-pagetype="print"
 	{$cell_grid_footcell_field4}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Spliter_class}	"
+		 r-ori-vert		 {$Cable_class}	"
 
 	
 	data-cellId="grid_footcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="ctos_print"	
@@ -549,7 +554,7 @@ data-pagetype="print"
 	{$cell_grid_footcell_field5}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Cable_class}	"
+		 r-ori-vert		 {$Localidad_class}	"
 
 	
 	data-cellId="grid_footcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="ctos_print"	
@@ -564,7 +569,7 @@ data-pagetype="print"
 	{$cell_grid_footcell_field6}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Localidad_class}	"
+		 r-ori-vert		 {$id_Ctos_class}	"
 
 	
 	data-cellId="grid_footcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="ctos_print"	

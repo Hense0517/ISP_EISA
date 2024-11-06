@@ -740,9 +740,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "595_1723227451";
+$projectBuildKey = "818_1728412012";
 $wizardBuildKey = "39558";
-$projectBuildNumber = "595";
+$projectBuildNumber = "818";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -780,11 +780,18 @@ $tableCaptions["Spanish"]["Mapa_Puertos_Libres"] = "Mapa Puertos Libres";
 $tableCaptions["Spanish"]["Mapa_Ventas"] = "Mapa Ventas";
 $tableCaptions["Spanish"]["Puertos_Libres"] = "Puertos Libres";
 $tableCaptions["Spanish"]["usuarios"] = "Usuarios";
+$tableCaptions["Spanish"]["Vista_Digitadores"] = "Vista Digitadores";
+$tableCaptions["Spanish"]["Ingresar_cliente"] = "Ingresar Cliente";
+$tableCaptions["Spanish"]["reporte_afectaciones"] = "Reporte Afectaciones";
+$tableCaptions["Spanish"]["reporte_afectaciones_view"] = "Reporte Afectaciones View";
+$tableCaptions["Spanish"]["tarjeta_olt"] = "Tarjeta Olt";
+$tableCaptions["Spanish"]["puertos_olt"] = "Puertos Olt";
+$tableCaptions["Spanish"]["Clientes_por_puerto"] = "Clientes Por Puerto";
+$tableCaptions["Spanish"]["Departamentos"] = "Departamentos";
+$tableCaptions["Spanish"]["Ciudades"] = "Ciudades";
 $tableCaptions["Spanish"]["admin_rights"] = "Admin Rights";
 $tableCaptions["Spanish"]["admin_members"] = "Admin Members";
 $tableCaptions["Spanish"]["admin_users"] = "Admin Users";
-$tableCaptions["Spanish"]["Vista_Digitadores"] = "Vista Digitadores";
-$tableCaptions["Spanish"]["Ingresar_cliente"] = "Ingresar Cliente";
 $tableCaptions["English"] = array();
 $tableCaptions["English"][""] = "";
 $tableCaptions["English"]["numeros_de_cables"] = "Numeros De Cables";
@@ -802,11 +809,18 @@ $tableCaptions["English"]["Mapa_Puertos_Libres"] = "Mapa Puertos Libres";
 $tableCaptions["English"]["Mapa_Ventas"] = "Mapa Ventas";
 $tableCaptions["English"]["Puertos_Libres"] = "Puertos Libres";
 $tableCaptions["English"]["usuarios"] = "Usuarios";
+$tableCaptions["English"]["Vista_Digitadores"] = "Vista Digitadores";
+$tableCaptions["English"]["Ingresar_cliente"] = "Ingresar Cliente";
+$tableCaptions["English"]["reporte_afectaciones"] = "Reporte Afectaciones";
+$tableCaptions["English"]["reporte_afectaciones_view"] = "Reporte Afectaciones View";
+$tableCaptions["English"]["tarjeta_olt"] = "Tarjeta Olt";
+$tableCaptions["English"]["puertos_olt"] = "Puertos Olt";
+$tableCaptions["English"]["Clientes_por_puerto"] = "Clientes Por Puerto";
+$tableCaptions["English"]["Departamentos"] = "Departamentos";
+$tableCaptions["English"]["Ciudades"] = "Ciudades";
 $tableCaptions["English"]["admin_rights"] = "Admin Rights";
 $tableCaptions["English"]["admin_members"] = "Admin Members";
 $tableCaptions["English"]["admin_users"] = "Admin Users";
-$tableCaptions["English"]["Vista_Digitadores"] = "Vista Digitadores";
-$tableCaptions["English"]["Ingresar_cliente"] = "Ingresar Cliente";
 
 
 $globalEvents = new class_GlobalEvents;
@@ -925,6 +939,8 @@ $resizeImagesOnClient = false;
 
 // Place event code here.
 // Use "Add Action" button to add code snippets.
+
+date_default_timezone_set('America/Bogota'); 
 
 if(postvalue("lat") && postvalue("lng")){
     $_SESSION["geoLatitude"] = postvalue("lat");

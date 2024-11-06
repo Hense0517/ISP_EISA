@@ -1530,7 +1530,7 @@ $proto0["m_strFrom"] = "FROM `puertos_cto`";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
 	
-		;
+										;
 			$proto0["cipherer"] = null;
 $proto2=array();
 $proto2["m_sql"] = "";
@@ -1693,6 +1693,10 @@ $proto23["m_columns"][] = "Localidad";
 $proto23["m_columns"][] = "Cedula";
 $proto23["m_columns"][] = "Activo";
 $proto23["m_columns"][] = "Ocupado";
+$proto23["m_columns"][] = "id_cto";
+$proto23["m_columns"][] = "id_spliter";
+$proto23["m_columns"][] = "id_cable";
+$proto23["m_columns"][] = "id_localidad";
 $obj = new SQLTable($proto23);
 
 $proto22["m_table"] = $obj;
@@ -1729,7 +1733,7 @@ $queryData_puertos_cto = createSqlQuery_puertos_cto();
 
 
 	
-		;
+										;
 
 								
 

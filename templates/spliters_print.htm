@@ -1,12 +1,17 @@
 <!doctype html>
 <html  {$html_attrs}>
 	<head>
-				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+			<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>{$pagetitle}</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<base href="{$projectPath}">
-		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	
+    <head profile="http://www.w3.org/2005/10/profile">
+
+    <link rel="icon" type="image/png" href="eia.png" />
+
+    </head>		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
 	{BEGIN rtlCSS}
 	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
 	{END rtlCSS}
@@ -167,19 +172,19 @@ data-pagetype="print"
 	{$cell_grid_headcell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$id_spliters_class}	"
+		 r-ori-vert		 {$cable_class}	"
 
-			data-field="id_spliters"
+			data-field="cable"
 	
 	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN id_spliters_fieldheadercolumn}
+		{BEGIN cable_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="id_spliters" data-fieldname="id_spliters">
-	{$label spliters id_spliters }	</span>
-{END id_spliters_fieldheadercolumn}
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="cable" data-fieldname="cable">
+	{$label spliters cable }	</span>
+{END cable_fieldheadercolumn}
 
 	
 	</th>
@@ -190,19 +195,19 @@ data-pagetype="print"
 	{$cell_grid_headcell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$cable_class}	"
+		 r-ori-vert		 {$localidad_class}	"
 
-			data-field="cable"
+			data-field="localidad"
 	
 	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN cable_fieldheadercolumn}
+		{BEGIN localidad_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="cable" data-fieldname="cable">
-	{$label spliters cable }	</span>
-{END cable_fieldheadercolumn}
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="localidad" data-fieldname="localidad">
+	{$label spliters localidad }	</span>
+{END localidad_fieldheadercolumn}
 
 	
 	</th>
@@ -213,19 +218,19 @@ data-pagetype="print"
 	{$cell_grid_headcell_field3}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$localidad_class}	"
+		 r-ori-vert		 {$Numero_de_tarjeta_class}	"
 
-			data-field="localidad"
+			data-field="Numero_de_tarjeta"
 	
 	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN localidad_fieldheadercolumn}
+		{BEGIN Numero_de_tarjeta_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="localidad" data-fieldname="localidad">
-	{$label spliters localidad }	</span>
-{END localidad_fieldheadercolumn}
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Numero_de_tarjeta" data-fieldname="Numero_de_tarjeta">
+	{$label spliters Numero_de_tarjeta }	</span>
+{END Numero_de_tarjeta_fieldheadercolumn}
 
 	
 	</th>
@@ -236,19 +241,19 @@ data-pagetype="print"
 	{$cell_grid_headcell_field4}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Numero_de_tarjeta_class}	"
+		 r-ori-vert		 {$Numero_de_puerto_class}	"
 
-			data-field="Numero_de_tarjeta"
+			data-field="Numero_de_puerto"
 	
 	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Numero_de_tarjeta_fieldheadercolumn}
+		{BEGIN Numero_de_puerto_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Numero_de_tarjeta" data-fieldname="Numero_de_tarjeta">
-	{$label spliters Numero_de_tarjeta }	</span>
-{END Numero_de_tarjeta_fieldheadercolumn}
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Numero_de_puerto" data-fieldname="Numero_de_puerto">
+	{$label spliters Numero_de_puerto }	</span>
+{END Numero_de_puerto_fieldheadercolumn}
 
 	
 	</th>
@@ -259,19 +264,19 @@ data-pagetype="print"
 	{$cell_grid_headcell_field5}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Numero_de_puerto_class}	"
+		 r-ori-vert		 {$Barrio_class}	"
 
-			data-field="Numero_de_puerto"
+			data-field="Barrio"
 	
 	data-cellId="grid_headcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Numero_de_puerto_fieldheadercolumn}
+		{BEGIN Barrio_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field12" {$item_simple_grid_field12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Numero_de_puerto" data-fieldname="Numero_de_puerto">
-	{$label spliters Numero_de_puerto }	</span>
-{END Numero_de_puerto_fieldheadercolumn}
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field12" {$item_simple_grid_field12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Barrio" data-fieldname="Barrio">
+	{$label spliters Barrio }	</span>
+{END Barrio_fieldheadercolumn}
 
 	
 	</th>
@@ -282,19 +287,19 @@ data-pagetype="print"
 	{$cell_grid_headcell_field6}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Barrio_class}	"
+		 r-ori-vert		 {$id_spliters_class}	"
 
-			data-field="Barrio"
+			data-field="id_spliters"
 	
 	data-cellId="grid_headcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Barrio_fieldheadercolumn}
+		{BEGIN id_spliters_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field13" {$item_simple_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Barrio" data-fieldname="Barrio">
-	{$label spliters Barrio }	</span>
-{END Barrio_fieldheadercolumn}
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field13" {$item_simple_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="id_spliters" data-fieldname="id_spliters">
+	{$label spliters id_spliters }	</span>
+{END id_spliters_fieldheadercolumn}
 
 	
 	</th>
@@ -337,32 +342,11 @@ data-pagetype="print"
 	{$cell_grid_cell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$id_spliters_class}	"
-
-			data-field="id_spliters"
-	
-	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN id_spliters_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="id_spliters" data-fieldname="id_spliters" data-default-width >
-{$id_spliters_value}
-</span>
-{END id_spliters_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field1}
-									{BEGIN cellblock_grid_cell_field2}
-	<td
-	
-	{$cell_grid_cell_field2}
-	{$recordattrs}
-	class="
 		 r-ori-vert		 {$cable_class}	"
 
 			data-field="cable"
 	
-	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -372,18 +356,18 @@ data-pagetype="print"
 </span>
 {END cable_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field2}
-									{BEGIN cellblock_grid_cell_field3}
+	{END cellblock_grid_cell_field1}
+									{BEGIN cellblock_grid_cell_field2}
 	<td
 	
-	{$cell_grid_cell_field3}
+	{$cell_grid_cell_field2}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$localidad_class}	"
 
 			data-field="localidad"
 	
-	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -393,18 +377,18 @@ data-pagetype="print"
 </span>
 {END localidad_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field3}
-									{BEGIN cellblock_grid_cell_field4}
+	{END cellblock_grid_cell_field2}
+									{BEGIN cellblock_grid_cell_field3}
 	<td
 	
-	{$cell_grid_cell_field4}
+	{$cell_grid_cell_field3}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Numero_de_tarjeta_class}	"
 
 			data-field="Numero_de_tarjeta"
 	
-	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -414,18 +398,18 @@ data-pagetype="print"
 </span>
 {END Numero_de_tarjeta_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field4}
-									{BEGIN cellblock_grid_cell_field5}
+	{END cellblock_grid_cell_field3}
+									{BEGIN cellblock_grid_cell_field4}
 	<td
 	
-	{$cell_grid_cell_field5}
+	{$cell_grid_cell_field4}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Numero_de_puerto_class}	"
 
 			data-field="Numero_de_puerto"
 	
-	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -435,18 +419,18 @@ data-pagetype="print"
 </span>
 {END Numero_de_puerto_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field5}
-									{BEGIN cellblock_grid_cell_field6}
+	{END cellblock_grid_cell_field4}
+									{BEGIN cellblock_grid_cell_field5}
 	<td
 	
-	{$cell_grid_cell_field6}
+	{$cell_grid_cell_field5}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Barrio_class}	"
 
 			data-field="Barrio"
 	
-	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -455,6 +439,27 @@ data-pagetype="print"
 {$Barrio_value}
 </span>
 {END Barrio_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field5}
+									{BEGIN cellblock_grid_cell_field6}
+	<td
+	
+	{$cell_grid_cell_field6}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$id_spliters_class}	"
+
+			data-field="id_spliters"
+	
+	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN id_spliters_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="id_spliters" data-fieldname="id_spliters" data-default-width >
+{$id_spliters_value}
+</span>
+{END id_spliters_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field6}
 							</tr>
@@ -489,7 +494,7 @@ data-pagetype="print"
 	{$cell_grid_footcell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$id_spliters_class}	"
+		 r-ori-vert		 {$cable_class}	"
 
 	
 	data-cellId="grid_footcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="spliters_print"	
@@ -504,7 +509,7 @@ data-pagetype="print"
 	{$cell_grid_footcell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$cable_class}	"
+		 r-ori-vert		 {$localidad_class}	"
 
 	
 	data-cellId="grid_footcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="spliters_print"	
@@ -519,7 +524,7 @@ data-pagetype="print"
 	{$cell_grid_footcell_field3}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$localidad_class}	"
+		 r-ori-vert		 {$Numero_de_tarjeta_class}	"
 
 	
 	data-cellId="grid_footcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="spliters_print"	
@@ -534,7 +539,7 @@ data-pagetype="print"
 	{$cell_grid_footcell_field4}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Numero_de_tarjeta_class}	"
+		 r-ori-vert		 {$Numero_de_puerto_class}	"
 
 	
 	data-cellId="grid_footcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="spliters_print"	
@@ -549,7 +554,7 @@ data-pagetype="print"
 	{$cell_grid_footcell_field5}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Numero_de_puerto_class}	"
+		 r-ori-vert		 {$Barrio_class}	"
 
 	
 	data-cellId="grid_footcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="spliters_print"	
@@ -564,7 +569,7 @@ data-pagetype="print"
 	{$cell_grid_footcell_field6}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Barrio_class}	"
+		 r-ori-vert		 {$id_spliters_class}	"
 
 	
 	data-cellId="grid_footcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="spliters_print"	

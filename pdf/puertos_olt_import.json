@@ -1,0 +1,160 @@
+
+pdfDocument = {
+{BEGIN backgroundImage}
+	background: {
+		image: {$backgroundImage},
+		{BEGIN bgWidth}
+		imgWidth: {$bgWidth},
+		imgHeight: {$bgHeight},
+		{END bgWidth}
+	},
+{END backgroundImage}
+	styles: {
+				bodycell: {
+			fontSize:12,
+		},
+		headcell: {
+			fontSize:12,
+			bold: true
+		},
+
+	
+	},
+	defaultStyle: {
+		fontSize: 14,
+	},
+	"content": [
+								
+{
+	table: {
+	
+				
+		location: 'top',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jspagetitlelabel puertos_olt import}","hidden":"{$item_hide_import_header}","fontSize":30},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+		
+				
+								
+{
+	table: {
+	
+				
+		location: 'grid',
+		
+		
+		widths: [
+								"%", 
+					 ],	
+		
+			heights: [
+								
+			"%",
+			 
+				],
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":{$Id_puerto_pdfvalue},"hidden":"{$item_hide_import_field}"},
+				
+				
+			{"text":{$tarjeta_pdfvalue},"hidden":"{$item_hide_import_field1}"},
+				
+				
+			{"text":{$localidad_pdfvalue},"hidden":"{$item_hide_import_field2}"},
+				
+				
+			{"text":{$cable_pdfvalue},"hidden":"{$item_hide_import_field3}"},
+				
+				
+			{"text":{$spliter_pdfvalue},"hidden":"{$item_hide_import_field4}"},
+				
+				
+			{"text":{$puerto_pdfvalue},"hidden":"{$item_hide_import_field5}"},
+				
+				
+			{"text":{$Odf_pdfvalue},"hidden":"{$item_hide_import_field6}"},
+				
+				
+			{"text":{$Bandeja_pdfvalue},"hidden":"{$item_hide_import_field7}"},
+				
+				
+			{"text":{$Puerto_del_odf_pdfvalue},"hidden":"{$item_hide_import_field8}"},
+				
+				
+			{"text":{$Observaciones_pdfvalue},"hidden":"{$item_hide_import_field9}"},
+				
+				
+			{"text":{$Barrio_pdfvalue},"hidden":"{$item_hide_import_field10}"},
+				
+				
+			{"text":{$Fin_de_Fibra_pdfvalue},"hidden":"{$item_hide_import_field11}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+		
+					]
+}
+  

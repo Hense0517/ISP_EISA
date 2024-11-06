@@ -76,6 +76,12 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelslocalidad["Spanish"]["Observaciones"] = "Observaciones";
 	$fieldToolTipslocalidad["Spanish"]["Observaciones"] = "";
 	$placeHolderslocalidad["Spanish"]["Observaciones"] = "";
+	$fieldLabelslocalidad["Spanish"]["Foto"] = "Foto";
+	$fieldToolTipslocalidad["Spanish"]["Foto"] = "";
+	$placeHolderslocalidad["Spanish"]["Foto"] = "";
+	$fieldLabelslocalidad["Spanish"]["qr"] = "Qr";
+	$fieldToolTipslocalidad["Spanish"]["qr"] = "";
+	$placeHolderslocalidad["Spanish"]["qr"] = "";
 	if (count($fieldToolTipslocalidad["Spanish"]))
 		$tdatalocalidad[".isUseToolTips"] = true;
 }
@@ -136,6 +142,12 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelslocalidad["English"]["Observaciones"] = "Observaciones";
 	$fieldToolTipslocalidad["English"]["Observaciones"] = "";
 	$placeHolderslocalidad["English"]["Observaciones"] = "";
+	$fieldLabelslocalidad["English"]["Foto"] = "Foto";
+	$fieldToolTipslocalidad["English"]["Foto"] = "";
+	$placeHolderslocalidad["English"]["Foto"] = "";
+	$fieldLabelslocalidad["English"]["qr"] = "Qr";
+	$fieldToolTipslocalidad["English"]["qr"] = "";
+	$placeHolderslocalidad["English"]["qr"] = "";
 	if (count($fieldToolTipslocalidad["English"]))
 		$tdatalocalidad[".isUseToolTips"] = true;
 }
@@ -271,6 +283,8 @@ $tdatalocalidad[".googleLikeFields"][] = "Longitud";
 $tdatalocalidad[".googleLikeFields"][] = "Mapa";
 $tdatalocalidad[".googleLikeFields"][] = "Direccion";
 $tdatalocalidad[".googleLikeFields"][] = "Observaciones";
+$tdatalocalidad[".googleLikeFields"][] = "Foto";
+$tdatalocalidad[".googleLikeFields"][] = "qr";
 
 
 
@@ -306,7 +320,7 @@ $tdatalocalidad[".orderindexes"] = array();
 
 
 
-$tdatalocalidad[".sqlHead"] = "SELECT `id_localidad`,  `Localidad`,  `Tipo_Olt`,  `Serial_Olt`,  `Tipo_Mikrotik`,  `Serial_Mikrotik`,  `Serial_Ont_Prueba`,  `Serial_Raspberry`,  `Serial_Camara`,  `Nombre_del_custodio`,  `Telefono_del_custodio`,  `Contrato_de_energia`,  `Latitud`,  `Longitud`,  `Mapa`,  `Direccion`,  `Observaciones`";
+$tdatalocalidad[".sqlHead"] = "SELECT `id_localidad`,  `Localidad`,  `Tipo_Olt`,  `Serial_Olt`,  `Tipo_Mikrotik`,  `Serial_Mikrotik`,  `Serial_Ont_Prueba`,  `Serial_Raspberry`,  `Serial_Camara`,  `Nombre_del_custodio`,  `Telefono_del_custodio`,  `Contrato_de_energia`,  `Latitud`,  `Longitud`,  `Mapa`,  `Direccion`,  `Observaciones`,  `Foto`,  CONCAT(`Localidad`, '\\n', \"Propiedad de Isp Eiasa\") AS `qr`";
 $tdatalocalidad[".sqlFrom"] = "FROM `localidad`";
 $tdatalocalidad[".sqlWhereExpr"] = "(`Localidad` NOT IN ('EL BAGRE', 'ZARAGOZA'))";
 $tdatalocalidad[".sqlTail"] = "";
@@ -2743,6 +2757,300 @@ $tdatalocalidad[".hideMobileList"] = array();
 
 	$tdatalocalidad["Observaciones"] = $fdata;
 		$tdatalocalidad[".searchableFields"][] = "Observaciones";
+//	Foto
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 18;
+	$fdata["strName"] = "Foto";
+	$fdata["GoodName"] = "Foto";
+	$fdata["ownerTable"] = "localidad";
+	$fdata["Label"] = GetFieldLabel("localidad","Foto");
+	$fdata["FieldType"] = 200;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "Foto";
+
+		$fdata["sourceSingle"] = "Foto";
+
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "`Foto`";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "File-based Image");
+
+	
+	
+				$vdata["ImageWidth"] = 600;
+	$vdata["ImageHeight"] = 400;
+
+			$vdata["multipleImgMode"] = 1;
+	$vdata["maxImages"] = 0;
+
+			$vdata["showGallery"] = true;
+	$vdata["galleryMode"] = 2;
+	$vdata["captionMode"] = 2;
+	$vdata["captionField"] = "";
+
+	$vdata["imageBorder"] = 1;
+	$vdata["imageFullWidth"] = 1;
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Document upload");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypes"] = array();
+			$edata["acceptFileTypes"][] = strtoupper("bmp");
+						$edata["acceptFileTypesHtml"] = ".bmp";
+			$edata["acceptFileTypes"][] = strtoupper("gif");
+						$edata["acceptFileTypesHtml"] .= ",.gif";
+			$edata["acceptFileTypes"][] = strtoupper("jpg");
+						$edata["acceptFileTypesHtml"] .= ",.jpg";
+			$edata["acceptFileTypes"][] = strtoupper("png");
+						$edata["acceptFileTypesHtml"] .= ",.png";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+	
+	
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+//	End validation
+
+	
+				$edata["ResizeImage"] = true;
+				$edata["NewSize"] = 600;
+
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatalocalidad["Foto"] = $fdata;
+		$tdatalocalidad[".searchableFields"][] = "Foto";
+//	qr
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 19;
+	$fdata["strName"] = "qr";
+	$fdata["GoodName"] = "qr";
+	$fdata["ownerTable"] = "";
+	$fdata["Label"] = GetFieldLabel("localidad","qr");
+	$fdata["FieldType"] = 200;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "qr";
+
+	
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "CONCAT(`Localidad`, '\\n', \"Propiedad de Isp Eiasa\")";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "QRCode");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+		
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatalocalidad["qr"] = $fdata;
+		$tdatalocalidad[".searchableFields"][] = "qr";
 
 
 $tables_data["localidad"]=&$tdatalocalidad;
@@ -2787,9 +3095,14 @@ $detailsTablesData["localidad"] = array();
 
 	$detailsTablesData["localidad"][$dIndex]["masterKeys"][]="Localidad";
 
+	$detailsTablesData["localidad"][$dIndex]["masterKeys"][]="id_localidad";
+
 				$detailsTablesData["localidad"][$dIndex]["detailKeys"] = array();
 
 	$detailsTablesData["localidad"][$dIndex]["detailKeys"][]="localidad";
+
+		
+	$detailsTablesData["localidad"][$dIndex]["detailKeys"][]="id_localidad";
 //	Mapa_General
 	
 	
@@ -2820,6 +3133,36 @@ $detailsTablesData["localidad"] = array();
 				$detailsTablesData["localidad"][$dIndex]["detailKeys"] = array();
 
 	$detailsTablesData["localidad"][$dIndex]["detailKeys"][]="Localidad";
+//	tarjeta_olt
+	
+	
+
+		$dIndex = 2;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="tarjeta_olt";
+		$detailsParam["dOriginalTable"] = "tarjeta_olt";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "tarjeta_olt";
+	$detailsParam["dCaptionTable"] = GetTableCaption("tarjeta_olt");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["localidad"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["localidad"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["localidad"][$dIndex]["masterKeys"][]="id_localidad";
+
+				$detailsTablesData["localidad"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["localidad"][$dIndex]["detailKeys"][]="Loclaidad";
 //endif
 
 // tables which are master tables for current table (detail)
@@ -2847,12 +3190,12 @@ function createSqlQuery_localidad()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "`id_localidad`,  `Localidad`,  `Tipo_Olt`,  `Serial_Olt`,  `Tipo_Mikrotik`,  `Serial_Mikrotik`,  `Serial_Ont_Prueba`,  `Serial_Raspberry`,  `Serial_Camara`,  `Nombre_del_custodio`,  `Telefono_del_custodio`,  `Contrato_de_energia`,  `Latitud`,  `Longitud`,  `Mapa`,  `Direccion`,  `Observaciones`";
+$proto0["m_strFieldList"] = "`id_localidad`,  `Localidad`,  `Tipo_Olt`,  `Serial_Olt`,  `Tipo_Mikrotik`,  `Serial_Mikrotik`,  `Serial_Ont_Prueba`,  `Serial_Raspberry`,  `Serial_Camara`,  `Nombre_del_custodio`,  `Telefono_del_custodio`,  `Contrato_de_energia`,  `Latitud`,  `Longitud`,  `Mapa`,  `Direccion`,  `Observaciones`,  `Foto`,  CONCAT(`Localidad`, '\\n', \"Propiedad de Isp Eiasa\") AS `qr`";
 $proto0["m_strFrom"] = "FROM `localidad`";
 $proto0["m_strWhere"] = "(`Localidad` NOT IN ('EL BAGRE', 'ZARAGOZA'))";
 $proto0["m_strOrderBy"] = "ORDER BY `Localidad`";
 	
-		;
+										;
 			$proto0["cipherer"] = null;
 $proto2=array();
 $proto2["m_sql"] = "`Localidad` NOT IN ('EL BAGRE', 'ZARAGOZA')";
@@ -3127,68 +3470,112 @@ $proto38["m_alias"] = "";
 $obj = new SQLFieldListItem($proto38);
 
 $proto0["m_fieldlist"][]=$obj;
-$proto0["m_fromlist"] = array();
-												$proto40=array();
-$proto40["m_link"] = "SQLL_MAIN";
-			$proto41=array();
-$proto41["m_strName"] = "localidad";
-$proto41["m_srcTableName"] = "localidad";
-$proto41["m_columns"] = array();
-$proto41["m_columns"][] = "id_localidad";
-$proto41["m_columns"][] = "Localidad";
-$proto41["m_columns"][] = "Tipo_Olt";
-$proto41["m_columns"][] = "Serial_Olt";
-$proto41["m_columns"][] = "Tipo_Mikrotik";
-$proto41["m_columns"][] = "Serial_Mikrotik";
-$proto41["m_columns"][] = "Serial_Ont_Prueba";
-$proto41["m_columns"][] = "Serial_Raspberry";
-$proto41["m_columns"][] = "Serial_Camara";
-$proto41["m_columns"][] = "Nombre_del_custodio";
-$proto41["m_columns"][] = "Telefono_del_custodio";
-$proto41["m_columns"][] = "Contrato_de_energia";
-$proto41["m_columns"][] = "Latitud";
-$proto41["m_columns"][] = "Longitud";
-$proto41["m_columns"][] = "Mapa";
-$proto41["m_columns"][] = "Direccion";
-$proto41["m_columns"][] = "Observaciones";
-$obj = new SQLTable($proto41);
+						$proto40=array();
+			$obj = new SQLField(array(
+	"m_strName" => "Foto",
+	"m_strTable" => "localidad",
+	"m_srcTableName" => "localidad"
+));
 
-$proto40["m_table"] = $obj;
-$proto40["m_sql"] = "`localidad`";
-$proto40["m_alias"] = "";
+$proto40["m_sql"] = "`Foto`";
 $proto40["m_srcTableName"] = "localidad";
-$proto42=array();
-$proto42["m_sql"] = "";
-$proto42["m_uniontype"] = "SQLL_UNKNOWN";
+$proto40["m_expr"]=$obj;
+$proto40["m_alias"] = "";
+$obj = new SQLFieldListItem($proto40);
+
+$proto0["m_fieldlist"][]=$obj;
+						$proto42=array();
+			$proto43=array();
+$proto43["m_functiontype"] = "SQLF_CUSTOM";
+$proto43["m_arguments"] = array();
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "`Localidad`"
+));
+
+$proto43["m_arguments"][]=$obj;
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "'\\n'"
+));
+
+$proto43["m_arguments"][]=$obj;
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "\"Propiedad de Isp Eiasa\""
+));
+
+$proto43["m_arguments"][]=$obj;
+$proto43["m_strFunctionName"] = "CONCAT";
+$obj = new SQLFunctionCall($proto43);
+
+$proto42["m_sql"] = "CONCAT(`Localidad`, '\\n', \"Propiedad de Isp Eiasa\")";
+$proto42["m_srcTableName"] = "localidad";
+$proto42["m_expr"]=$obj;
+$proto42["m_alias"] = "qr";
+$obj = new SQLFieldListItem($proto42);
+
+$proto0["m_fieldlist"][]=$obj;
+$proto0["m_fromlist"] = array();
+												$proto47=array();
+$proto47["m_link"] = "SQLL_MAIN";
+			$proto48=array();
+$proto48["m_strName"] = "localidad";
+$proto48["m_srcTableName"] = "localidad";
+$proto48["m_columns"] = array();
+$proto48["m_columns"][] = "id_localidad";
+$proto48["m_columns"][] = "Localidad";
+$proto48["m_columns"][] = "Tipo_Olt";
+$proto48["m_columns"][] = "Serial_Olt";
+$proto48["m_columns"][] = "Tipo_Mikrotik";
+$proto48["m_columns"][] = "Serial_Mikrotik";
+$proto48["m_columns"][] = "Serial_Ont_Prueba";
+$proto48["m_columns"][] = "Serial_Raspberry";
+$proto48["m_columns"][] = "Serial_Camara";
+$proto48["m_columns"][] = "Nombre_del_custodio";
+$proto48["m_columns"][] = "Telefono_del_custodio";
+$proto48["m_columns"][] = "Contrato_de_energia";
+$proto48["m_columns"][] = "Latitud";
+$proto48["m_columns"][] = "Longitud";
+$proto48["m_columns"][] = "Mapa";
+$proto48["m_columns"][] = "Direccion";
+$proto48["m_columns"][] = "Observaciones";
+$proto48["m_columns"][] = "Foto";
+$obj = new SQLTable($proto48);
+
+$proto47["m_table"] = $obj;
+$proto47["m_sql"] = "`localidad`";
+$proto47["m_alias"] = "";
+$proto47["m_srcTableName"] = "localidad";
+$proto49=array();
+$proto49["m_sql"] = "";
+$proto49["m_uniontype"] = "SQLL_UNKNOWN";
 	$obj = new SQLNonParsed(array(
 	"m_sql" => ""
 ));
 
-$proto42["m_column"]=$obj;
-$proto42["m_contained"] = array();
-$proto42["m_strCase"] = "";
-$proto42["m_havingmode"] = false;
-$proto42["m_inBrackets"] = false;
-$proto42["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto42);
+$proto49["m_column"]=$obj;
+$proto49["m_contained"] = array();
+$proto49["m_strCase"] = "";
+$proto49["m_havingmode"] = false;
+$proto49["m_inBrackets"] = false;
+$proto49["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto49);
 
-$proto40["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto40);
+$proto47["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto47);
 
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
 $proto0["m_orderby"] = array();
-												$proto44=array();
+												$proto51=array();
 						$obj = new SQLField(array(
 	"m_strName" => "Localidad",
 	"m_strTable" => "localidad",
 	"m_srcTableName" => "localidad"
 ));
 
-$proto44["m_column"]=$obj;
-$proto44["m_bAsc"] = 1;
-$proto44["m_nColumn"] = 0;
-$obj = new SQLOrderByItem($proto44);
+$proto51["m_column"]=$obj;
+$proto51["m_bAsc"] = 1;
+$proto51["m_nColumn"] = 0;
+$obj = new SQLOrderByItem($proto51);
 
 $proto0["m_orderby"][]=$obj;					
 $proto0["m_srcTableName"]="localidad";		
@@ -3200,9 +3587,9 @@ $queryData_localidad = createSqlQuery_localidad();
 
 
 	
-		;
+										;
 
-																	
+																			
 
 $tdatalocalidad[".sqlquery"] = $queryData_localidad;
 

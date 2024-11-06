@@ -579,7 +579,7 @@ $proto0["m_strFrom"] = "FROM `numeros_de_spliters`";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
 	
-		;
+										;
 			$proto0["cipherer"] = null;
 $proto2=array();
 $proto2["m_sql"] = "";
@@ -687,7 +687,7 @@ $queryData_numeros_de_spliters1 = createSqlQuery_numeros_de_spliters1();
 
 
 	
-		;
+										;
 
 		
 

@@ -416,6 +416,42 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="Vista_Digitadores")
+		{
+			return false;
+		}
+		if($table=="Ingresar_cliente")
+		{
+			return false;
+		}
+		if($table=="reporte_afectaciones")
+		{
+			return false;
+		}
+		if($table=="reporte_afectaciones_view")
+		{
+			return false;
+		}
+		if($table=="tarjeta_olt")
+		{
+			return false;
+		}
+		if($table=="puertos_olt")
+		{
+			return false;
+		}
+		if($table=="Clientes_por_puerto")
+		{
+			return false;
+		}
+		if($table=="Departamentos")
+		{
+			return false;
+		}
+		if($table=="Ciudades")
+		{
+			return false;
+		}
 		if($table=="admin_rights")
 		{
 			return false;
@@ -425,14 +461,6 @@ class AuditTrailTable
 			return false;
 		}
 		if($table=="admin_users")
-		{
-			return false;
-		}
-		if($table=="Vista_Digitadores")
-		{
-			return false;
-		}
-		if($table=="Ingresar_cliente")
 		{
 			return false;
 		}
@@ -804,6 +832,42 @@ class AuditTrailFile
 		{
 			return false;
 		}
+		if($table=="Vista_Digitadores")
+		{
+			return false;
+		}
+		if($table=="Ingresar_cliente")
+		{
+			return false;
+		}
+		if($table=="reporte_afectaciones")
+		{
+			return false;
+		}
+		if($table=="reporte_afectaciones_view")
+		{
+			return false;
+		}
+		if($table=="tarjeta_olt")
+		{
+			return false;
+		}
+		if($table=="puertos_olt")
+		{
+			return false;
+		}
+		if($table=="Clientes_por_puerto")
+		{
+			return false;
+		}
+		if($table=="Departamentos")
+		{
+			return false;
+		}
+		if($table=="Ciudades")
+		{
+			return false;
+		}
 		if($table=="admin_rights")
 		{
 			return false;
@@ -813,14 +877,6 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="admin_users")
-		{
-			return false;
-		}
-		if($table=="Vista_Digitadores")
-		{
-			return false;
-		}
-		if($table=="Ingresar_cliente")
 		{
 			return false;
 		}

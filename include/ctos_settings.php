@@ -52,6 +52,9 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsctos["Spanish"]["Ubicacion"] = "Ubicacion";
 	$fieldToolTipsctos["Spanish"]["Ubicacion"] = "";
 	$placeHoldersctos["Spanish"]["Ubicacion"] = "";
+	$fieldLabelsctos["Spanish"]["id_spliter"] = "Id Spliter";
+	$fieldToolTipsctos["Spanish"]["id_spliter"] = "";
+	$placeHoldersctos["Spanish"]["id_spliter"] = "";
 	if (count($fieldToolTipsctos["Spanish"]))
 		$tdatactos[".isUseToolTips"] = true;
 }
@@ -88,6 +91,9 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelsctos["English"]["Ubicacion"] = "Ubicacion";
 	$fieldToolTipsctos["English"]["Ubicacion"] = "";
 	$placeHoldersctos["English"]["Ubicacion"] = "";
+	$fieldLabelsctos["English"]["id_spliter"] = "Id Spliter";
+	$fieldToolTipsctos["English"]["id_spliter"] = "";
+	$placeHoldersctos["English"]["id_spliter"] = "";
 	if (count($fieldToolTipsctos["English"]))
 		$tdatactos[".isUseToolTips"] = true;
 }
@@ -215,6 +221,7 @@ $tdatactos[".googleLikeFields"][] = "Cable";
 $tdatactos[".googleLikeFields"][] = "Localidad";
 $tdatactos[".googleLikeFields"][] = "DisplayOnMap";
 $tdatactos[".googleLikeFields"][] = "Ubicacion";
+$tdatactos[".googleLikeFields"][] = "id_spliter";
 
 
 
@@ -250,7 +257,7 @@ $tdatactos[".orderindexes"] = array();
 
 
 
-$tdatactos[".sqlHead"] = "SELECT `id_Ctos`,  `Cto`,  `Latitud`,  `Longitud`,  `Spliter`,  `Cable`,  `Localidad`,  concat(Cto, '\\n', Spliter, '\\n', Cable, '\\n', Localidad) AS `DisplayOnMap`,  `Ubicacion`";
+$tdatactos[".sqlHead"] = "SELECT `id_Ctos`,  `Cto`,  `Latitud`,  `Longitud`,  `Spliter`,  `Cable`,  `Localidad`,  concat(Cto, '\\n', Spliter, '\\n', Cable, '\\n', Localidad) AS `DisplayOnMap`,  `Ubicacion`,  `id_spliter`";
 $tdatactos[".sqlFrom"] = "FROM `ctos`";
 $tdatactos[".sqlWhereExpr"] = "";
 $tdatactos[".sqlTail"] = "";
@@ -1582,6 +1589,169 @@ $tdatactos[".hideMobileList"] = array();
 
 	$tdatactos["Ubicacion"] = $fdata;
 		$tdatactos[".searchableFields"][] = "Ubicacion";
+//	id_spliter
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 10;
+	$fdata["strName"] = "id_spliter";
+	$fdata["GoodName"] = "id_spliter";
+	$fdata["ownerTable"] = "ctos";
+	$fdata["Label"] = GetFieldLabel("ctos","id_spliter");
+	$fdata["FieldType"] = 3;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "id_spliter";
+
+		$fdata["sourceSingle"] = "id_spliter";
+
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "`id_spliter`";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Lookup wizard");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "spliters";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+		
+	$edata["LinkField"] = "id_spliters";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "id_spliters";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "id_spliters";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+	
+	
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+							
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Equals";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatactos["id_spliter"] = $fdata;
+		$tdatactos[".searchableFields"][] = "id_spliter";
 
 
 $tables_data["ctos"]=&$tdatactos;
@@ -1667,10 +1837,12 @@ $masterTablesData["ctos"] = array();
 	$masterTablesData["ctos"][0]["masterKeys"][]="spliter";
 				$masterTablesData["ctos"][0]["masterKeys"][]="cable";
 				$masterTablesData["ctos"][0]["masterKeys"][]="localidad";
+				$masterTablesData["ctos"][0]["masterKeys"][]="id_spliters";
 				$masterTablesData["ctos"][0]["detailKeys"] = array();
 	$masterTablesData["ctos"][0]["detailKeys"][]="Spliter";
 				$masterTablesData["ctos"][0]["detailKeys"][]="Cable";
 				$masterTablesData["ctos"][0]["detailKeys"][]="Localidad";
+				$masterTablesData["ctos"][0]["detailKeys"][]="id_spliter";
 		
 	//endif
 // -----------------end  prepare master-details data arrays ------------------------------//
@@ -1693,12 +1865,12 @@ function createSqlQuery_ctos()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "`id_Ctos`,  `Cto`,  `Latitud`,  `Longitud`,  `Spliter`,  `Cable`,  `Localidad`,  concat(Cto, '\\n', Spliter, '\\n', Cable, '\\n', Localidad) AS `DisplayOnMap`,  `Ubicacion`";
+$proto0["m_strFieldList"] = "`id_Ctos`,  `Cto`,  `Latitud`,  `Longitud`,  `Spliter`,  `Cable`,  `Localidad`,  concat(Cto, '\\n', Spliter, '\\n', Cable, '\\n', Localidad) AS `DisplayOnMap`,  `Ubicacion`,  `id_spliter`";
 $proto0["m_strFrom"] = "FROM `ctos`";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "ORDER BY `id_Ctos`";
 	
-		;
+										;
 			$proto0["cipherer"] = null;
 $proto2=array();
 $proto2["m_sql"] = "";
@@ -1894,62 +2066,78 @@ $proto29["m_alias"] = "";
 $obj = new SQLFieldListItem($proto29);
 
 $proto0["m_fieldlist"][]=$obj;
-$proto0["m_fromlist"] = array();
-												$proto31=array();
-$proto31["m_link"] = "SQLL_MAIN";
-			$proto32=array();
-$proto32["m_strName"] = "ctos";
-$proto32["m_srcTableName"] = "ctos";
-$proto32["m_columns"] = array();
-$proto32["m_columns"][] = "id_Ctos";
-$proto32["m_columns"][] = "Cto";
-$proto32["m_columns"][] = "Latitud";
-$proto32["m_columns"][] = "Longitud";
-$proto32["m_columns"][] = "Spliter";
-$proto32["m_columns"][] = "Cable";
-$proto32["m_columns"][] = "Localidad";
-$proto32["m_columns"][] = "Lat";
-$proto32["m_columns"][] = "Lng";
-$proto32["m_columns"][] = "Ubicacion";
-$proto32["m_columns"][] = "id_spliter";
-$obj = new SQLTable($proto32);
+						$proto31=array();
+			$obj = new SQLField(array(
+	"m_strName" => "id_spliter",
+	"m_strTable" => "ctos",
+	"m_srcTableName" => "ctos"
+));
 
-$proto31["m_table"] = $obj;
-$proto31["m_sql"] = "`ctos`";
-$proto31["m_alias"] = "";
+$proto31["m_sql"] = "`id_spliter`";
 $proto31["m_srcTableName"] = "ctos";
-$proto33=array();
-$proto33["m_sql"] = "";
-$proto33["m_uniontype"] = "SQLL_UNKNOWN";
+$proto31["m_expr"]=$obj;
+$proto31["m_alias"] = "";
+$obj = new SQLFieldListItem($proto31);
+
+$proto0["m_fieldlist"][]=$obj;
+$proto0["m_fromlist"] = array();
+												$proto33=array();
+$proto33["m_link"] = "SQLL_MAIN";
+			$proto34=array();
+$proto34["m_strName"] = "ctos";
+$proto34["m_srcTableName"] = "ctos";
+$proto34["m_columns"] = array();
+$proto34["m_columns"][] = "id_Ctos";
+$proto34["m_columns"][] = "Cto";
+$proto34["m_columns"][] = "Latitud";
+$proto34["m_columns"][] = "Longitud";
+$proto34["m_columns"][] = "Spliter";
+$proto34["m_columns"][] = "Cable";
+$proto34["m_columns"][] = "Localidad";
+$proto34["m_columns"][] = "Lat";
+$proto34["m_columns"][] = "Lng";
+$proto34["m_columns"][] = "Ubicacion";
+$proto34["m_columns"][] = "id_spliter";
+$proto34["m_columns"][] = "id_cable";
+$proto34["m_columns"][] = "id_localidad";
+$obj = new SQLTable($proto34);
+
+$proto33["m_table"] = $obj;
+$proto33["m_sql"] = "`ctos`";
+$proto33["m_alias"] = "";
+$proto33["m_srcTableName"] = "ctos";
+$proto35=array();
+$proto35["m_sql"] = "";
+$proto35["m_uniontype"] = "SQLL_UNKNOWN";
 	$obj = new SQLNonParsed(array(
 	"m_sql" => ""
 ));
 
-$proto33["m_column"]=$obj;
-$proto33["m_contained"] = array();
-$proto33["m_strCase"] = "";
-$proto33["m_havingmode"] = false;
-$proto33["m_inBrackets"] = false;
-$proto33["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto33);
+$proto35["m_column"]=$obj;
+$proto35["m_contained"] = array();
+$proto35["m_strCase"] = "";
+$proto35["m_havingmode"] = false;
+$proto35["m_inBrackets"] = false;
+$proto35["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto35);
 
-$proto31["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto31);
+$proto33["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto33);
 
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
 $proto0["m_orderby"] = array();
-												$proto35=array();
+												$proto37=array();
 						$obj = new SQLField(array(
 	"m_strName" => "id_Ctos",
 	"m_strTable" => "ctos",
 	"m_srcTableName" => "ctos"
 ));
 
-$proto35["m_column"]=$obj;
-$proto35["m_bAsc"] = 1;
-$proto35["m_nColumn"] = 0;
-$obj = new SQLOrderByItem($proto35);
+$proto37["m_column"]=$obj;
+$proto37["m_bAsc"] = 1;
+$proto37["m_nColumn"] = 0;
+$obj = new SQLOrderByItem($proto37);
 
 $proto0["m_orderby"][]=$obj;					
 $proto0["m_srcTableName"]="ctos";		
@@ -1961,9 +2149,9 @@ $queryData_ctos = createSqlQuery_ctos();
 
 
 	
-		;
+										;
 
-									
+										
 
 $tdatactos[".sqlquery"] = $queryData_ctos;
 

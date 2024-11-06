@@ -192,6 +192,9 @@ pdfDocument = {
 				
 			{"text":{$Ubicacion_pdfvalue},"hidden":"{$item_hide_integrated_search_field8}"},
 				
+				
+			{"text":{$id_spliter_pdfvalue},"hidden":"{$item_hide_integrated_search_field9}"},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

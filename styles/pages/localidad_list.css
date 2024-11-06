@@ -22,6 +22,9 @@
 [data-cellid="grid_cell_icons1"][data-page="localidad_list"][data-cellid="grid_cell_icons1"][data-page="localidad_list"][data-cellid="grid_cell_icons1"][data-page="localidad_list"] {
   white-space: nowrap;
 }
+[data-cellid="grid_cell_details6"][data-page="localidad_list"][data-cellid="grid_cell_details6"][data-page="localidad_list"][data-cellid="grid_cell_details6"][data-page="localidad_list"] {
+  white-space: nowrap;
+}
 [data-page="localidad_list"][data-itemid="page_image_ash8f23hr"] {
   width: 400px;
 }

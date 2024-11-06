@@ -118,8 +118,21 @@
 [data-page="localidad_view"][data-itemid="integrated_edit_field16"][data-page="localidad_view"][data-itemid="integrated_edit_field16"][data-page="localidad_view"][data-itemid="integrated_edit_field16"][data-page="localidad_view"][data-itemid="integrated_edit_field16"] > * > * > * > select {
   font-weight: bold;
 }
-[data-page="localidad_view"][data-itemid="page_image_ash8f23hr"] {
-  width: 400px;
+[data-page="localidad_view"][data-itemid="integrated_edit_field14"][data-page="localidad_view"][data-itemid="integrated_edit_field14"][data-page="localidad_view"][data-itemid="integrated_edit_field14"][data-page="localidad_view"][data-itemid="integrated_edit_field14"] > * > label,
+[data-page="localidad_view"][data-itemid="integrated_edit_field14"][data-page="localidad_view"][data-itemid="integrated_edit_field14"][data-page="localidad_view"][data-itemid="integrated_edit_field14"][data-page="localidad_view"][data-itemid="integrated_edit_field14"] > * > * > input,
+[data-page="localidad_view"][data-itemid="integrated_edit_field14"][data-page="localidad_view"][data-itemid="integrated_edit_field14"][data-page="localidad_view"][data-itemid="integrated_edit_field14"][data-page="localidad_view"][data-itemid="integrated_edit_field14"] > * > * > textarea,
+[data-page="localidad_view"][data-itemid="integrated_edit_field14"][data-page="localidad_view"][data-itemid="integrated_edit_field14"][data-page="localidad_view"][data-itemid="integrated_edit_field14"][data-page="localidad_view"][data-itemid="integrated_edit_field14"] > * > * > select,
+[data-page="localidad_view"][data-itemid="integrated_edit_field14"][data-page="localidad_view"][data-itemid="integrated_edit_field14"][data-page="localidad_view"][data-itemid="integrated_edit_field14"][data-page="localidad_view"][data-itemid="integrated_edit_field14"] > * > * > .r-readonly-control,
+[data-page="localidad_view"][data-itemid="integrated_edit_field14"][data-page="localidad_view"][data-itemid="integrated_edit_field14"][data-page="localidad_view"][data-itemid="integrated_edit_field14"][data-page="localidad_view"][data-itemid="integrated_edit_field14"] > * > * > * > select {
+  font-weight: bold;
+}
+[data-page="localidad_view"][data-itemid="integrated_edit_field17"][data-page="localidad_view"][data-itemid="integrated_edit_field17"][data-page="localidad_view"][data-itemid="integrated_edit_field17"][data-page="localidad_view"][data-itemid="integrated_edit_field17"] > * > label,
+[data-page="localidad_view"][data-itemid="integrated_edit_field17"][data-page="localidad_view"][data-itemid="integrated_edit_field17"][data-page="localidad_view"][data-itemid="integrated_edit_field17"][data-page="localidad_view"][data-itemid="integrated_edit_field17"] > * > * > input,
+[data-page="localidad_view"][data-itemid="integrated_edit_field17"][data-page="localidad_view"][data-itemid="integrated_edit_field17"][data-page="localidad_view"][data-itemid="integrated_edit_field17"][data-page="localidad_view"][data-itemid="integrated_edit_field17"] > * > * > textarea,
+[data-page="localidad_view"][data-itemid="integrated_edit_field17"][data-page="localidad_view"][data-itemid="integrated_edit_field17"][data-page="localidad_view"][data-itemid="integrated_edit_field17"][data-page="localidad_view"][data-itemid="integrated_edit_field17"] > * > * > select,
+[data-page="localidad_view"][data-itemid="integrated_edit_field17"][data-page="localidad_view"][data-itemid="integrated_edit_field17"][data-page="localidad_view"][data-itemid="integrated_edit_field17"][data-page="localidad_view"][data-itemid="integrated_edit_field17"] > * > * > .r-readonly-control,
+[data-page="localidad_view"][data-itemid="integrated_edit_field17"][data-page="localidad_view"][data-itemid="integrated_edit_field17"][data-page="localidad_view"][data-itemid="integrated_edit_field17"][data-page="localidad_view"][data-itemid="integrated_edit_field17"] > * > * > * > select {
+  font-weight: bold;
 }
 
 

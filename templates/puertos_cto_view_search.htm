@@ -1,12 +1,17 @@
 <!doctype html>
 <html  {$html_attrs}>
 	<head>
-				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+			<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>{$pagetitle}</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<base href="{$projectPath}">
-		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	
+    <head profile="http://www.w3.org/2005/10/profile">
+
+    <link rel="icon" type="image/png" href="eia.png" />
+
+    </head>		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
 	{BEGIN rtlCSS}
 	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
 	{END rtlCSS}
@@ -94,28 +99,6 @@
 >
 	<div edit-form-cell class="clearfix">
 				
-{BEGIN Puerto_fieldblock}
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_Puerto}  r-horizontal-field form-horizontal" 	
-	data-signal-error-for="Puerto{$id}" 
-	data-itemtype="integrated_search_field" data-itemid="integrated_search_field1" {$item_integrated_search_field1} data-pageid="{$pageid}" data-field="Puerto" data-fieldname="Puerto" >
-
-
-	<label class="r-search-label control-label" for="{$labelfor_Puerto}">
-		{$label puertos_cto_view Puerto }	</label>
-	<div class="r-search-option">
-		{$searchtype_Puerto}
-	</div>
-	<div class="r-search-field">
-		{$Puerto_editcontrol}	</div>
-	<div class="r-search-field">
-		{$Puerto_editcontrol1}
-	</div>
-	
-</div>
-
-{END Puerto_fieldblock}
-											
 {BEGIN Cto_fieldblock}
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_Cto}  r-horizontal-field form-horizontal" 	
@@ -137,72 +120,6 @@
 </div>
 
 {END Cto_fieldblock}
-											
-{BEGIN Spliter_fieldblock}
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_Spliter}  r-horizontal-field form-horizontal" 	
-	data-signal-error-for="Spliter{$id}" 
-	data-itemtype="integrated_search_field" data-itemid="integrated_search_field3" {$item_integrated_search_field3} data-pageid="{$pageid}" data-field="Spliter" data-fieldname="Spliter" >
-
-
-	<label class="r-search-label control-label" for="{$labelfor_Spliter}">
-		{$label puertos_cto_view Spliter }	</label>
-	<div class="r-search-option">
-		{$searchtype_Spliter}
-	</div>
-	<div class="r-search-field">
-		{$Spliter_editcontrol}	</div>
-	<div class="r-search-field">
-		{$Spliter_editcontrol1}
-	</div>
-	
-</div>
-
-{END Spliter_fieldblock}
-											
-{BEGIN Cable_fieldblock}
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_Cable}  r-horizontal-field form-horizontal" 	
-	data-signal-error-for="Cable{$id}" 
-	data-itemtype="integrated_search_field" data-itemid="integrated_search_field4" {$item_integrated_search_field4} data-pageid="{$pageid}" data-field="Cable" data-fieldname="Cable" >
-
-
-	<label class="r-search-label control-label" for="{$labelfor_Cable}">
-		{$label puertos_cto_view Cable }	</label>
-	<div class="r-search-option">
-		{$searchtype_Cable}
-	</div>
-	<div class="r-search-field">
-		{$Cable_editcontrol}	</div>
-	<div class="r-search-field">
-		{$Cable_editcontrol1}
-	</div>
-	
-</div>
-
-{END Cable_fieldblock}
-											
-{BEGIN Localidad_fieldblock}
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_Localidad}  r-horizontal-field form-horizontal" 	
-	data-signal-error-for="Localidad{$id}" 
-	data-itemtype="integrated_search_field" data-itemid="integrated_search_field5" {$item_integrated_search_field5} data-pageid="{$pageid}" data-field="Localidad" data-fieldname="Localidad" >
-
-
-	<label class="r-search-label control-label" for="{$labelfor_Localidad}">
-		{$label puertos_cto_view Localidad }	</label>
-	<div class="r-search-option">
-		{$searchtype_Localidad}
-	</div>
-	<div class="r-search-field">
-		{$Localidad_editcontrol}	</div>
-	<div class="r-search-field">
-		{$Localidad_editcontrol1}
-	</div>
-	
-</div>
-
-{END Localidad_fieldblock}
 											
 {BEGIN Cedula_fieldblock}
 
@@ -226,49 +143,27 @@
 
 {END Cedula_fieldblock}
 											
-{BEGIN Activo_fieldblock}
+{BEGIN id_spliters_fieldblock}
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_Activo}  r-horizontal-field form-horizontal" 	
-	data-signal-error-for="Activo{$id}" 
-	data-itemtype="integrated_search_field" data-itemid="integrated_search_field7" {$item_integrated_search_field7} data-pageid="{$pageid}" data-field="Activo" data-fieldname="Activo" >
+<div class="r-integrated-field form-group clearfix {$fielddispclass_id_spliters}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="id_spliters{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field" {$item_integrated_search_field} data-pageid="{$pageid}" data-field="id_spliters" data-fieldname="id_spliters" >
 
 
-	<label class="r-search-label control-label" for="{$labelfor_Activo}">
-		{$label puertos_cto_view Activo }	</label>
+	<label class="r-search-label control-label" for="{$labelfor_id_spliters}">
+		{$label puertos_cto_view id_spliters }	</label>
 	<div class="r-search-option">
-		{$searchtype_Activo}
+		{$searchtype_id_spliters}
 	</div>
 	<div class="r-search-field">
-		{$Activo_editcontrol}	</div>
+		{$id_spliters_editcontrol}	</div>
 	<div class="r-search-field">
-		{$Activo_editcontrol1}
+		{$id_spliters_editcontrol1}
 	</div>
 	
 </div>
 
-{END Activo_fieldblock}
-											
-{BEGIN Ocupado_fieldblock}
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_Ocupado}  r-horizontal-field form-horizontal" 	
-	data-signal-error-for="Ocupado{$id}" 
-	data-itemtype="integrated_search_field" data-itemid="integrated_search_field8" {$item_integrated_search_field8} data-pageid="{$pageid}" data-field="Ocupado" data-fieldname="Ocupado" >
-
-
-	<label class="r-search-label control-label" for="{$labelfor_Ocupado}">
-		{$label puertos_cto_view Ocupado }	</label>
-	<div class="r-search-option">
-		{$searchtype_Ocupado}
-	</div>
-	<div class="r-search-field">
-		{$Ocupado_editcontrol}	</div>
-	<div class="r-search-field">
-		{$Ocupado_editcontrol1}
-	</div>
-	
-</div>
-
-{END Ocupado_fieldblock}
+{END id_spliters_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c3}

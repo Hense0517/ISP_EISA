@@ -167,7 +167,7 @@ $tdataadmin_rights[".addPageEvents"] = false;
 $tdataadmin_rights[".isUseTimeForSearch"] = false;
 
 
-$tdataadmin_rights[".badgeColor"] = "008B8B";
+$tdataadmin_rights[".badgeColor"] = "5F9EA0";
 
 
 $tdataadmin_rights[".allSearchFields"] = array();
@@ -866,7 +866,7 @@ $proto0["m_strFrom"] = "FROM `isp_eisa prueba de mapasugrights`";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
 	
-		;
+										;
 			$proto0["cipherer"] = null;
 $proto2=array();
 $proto2["m_sql"] = "";
@@ -1004,7 +1004,7 @@ $queryData_admin_rights = createSqlQuery_admin_rights();
 
 
 	
-		;
+										;
 
 				
 

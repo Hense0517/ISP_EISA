@@ -166,28 +166,13 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"text":{$Puerto_pdfvalue},"hidden":"{$item_hide_integrated_search_field1}"},
-				
-				
 			{"text":{$Cto_pdfvalue},"hidden":"{$item_hide_integrated_search_field2}"},
-				
-				
-			{"text":{$Spliter_pdfvalue},"hidden":"{$item_hide_integrated_search_field3}"},
-				
-				
-			{"text":{$Cable_pdfvalue},"hidden":"{$item_hide_integrated_search_field4}"},
-				
-				
-			{"text":{$Localidad_pdfvalue},"hidden":"{$item_hide_integrated_search_field5}"},
 				
 				
 			{"text":{$Cedula_pdfvalue},"hidden":"{$item_hide_integrated_search_field6}"},
 				
 				
-			{"text":{$Activo_pdfvalue},"hidden":"{$item_hide_integrated_search_field7}"},
-				
-				
-			{"text":{$Ocupado_pdfvalue},"hidden":"{$item_hide_integrated_search_field8}"},
+			{"text":{$id_spliters_pdfvalue},"hidden":"{$item_hide_integrated_search_field}"},
 				
 		  ],
   "border": [ false, false, false, false ],

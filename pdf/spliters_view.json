@@ -171,11 +171,58 @@ pdfDocument = {
 			"%",
 						{END row_grid_5}
 			 
+								{BEGIN row_grid_6}
+						
+			"%",
+						{END row_grid_6}
+			 
 				],
 	
 		body: [
 				
 				{BEGIN row_grid_0}
+				[
+																{BEGIN cellblock_grid_c9}
+{
+	cellId: 'c9',
+	col:0,
+	row:0,
+			
+		
+	//	dynamic colspan/rowspan
+
+					{BEGIN colspan_grid_c9}
+			colSpan: {$colspan_grid_c9},
+			{END colspan_grid_c9}
+		
+						
+	
+	
+	
+			"stack": [
+		
+				
+			{BEGIN mastertable_block}
+			{$showmasterfile}
+		{END mastertable_block},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_c9}
+																		{ 
+				cellId: 'c9',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+							],
+				{END row_grid_0}
+						{BEGIN row_grid_1}
 				[
 																{BEGIN cellblock_grid_c}
 {
@@ -193,10 +240,8 @@ pdfDocument = {
 	
 			"stack": [
 		
-				
-			{"hidden":"{$item_hide_integrated_edit_field3}","stack":[{"text":"{$jslabel spliters id_spliters }","bold":true},{"text":{$id_spliters_pdfvalue}}],"margin":[0,0,0,15]},
-				
-		  ],
+				'',
+	  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
      
@@ -232,8 +277,8 @@ pdfDocument = {
 
 {END cellblock_grid_c6}
 											],
-				{END row_grid_0}
-						{BEGIN row_grid_1}
+				{END row_grid_1}
+						{BEGIN row_grid_2}
 				[
 																{BEGIN cellblock_grid_c4}
 {
@@ -290,8 +335,8 @@ pdfDocument = {
 
 {END cellblock_grid_c7}
 											],
-				{END row_grid_1}
-						{BEGIN row_grid_2}
+				{END row_grid_2}
+						{BEGIN row_grid_3}
 				[
 																{BEGIN cellblock_grid_c5}
 {
@@ -348,8 +393,8 @@ pdfDocument = {
 
 {END cellblock_grid_c8}
 											],
-				{END row_grid_2}
-						{BEGIN row_grid_3}
+				{END row_grid_3}
+						{BEGIN row_grid_4}
 				[
 																{BEGIN cellblock_grid_c10}
 {
@@ -388,8 +433,8 @@ pdfDocument = {
 				text: ''
 			},
 							],
-				{END row_grid_3}
-						{BEGIN row_grid_4}
+				{END row_grid_4}
+						{BEGIN row_grid_5}
 				[
 																{BEGIN cellblock_grid_c11}
 {
@@ -430,8 +475,8 @@ pdfDocument = {
 				text: ''
 			},
 							],
-				{END row_grid_4}
-						{BEGIN row_grid_5}
+				{END row_grid_5}
+						{BEGIN row_grid_6}
 				[
 																{BEGIN cellblock_grid_c3}
 {
@@ -452,12 +497,8 @@ pdfDocument = {
 	
 			"stack": [
 		
-				
-			 {BEGIN details_vista_digitadores}
-			{$displayDetailTable_vista_digitadores }
-		{END details_vista_digitadores},
-				
-		  ],
+				'',
+	  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
      
@@ -472,7 +513,7 @@ pdfDocument = {
 				text: ''
 			},
 							],
-				{END row_grid_5}
+				{END row_grid_6}
 		
 		]
 	}

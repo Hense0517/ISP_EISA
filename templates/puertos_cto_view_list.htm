@@ -1,12 +1,17 @@
 <!doctype html>
 <html  {$html_attrs}>
 	<head>
-				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+			<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>{$pagetitle}</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<base href="{$projectPath}">
-		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	
+    <head profile="http://www.w3.org/2005/10/profile">
+
+    <link rel="icon" type="image/png" href="eia.png" />
+
+    </head>		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
 	{BEGIN rtlCSS}
 	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
 	{END rtlCSS}
@@ -81,7 +86,15 @@
 												<span class="caret"></span>
 		</button>
 		<ul class="dropdown-menu">
-								<li data-itemtype="advsearch_link" data-itemid="advsearch_link" {$item_advsearch_link} data-pageid="{$pageid}" data-small >
+							{BEGIN exportselected_link}
+	<li data-itemtype="export_selected" data-itemid="export_selected" {$item_export_selected} data-pageid="{$pageid}" data-small >
+				<a  href="#" {$exportselectedlink_attrs} {$exportselectedlink_span}  title="" >
+				
+		{mlang_message EXPORT_SELECTED}		
+		</a>
+	</li>
+{END exportselected_link}
+							<li role="separator" class="divider"></li>								<li data-itemtype="advsearch_link" data-itemid="advsearch_link" {$item_advsearch_link} data-pageid="{$pageid}" data-small >
 				<a   href="puertos_cto_view_search.php{$stateLink_full}" {$advsearchlink_attrs}  title="" >
 				
 		{mlang_message ADVANCED_SEARCH}		
@@ -133,6 +146,55 @@
 	</span>
 </span>
 			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="loginform_login" {$item_loginform_login} data-topcell-item-type="loginform_login" >
+				{BEGIN guestloginbutton}
+<span data-itemtype="loginform_login" data-itemid="loginform_login" {$item_loginform_login} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" href="#" {$guestloginlink_attrs} >
+							{mlang_message LOGIN}			</a>
+</span>
+{END guestloginbutton}
+			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="username_button" {$item_username_button} data-topcell-item-type="username_button" >
+				{BEGIN loggedas_message}
+<span data-itemtype="username_button" data-itemid="username_button" {$item_username_button} data-pageid="{$pageid}" data-small data-button-item>
+	<span class="dropdown ">
+		<button type="button" title="" class="btn btn-default   dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">		
+			{BEGIN userbutton_icon}							<span class="glyphicon glyphicon-user"></span>
+						{END userbutton_icon}{$userbutton_image}			{$username}			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu">
+							{BEGIN userinfo_link}
+	<li data-itemtype="userinfo_link" data-itemid="userinfo_link" {$item_userinfo_link} data-pageid="{$pageid}" data-small >
+				<a  href="userinfo.php"  title="" >
+				
+		{mlang_message USERINFO}		
+		</a>
+	</li>
+{END userinfo_link}
+							{BEGIN logoutbutton}
+	<li data-itemtype="logout_link" data-itemid="logout_link" {$item_logout_link} data-pageid="{$pageid}" data-small >
+				<a  href="#" {$logoutlink_attrs}  title="" >
+				
+		{mlang_message LOG_OUT}		
+		</a>
+	</li>
+{END logoutbutton}
+							{BEGIN adminarea_link}
+	<li data-itemtype="adminarea_link" data-itemid="adminarea_link" {$item_adminarea_link} data-pageid="{$pageid}" data-small >
+				<a  href="admin_rights_list.php"  title="" >
+				
+		{mlang_message AA_ADMINAREA}		
+		</a>
+	</li>
+{END adminarea_link}
+					</ul>
+	</span>
+</span>
+{END loggedas_message}
+			</span>
 								</nav>
 {END supertop_block}
 					{$locking}
@@ -166,6 +228,20 @@
 {END crumb}
 </ol>
 {END breadcrumb}		</div>					</div>
+			 
+				<div class="row">
+			 
+				<div 
+	data-cellId="top_c3" data-pageid="{$pageid}"	{$cell_top_c3}
+	class=" r-ori-vert			col-md-12
+	
+">
+		 
+		{BEGIN mastertable_block}
+<div data-itemtype="master_info" data-itemid="master_info" {$item_master_info} data-pageid="{$pageid}">
+	{$showmasterfile}
+</div>
+{END mastertable_block}		</div>					</div>
 			</div>		
 {END top_block}
 					</div>
@@ -220,32 +296,32 @@
 				<span class="rnr-searchcontrol">{$searchcontrol1}</span>
 		</div>
 		{END searchCtrlBlock}
-																		{BEGIN searchCtrlBlock_Ocupado}
+																		{BEGIN searchCtrlBlock_Cto}
 
 
-		<div class="form-group srchPanelRow {$filterRow_class_Ocupado}" {$filterRow_attrs_Ocupado}>
-			<label>{$label puertos_cto_view Ocupado }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Ocupado}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Ocupado}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Ocupado}</span>
-						</div>
-		{END searchCtrlBlock_Ocupado}
-																{BEGIN searchCtrlBlock_Activo}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Activo}" {$filterRow_attrs_Activo}>
-			<label>{$label puertos_cto_view Activo }</label>
+		<div class="form-group srchPanelRow {$filterRow_class_Cto}" {$filterRow_attrs_Cto}>
+			<label>{$label puertos_cto_view Cto }</label>
 
 							{$delCtrlButt}
 			
-								<span class="rnr-searchtype">{$searchtype_Activo}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Activo}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Activo}</span>
+								<span class="rnr-searchtype">{$searchtype_Cto}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Cto}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Cto}</span>
 						</div>
-		{END searchCtrlBlock_Activo}
+		{END searchCtrlBlock_Cto}
+																{BEGIN searchCtrlBlock_id_spliters}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_id_spliters}" {$filterRow_attrs_id_spliters}>
+			<label>{$label puertos_cto_view id_spliters }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_id_spliters}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_id_spliters}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_id_spliters}</span>
+						</div>
+		{END searchCtrlBlock_id_spliters}
 																{BEGIN searchCtrlBlock_Cedula}
 
 
@@ -259,71 +335,6 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_Cedula}</span>
 						</div>
 		{END searchCtrlBlock_Cedula}
-																{BEGIN searchCtrlBlock_Localidad}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Localidad}" {$filterRow_attrs_Localidad}>
-			<label>{$label puertos_cto_view Localidad }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Localidad}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Localidad}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Localidad}</span>
-						</div>
-		{END searchCtrlBlock_Localidad}
-																{BEGIN searchCtrlBlock_Cable}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Cable}" {$filterRow_attrs_Cable}>
-			<label>{$label puertos_cto_view Cable }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Cable}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Cable}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Cable}</span>
-						</div>
-		{END searchCtrlBlock_Cable}
-																{BEGIN searchCtrlBlock_Spliter}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Spliter}" {$filterRow_attrs_Spliter}>
-			<label>{$label puertos_cto_view Spliter }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Spliter}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Spliter}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Spliter}</span>
-						</div>
-		{END searchCtrlBlock_Spliter}
-																{BEGIN searchCtrlBlock_Cto}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Cto}" {$filterRow_attrs_Cto}>
-			<label>{$label puertos_cto_view Cto }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Cto}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Cto}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Cto}</span>
-						</div>
-		{END searchCtrlBlock_Cto}
-																{BEGIN searchCtrlBlock_Puerto}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Puerto}" {$filterRow_attrs_Puerto}>
-			<label>{$label puertos_cto_view Puerto }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Puerto}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Puerto}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Puerto}</span>
-						</div>
-		{END searchCtrlBlock_Puerto}
 		
 
 	</div>
@@ -362,18 +373,26 @@
 			 
 				<div 
 	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
-	class=" r-ori-vert			col-md-6
+	class="			col-md-6
 	
 ">
 		{BEGIN firstAboveGridCell}
 		 
-		{BEGIN updateselected_link}
-<span data-itemtype="update_selected" data-itemid="update_selected" {$item_update_selected} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="" class="btn btn-default   
-	" href="puertos_cto_view_edit.php{$stateLink_full}" {$updateselectedlink_attrs} disabled >
-							{mlang_message UPDATE_SELECTED}			</a>
+		{BEGIN add_link}
+<span data-itemtype="add" data-itemid="add" {$item_add} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" {$addlink_attrs} href="puertos_cto_view_add.php{$stateLink_full}" >
+							{mlang_message ADD_NEW}			</a>
 </span>
-{END updateselected_link}
+{END add_link}
+	 
+		{BEGIN inlineadd_link}
+<span data-itemtype="inline_add" data-itemid="inline_add" {$item_inline_add} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" {$inlineaddlink_attrs} >
+							{mlang_message INLINE_ADD}			</a>
+</span>
+{END inlineadd_link}
 			{END firstAboveGridCell}	
 	</div>			 
 				<div 
@@ -421,17 +440,6 @@
 		</div>
 	</div>
 		
-		 
-	<div class="row">
-		<div class="col-md-4">
-			&nbsp;
-		</div>
-		<div class="col-md-8">
-			<label style="color: gray;" for="printSelection{$id}">
-			<input name="printScope" disabled="disabled" id="printSelection{$id}" type="radio" >
-			{mlang_message PPANEL_SELECTED}			</label>
-		</div>
-	</div>
 	</div>
 				 
 					</li>
@@ -473,29 +481,14 @@
 <div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
 {END message_block}	<style>
 @media screen and (max-width: 767px) {
-		[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Puerto"]:before {
-		content: "{$label puertos_cto_view Puerto}";
+		[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="id_spliters"]:before {
+		content: "{$label puertos_cto_view id_spliters}";
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Cto"]:before {
 		content: "{$label puertos_cto_view Cto}";
 	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Spliter"]:before {
-		content: "{$label puertos_cto_view Spliter}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Cable"]:before {
-		content: "{$label puertos_cto_view Cable}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Localidad"]:before {
-		content: "{$label puertos_cto_view Localidad}";
-	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Cedula"]:before {
 		content: "{$label puertos_cto_view Cedula}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Activo"]:before {
-		content: "{$label puertos_cto_view Activo}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Ocupado"]:before {
-		content: "{$label puertos_cto_view Ocupado}";
 	}
 	}
 </style>
@@ -555,21 +548,21 @@
 	{$cell_grid_headcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Puerto_class}	"
+		 r-ori-vert		 {$Cto_class}	"
 
-			data-field="Puerto"
+			data-field="Cto"
 	
 	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Puerto_fieldheadercolumn}
-	{BEGIN Puerto_fieldheader}
-	<SPAN {$Puerto_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Puerto" data-fieldname="Puerto">
-	{$label puertos_cto_view Puerto }	{$arrow_icon_Puerto}
+		{BEGIN Cto_fieldheadercolumn}
+	{BEGIN Cto_fieldheader}
+	<SPAN {$Cto_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Cto" data-fieldname="Cto">
+	{$label puertos_cto_view Cto }	{$arrow_icon_Cto}
 	</SPAN>
-	{END Puerto_fieldheader}
-{END Puerto_fieldheadercolumn}
+	{END Cto_fieldheader}
+{END Cto_fieldheadercolumn}
 
 	
 	</th>
@@ -580,21 +573,21 @@
 	{$cell_grid_headcell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Cto_class}	"
+		 r-ori-vert		 {$Cedula_class}	"
 
-			data-field="Cto"
+			data-field="Cedula"
 	
 	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Cto_fieldheadercolumn}
-	{BEGIN Cto_fieldheader}
-	<SPAN {$Cto_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Cto" data-fieldname="Cto">
-	{$label puertos_cto_view Cto }	{$arrow_icon_Cto}
+		{BEGIN Cedula_fieldheadercolumn}
+	{BEGIN Cedula_fieldheader}
+	<SPAN {$Cedula_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Cedula" data-fieldname="Cedula">
+	{$label puertos_cto_view Cedula }	{$arrow_icon_Cedula}
 	</SPAN>
-	{END Cto_fieldheader}
-{END Cto_fieldheadercolumn}
+	{END Cedula_fieldheader}
+{END Cedula_fieldheadercolumn}
 
 	
 	</th>
@@ -605,150 +598,25 @@
 	{$cell_grid_headcell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Spliter_class}	"
+		 r-ori-vert		 {$id_spliters_class}	"
 
-			data-field="Spliter"
+			data-field="id_spliters"
 	
 	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Spliter_fieldheadercolumn}
-	{BEGIN Spliter_fieldheader}
-	<SPAN {$Spliter_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Spliter" data-fieldname="Spliter">
-	{$label puertos_cto_view Spliter }	{$arrow_icon_Spliter}
+		{BEGIN id_spliters_fieldheadercolumn}
+	{BEGIN id_spliters_fieldheader}
+	<SPAN {$id_spliters_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field1" {$item_simple_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="id_spliters" data-fieldname="id_spliters">
+	{$label puertos_cto_view id_spliters }	{$arrow_icon_id_spliters}
 	</SPAN>
-	{END Spliter_fieldheader}
-{END Spliter_fieldheadercolumn}
+	{END id_spliters_fieldheader}
+{END id_spliters_fieldheadercolumn}
 
 	
 	</th>
 	{END cellblock_grid_headcell_field2}
-									{BEGIN cellblock_grid_headcell_field3}
-	<th
-	
-	{$cell_grid_headcell_field3}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Cable_class}	"
-
-			data-field="Cable"
-	
-	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Cable_fieldheadercolumn}
-	{BEGIN Cable_fieldheader}
-	<SPAN {$Cable_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Cable" data-fieldname="Cable">
-	{$label puertos_cto_view Cable }	{$arrow_icon_Cable}
-	</SPAN>
-	{END Cable_fieldheader}
-{END Cable_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field3}
-									{BEGIN cellblock_grid_headcell_field4}
-	<th
-	
-	{$cell_grid_headcell_field4}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Localidad_class}	"
-
-			data-field="Localidad"
-	
-	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Localidad_fieldheadercolumn}
-	{BEGIN Localidad_fieldheader}
-	<SPAN {$Localidad_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field12" {$item_simple_grid_field12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Localidad" data-fieldname="Localidad">
-	{$label puertos_cto_view Localidad }	{$arrow_icon_Localidad}
-	</SPAN>
-	{END Localidad_fieldheader}
-{END Localidad_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field4}
-									{BEGIN cellblock_grid_headcell_field5}
-	<th
-	
-	{$cell_grid_headcell_field5}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Cedula_class}	"
-
-			data-field="Cedula"
-	
-	data-cellId="grid_headcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Cedula_fieldheadercolumn}
-	{BEGIN Cedula_fieldheader}
-	<SPAN {$Cedula_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field13" {$item_simple_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Cedula" data-fieldname="Cedula">
-	{$label puertos_cto_view Cedula }	{$arrow_icon_Cedula}
-	</SPAN>
-	{END Cedula_fieldheader}
-{END Cedula_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field5}
-									{BEGIN cellblock_grid_headcell_field6}
-	<th
-	
-	{$cell_grid_headcell_field6}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Activo_class}	"
-
-			data-field="Activo"
-	
-	data-cellId="grid_headcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Activo_fieldheadercolumn}
-	{BEGIN Activo_fieldheader}
-	<SPAN {$Activo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field14" {$item_simple_grid_field14} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Activo" data-fieldname="Activo">
-	{$label puertos_cto_view Activo }	{$arrow_icon_Activo}
-	</SPAN>
-	{END Activo_fieldheader}
-{END Activo_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field6}
-									{BEGIN cellblock_grid_headcell_field7}
-	<th
-	
-	{$cell_grid_headcell_field7}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Ocupado_class}	"
-
-			data-field="Ocupado"
-	
-	data-cellId="grid_headcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Ocupado_fieldheadercolumn}
-	{BEGIN Ocupado_fieldheader}
-	<SPAN {$Ocupado_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field15" {$item_simple_grid_field15} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Ocupado" data-fieldname="Ocupado">
-	{$label puertos_cto_view Ocupado }	{$arrow_icon_Ocupado}
-	</SPAN>
-	{END Ocupado_fieldheader}
-{END Ocupado_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field7}
 							</tr>
 															
 					{END grid_header}
@@ -774,16 +642,14 @@
 	>
 
 	 
-		{BEGIN edit_column}
-{BEGIN edit_link}
-<span data-itemtype="grid_edit" data-itemid="grid_edit" {$item_grid_edit} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
-	<a type="button" title="{mlang_message EDIT}" class="btn-link   
-	 glyphicon glyphicon-pencil" href="puertos_cto_view_edit.php?{$editlink}" {$editlink_attrs} title="{mlang_message EDIT}" >		
+		{BEGIN inline_cancel}
+<span data-itemtype="grid_inline_cancel" data-itemid="grid_inline_cancel" {$item_grid_inline_cancel} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
+	<a type="button" title="{mlang_message CANCEL}" class="btn-link   
+	 glyphicon glyphicon-remove" {$inlinerevertlink_attrs} title="{mlang_message CANCEL}" >		
 				
 								</a>
 </span>
-{END edit_link}
-{END edit_column}
+{END inline_cancel}
 	
 	</td>
 	{END cellblock_grid_cell_icons}
@@ -817,32 +683,11 @@
 	{$cell_grid_cell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Puerto_class}	"
-
-			data-field="Puerto"
-	
-	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Puerto_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field1" {$item_simple_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Puerto" data-fieldname="Puerto" data-default-width >
-{$Puerto_value}
-</span>
-{END Puerto_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field}
-									{BEGIN cellblock_grid_cell_field1}
-	<td
-	
-	{$cell_grid_cell_field1}
-	{$recordattrs}
-	class="
 		 r-ori-vert		 {$Cto_class}	"
 
 			data-field="Cto"
 	
-	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -852,81 +697,18 @@
 </span>
 {END Cto_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field1}
-									{BEGIN cellblock_grid_cell_field2}
+	{END cellblock_grid_cell_field}
+									{BEGIN cellblock_grid_cell_field1}
 	<td
 	
-	{$cell_grid_cell_field2}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Spliter_class}	"
-
-			data-field="Spliter"
-	
-	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Spliter_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Spliter" data-fieldname="Spliter" data-default-width >
-{$Spliter_value}
-</span>
-{END Spliter_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field2}
-									{BEGIN cellblock_grid_cell_field3}
-	<td
-	
-	{$cell_grid_cell_field3}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Cable_class}	"
-
-			data-field="Cable"
-	
-	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Cable_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Cable" data-fieldname="Cable" data-default-width >
-{$Cable_value}
-</span>
-{END Cable_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field3}
-									{BEGIN cellblock_grid_cell_field4}
-	<td
-	
-	{$cell_grid_cell_field4}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Localidad_class}	"
-
-			data-field="Localidad"
-	
-	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Localidad_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Localidad" data-fieldname="Localidad" data-default-width >
-{$Localidad_value}
-</span>
-{END Localidad_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field4}
-									{BEGIN cellblock_grid_cell_field5}
-	<td
-	
-	{$cell_grid_cell_field5}
+	{$cell_grid_cell_field1}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Cedula_class}	"
 
 			data-field="Cedula"
 	
-	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -936,49 +718,28 @@
 </span>
 {END Cedula_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field5}
-									{BEGIN cellblock_grid_cell_field6}
+	{END cellblock_grid_cell_field1}
+									{BEGIN cellblock_grid_cell_field2}
 	<td
 	
-	{$cell_grid_cell_field6}
+	{$cell_grid_cell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Activo_class}	"
+		 r-ori-vert		 {$id_spliters_class}	"
 
-			data-field="Activo"
+			data-field="id_spliters"
 	
-	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Activo_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Activo" data-fieldname="Activo" data-default-width >
-{$Activo_value}
+		{BEGIN id_spliters_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="id_spliters" data-fieldname="id_spliters" data-default-width >
+{$id_spliters_value}
 </span>
-{END Activo_fieldcolumn}	
+{END id_spliters_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field6}
-									{BEGIN cellblock_grid_cell_field7}
-	<td
-	
-	{$cell_grid_cell_field7}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Ocupado_class}	"
-
-			data-field="Ocupado"
-	
-	data-cellId="grid_cell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Ocupado_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Ocupado" data-fieldname="Ocupado" data-default-width >
-{$Ocupado_value}
-</span>
-{END Ocupado_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field7}
+	{END cellblock_grid_cell_field2}
 							</tr>
 										
 											{END grid_row}
@@ -1026,7 +787,7 @@
 	{$cell_grid_footcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Puerto_class}	"
+		 r-ori-vert		 {$Cto_class}	"
 
 	
 	data-cellId="grid_footcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="puertos_cto_view_list"	
@@ -1041,7 +802,7 @@
 	{$cell_grid_footcell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Cto_class}	"
+		 r-ori-vert		 {$Cedula_class}	"
 
 	
 	data-cellId="grid_footcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="puertos_cto_view_list"	
@@ -1056,7 +817,7 @@
 	{$cell_grid_footcell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Spliter_class}	"
+		 r-ori-vert		 {$id_spliters_class}	"
 
 	
 	data-cellId="grid_footcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="puertos_cto_view_list"	
@@ -1065,81 +826,6 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field2}
-									{BEGIN cellblock_grid_footcell_field3}
-	<td
-	
-	{$cell_grid_footcell_field3}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Cable_class}	"
-
-	
-	data-cellId="grid_footcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="puertos_cto_view_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field3}
-									{BEGIN cellblock_grid_footcell_field4}
-	<td
-	
-	{$cell_grid_footcell_field4}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Localidad_class}	"
-
-	
-	data-cellId="grid_footcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="puertos_cto_view_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field4}
-									{BEGIN cellblock_grid_footcell_field5}
-	<td
-	
-	{$cell_grid_footcell_field5}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Cedula_class}	"
-
-	
-	data-cellId="grid_footcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="puertos_cto_view_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field5}
-									{BEGIN cellblock_grid_footcell_field6}
-	<td
-	
-	{$cell_grid_footcell_field6}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Activo_class}	"
-
-	
-	data-cellId="grid_footcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="puertos_cto_view_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field6}
-									{BEGIN cellblock_grid_footcell_field7}
-	<td
-	
-	{$cell_grid_footcell_field7}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Ocupado_class}	"
-
-	
-	data-cellId="grid_footcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="puertos_cto_view_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field7}
 							</tr>
 					
 					</tfoot>

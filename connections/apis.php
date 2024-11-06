@@ -16,6 +16,8 @@ class RestManager
 	protected function _setTablesConnectionIds()
 	{
 		$connectionsIds = array();
+		$connectionsIds["Departamentos"] = "isp_eisa_at_localhost";
+		$connectionsIds["Ciudades"] = "isp_eisa_at_localhost";
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}
 
@@ -28,13 +30,15 @@ class RestManager
 
 		$data = array();
 		$data["connId"] = "isp_eisa_at_localhost";
-		$data["connName"] = "Rest Api";
+		$data["connName"] = "localidad_endpoint";
 
-		$this->_connectionsIdByName["Rest Api"] = "isp_eisa_at_localhost";
+		$this->_connectionsIdByName["localidad_endpoint"] = "isp_eisa_at_localhost";
 
-		$data["url"] = "isp_eiasa/puertos_cto_view_list.php";
-		$data["authType"] = "none";
-				
+		$data["url"] = "https://utrcgestion.info/isp_eiasa/api/v1.php?table=endpointlocalidad&action=list";
+		$data["authType"] = "basic";
+			$data["username"] = "Hense";
+		$data["password"] = "Sarita.2310";
+			
 	$connectionsData["isp_eisa_at_localhost"] = $data;
 		$this->_connectionsData = &$connectionsData;
 	}

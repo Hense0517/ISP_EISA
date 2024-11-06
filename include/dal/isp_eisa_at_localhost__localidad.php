@@ -17,6 +17,7 @@ $dalTablelocalidad["Longitud"] = array("type"=>200,"varname"=>"Longitud", "name"
 $dalTablelocalidad["Mapa"] = array("type"=>200,"varname"=>"Mapa", "name" => "Mapa", "autoInc" => "0");
 $dalTablelocalidad["Direccion"] = array("type"=>200,"varname"=>"Direccion", "name" => "Direccion", "autoInc" => "0");
 $dalTablelocalidad["Observaciones"] = array("type"=>201,"varname"=>"Observaciones", "name" => "Observaciones", "autoInc" => "0");
+$dalTablelocalidad["Foto"] = array("type"=>200,"varname"=>"Foto", "name" => "Foto", "autoInc" => "0");
 $dalTablelocalidad["id_localidad"]["key"]=true;
 
 $dal_info["isp_eisa_at_localhost__localidad"] = &$dalTablelocalidad;

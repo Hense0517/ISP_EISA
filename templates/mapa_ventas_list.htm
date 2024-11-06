@@ -1,12 +1,17 @@
 <!doctype html>
 <html  {$html_attrs}>
 	<head>
-				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+			<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>{$pagetitle}</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<base href="{$projectPath}">
-		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	
+    <head profile="http://www.w3.org/2005/10/profile">
+
+    <link rel="icon" type="image/png" href="eia.png" />
+
+    </head>		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
 	{BEGIN rtlCSS}
 	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
 	{END rtlCSS}
@@ -160,7 +165,7 @@
 {END supertop_block}
 					{$locking}
 			</div>	
-			<div data-body-align="left"  data-body-width="standard" class="r-body" data-resize-top="topbar" >
+			<div data-body-align="left"  data-body-width="full" class="r-body" data-resize-top="topbar" >
 				<div class="r-top">
 								{BEGIN top_block}
 <div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="topbar" {$form_top} data-pageid="{$pageid}" >		
@@ -187,7 +192,7 @@
 				</table>
 {END left_block}
 						</div>
-										<div class="r-data-block" data-body-width="standard" >
+										<div class="r-data-block" data-body-width="full" >
 						
 											<div class="r-grid"
 			data-responsive

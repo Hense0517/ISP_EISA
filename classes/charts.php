@@ -408,15 +408,29 @@ class Chart
 			return true;
 		if("usuarios" == $this->chrt_array['tables'][0])
 			return true;
+		if("ctos" == $this->chrt_array['tables'][0])
+			return true;
+		if("puertos_cto" == $this->chrt_array['tables'][0])
+			return true;
+		if("reporte_afectaciones" == $this->chrt_array['tables'][0])
+			return true;
+		if("reporte_afectaciones" == $this->chrt_array['tables'][0])
+			return true;
+		if("tarjeta_olt" == $this->chrt_array['tables'][0])
+			return true;
+		if("puertos_olt" == $this->chrt_array['tables'][0])
+			return true;
+		if("puertos_cto" == $this->chrt_array['tables'][0])
+			return true;
+		if("" == $this->chrt_array['tables'][0])
+			return true;
+		if("" == $this->chrt_array['tables'][0])
+			return true;
 		if("isp_eisa prueba de mapasugrights" == $this->chrt_array['tables'][0])
 			return true;
 		if("isp_eisa prueba de mapasugmembers" == $this->chrt_array['tables'][0])
 			return true;
 		if("usuarios" == $this->chrt_array['tables'][0])
-			return true;
-		if("ctos" == $this->chrt_array['tables'][0])
-			return true;
-		if("puertos_cto" == $this->chrt_array['tables'][0])
 			return true;
 		return false;
 	}

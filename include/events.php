@@ -31,6 +31,7 @@ class class_GlobalEvents extends eventsBase
 		$this->events["AfterLogout"]=true;
 
 
+
 //	onscreen events
 		$this->events["ctos_view_map1"] = true;
 		$this->events["ctos_view_map2"] = true;
@@ -222,6 +223,35 @@ exit();
 ;
 } // function AfterLogout
 
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		
@@ -975,7 +1005,7 @@ $mapSettings["height"] = 800;
 $mapSettings['description'] = 'DisplayOnMap'; // a field that contains the marker description
 
 // uncomment the next line if you need a fixed zoom for your map. Valid values are 1-20
-$mapSettings['zoom'] = 4;
+$mapSettings['zoom'] = 12;
 
 // Google maps only.
 // Make the markers join in clusters when zoom is wide.

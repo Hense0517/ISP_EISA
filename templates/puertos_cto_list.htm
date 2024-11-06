@@ -1,12 +1,17 @@
 <!doctype html>
 <html  {$html_attrs}>
 	<head>
-				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+			<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>{$pagetitle}</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<base href="{$projectPath}">
-		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	
+    <head profile="http://www.w3.org/2005/10/profile">
+
+    <link rel="icon" type="image/png" href="eia.png" />
+
+    </head>		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
 	{BEGIN rtlCSS}
 	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
 	{END rtlCSS}
@@ -668,7 +673,7 @@
 	{$cell_grid_headcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Puerto_class}	"
+		r-align-center r-ori-vert		 {$Puerto_class}	"
 
 			data-field="Puerto"
 	
@@ -925,11 +930,28 @@
 	{$cell_grid_cell_field}
 	{$recordattrs}
 	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		<img src="{$file_url images/ethernet%20(1).png}" data-itemtype="image" data-itemid="image1" {$item_image1} data-pageid="{$pageid}" data-record-id="{$recId}" />
+	
+	</td>
+	{END cellblock_grid_cell_field}
+									{BEGIN cellblock_grid_cell_field7}
+	<td
+	
+	{$cell_grid_cell_field7}
+	{$recordattrs}
+	class="
 		 r-ori-vert		 {$Puerto_class}	"
 
 			data-field="Puerto"
 	
-	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -939,7 +961,7 @@
 </span>
 {END Puerto_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field}
+	{END cellblock_grid_cell_field7}
 									{BEGIN cellblock_grid_cell_field1}
 	<td
 	

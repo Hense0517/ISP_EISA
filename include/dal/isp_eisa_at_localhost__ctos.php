@@ -11,6 +11,8 @@ $dalTablectos["Lat"] = array("type"=>14,"varname"=>"Lat", "name" => "Lat", "auto
 $dalTablectos["Lng"] = array("type"=>14,"varname"=>"Lng", "name" => "Lng", "autoInc" => "0");
 $dalTablectos["Ubicacion"] = array("type"=>200,"varname"=>"Ubicacion", "name" => "Ubicacion", "autoInc" => "0");
 $dalTablectos["id_spliter"] = array("type"=>3,"varname"=>"id_spliter", "name" => "id_spliter", "autoInc" => "0");
+$dalTablectos["id_cable"] = array("type"=>3,"varname"=>"id_cable", "name" => "id_cable", "autoInc" => "0");
+$dalTablectos["id_localidad"] = array("type"=>3,"varname"=>"id_localidad", "name" => "id_localidad", "autoInc" => "0");
 $dalTablectos["id_Ctos"]["key"]=true;
 
 $dal_info["isp_eisa_at_localhost__ctos"] = &$dalTablectos;

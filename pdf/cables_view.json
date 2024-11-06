@@ -177,12 +177,15 @@ pdfDocument = {
 			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel cables localidad }","bold":true},{"text":{$localidad_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field2}","stack":[{"text":"{$jslabel cables id_cables }","bold":true},{"text":{$id_cables_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
 			 {BEGIN details_spliters}
 			{$displayDetailTable_spliters }
 		{END details_spliters},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field2}","stack":[{"text":"{$jslabel cables id_cables }","bold":true},{"text":{$id_cables_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field3}","stack":[{"text":"{$jslabel cables id_localidad }","bold":true},{"text":{$id_localidad_pdfvalue}}],"margin":[0,0,0,15]},
 				
 		  ],
   "border": [ false, false, false, false ],

@@ -6,11 +6,11 @@ $tdataspliters[".OwnerID"] = "";
 $tdataspliters[".OriginalTable"] = "spliters";
 
 
-$tdataspliters[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
+$tdataspliters[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
 $tdataspliters[".originalPagesByType"] = $tdataspliters[".pagesByType"];
-$tdataspliters[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
+$tdataspliters[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
 $tdataspliters[".originalPages"] = $tdataspliters[".pages"];
-$tdataspliters[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
+$tdataspliters[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
 $tdataspliters[".originalDefaultPages"] = $tdataspliters[".defaultPages"];
 
 //	field labels
@@ -46,6 +46,9 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsspliters["Spanish"]["Barrio"] = "Barrio";
 	$fieldToolTipsspliters["Spanish"]["Barrio"] = "";
 	$placeHoldersspliters["Spanish"]["Barrio"] = "";
+	$fieldLabelsspliters["Spanish"]["id_cable"] = "Id Cable";
+	$fieldToolTipsspliters["Spanish"]["id_cable"] = "";
+	$placeHoldersspliters["Spanish"]["id_cable"] = "";
 	if (count($fieldToolTipsspliters["Spanish"]))
 		$tdataspliters[".isUseToolTips"] = true;
 }
@@ -76,6 +79,9 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelsspliters["English"]["Barrio"] = "Barrio";
 	$fieldToolTipsspliters["English"]["Barrio"] = "";
 	$placeHoldersspliters["English"]["Barrio"] = "";
+	$fieldLabelsspliters["English"]["id_cable"] = "Id Cable";
+	$fieldToolTipsspliters["English"]["id_cable"] = "";
+	$placeHoldersspliters["English"]["id_cable"] = "";
 	if (count($fieldToolTipsspliters["English"]))
 		$tdataspliters[".isUseToolTips"] = true;
 }
@@ -173,7 +179,7 @@ $tdataspliters[".isUseAjaxSuggest"] = true;
 
 
 
-						
+									
 
 $tdataspliters[".ajaxCodeSnippetAdded"] = false;
 
@@ -200,6 +206,7 @@ $tdataspliters[".googleLikeFields"][] = "localidad";
 $tdataspliters[".googleLikeFields"][] = "Numero_de_tarjeta";
 $tdataspliters[".googleLikeFields"][] = "Numero_de_puerto";
 $tdataspliters[".googleLikeFields"][] = "Barrio";
+$tdataspliters[".googleLikeFields"][] = "id_cable";
 
 
 
@@ -235,7 +242,7 @@ $tdataspliters[".orderindexes"] = array();
 
 
 
-$tdataspliters[".sqlHead"] = "SELECT `id_spliters`,  `spliter`,  `cable`,  `localidad`,  `Numero_de_tarjeta`,  `Numero_de_puerto`,  `Barrio`";
+$tdataspliters[".sqlHead"] = "SELECT `id_spliters`,  `spliter`,  `cable`,  `localidad`,  `Numero_de_tarjeta`,  `Numero_de_puerto`,  `Barrio`,  `id_cable`";
 $tdataspliters[".sqlFrom"] = "FROM `spliters`";
 $tdataspliters[".sqlWhereExpr"] = "";
 $tdataspliters[".sqlTail"] = "";
@@ -274,7 +281,7 @@ $tdataspliters[".arrGroupsPerPage"] = $arrGPP;
 $tdataspliters[".highlightSearchResults"] = true;
 
 $tableKeysspliters = array();
-$tableKeysspliters[] = "spliter";
+$tableKeysspliters[] = "id_spliters";
 $tdataspliters[".Keys"] = $tableKeysspliters;
 
 
@@ -341,7 +348,7 @@ $tdataspliters[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -351,6 +358,36 @@ $tdataspliters[".hideMobileList"] = array();
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "puertos_olt";
+			$edata["autoCompleteFieldsOnEdit"] = 1;
+	$edata["autoCompleteFields"] = array();
+		$edata["autoCompleteFields"][] = array('masterF'=>"Numero_de_tarjeta", 'lookupF'=>"tarjeta");
+	$edata["autoCompleteFields"][] = array('masterF'=>"Numero_de_puerto", 'lookupF'=>"puerto");
+	$edata["LCType"] = 0;
+
+	
+		
+	$edata["LinkField"] = "spliter";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "spliter";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "spliter";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
 
 
 		$edata["IsRequired"] = true;
@@ -366,17 +403,14 @@ $tdataspliters[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
 						$edata["validateAs"]["basicValidate"][] = "IsRequired";
 		
 	
@@ -397,7 +431,7 @@ $tdataspliters[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -481,7 +515,7 @@ $tdataspliters[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Lookup wizard");
+	$edata = array("EditFormat" => "Text field");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -491,34 +525,6 @@ $tdataspliters[".hideMobileList"] = array();
 	
 	
 
-// Begin Lookup settings
-				$edata["LookupType"] = 2;
-	$edata["LookupTable"] = "numeros_de_spliters";
-			$edata["autoCompleteFieldsOnEdit"] = 0;
-	$edata["autoCompleteFields"] = array();
-		$edata["LCType"] = 0;
-
-	
-		
-	$edata["LinkField"] = "Spliter";
-	$edata["LinkFieldType"] = 0;
-	$edata["DisplayField"] = "Spliter";
-
-	
-
-	
-	$edata["LookupOrderBy"] = "id_Spliters";
-
-	
-	
-	
-	
-
-	
-	
-		$edata["SelectSize"] = 1;
-
-// End Lookup Settings
 
 
 		$edata["IsRequired"] = true;
@@ -534,8 +540,11 @@ $tdataspliters[".hideMobileList"] = array();
 	
 	
 	
-	
-	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+			$edata["EditParams"].= " maxlength=50";
+
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
@@ -1325,6 +1334,169 @@ $tdataspliters[".hideMobileList"] = array();
 
 	$tdataspliters["Barrio"] = $fdata;
 		$tdataspliters[".searchableFields"][] = "Barrio";
+//	id_cable
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 8;
+	$fdata["strName"] = "id_cable";
+	$fdata["GoodName"] = "id_cable";
+	$fdata["ownerTable"] = "spliters";
+	$fdata["Label"] = GetFieldLabel("spliters","id_cable");
+	$fdata["FieldType"] = 3;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "id_cable";
+
+		$fdata["sourceSingle"] = "id_cable";
+
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "`id_cable`";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Lookup wizard");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "cables";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+		
+	$edata["LinkField"] = "id_cables";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "id_cables";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "id_cables";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+	
+	
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+							
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdataspliters["id_cable"] = $fdata;
+		$tdataspliters[".searchableFields"][] = "id_cable";
 
 
 $tables_data["spliters"]=&$tdataspliters;
@@ -1373,6 +1545,8 @@ $detailsTablesData["spliters"] = array();
 
 	$detailsTablesData["spliters"][$dIndex]["masterKeys"][]="localidad";
 
+	$detailsTablesData["spliters"][$dIndex]["masterKeys"][]="id_spliters";
+
 				$detailsTablesData["spliters"][$dIndex]["detailKeys"] = array();
 
 	$detailsTablesData["spliters"][$dIndex]["detailKeys"][]="Spliter";
@@ -1382,6 +1556,9 @@ $detailsTablesData["spliters"] = array();
 
 		
 	$detailsTablesData["spliters"][$dIndex]["detailKeys"][]="Localidad";
+
+		
+	$detailsTablesData["spliters"][$dIndex]["detailKeys"][]="id_spliter";
 //	Mapa_General
 	
 	
@@ -1484,9 +1661,29 @@ $masterTablesData["spliters"] = array();
 				$masterTablesData["spliters"][0]["masterKeys"] = array();
 	$masterTablesData["spliters"][0]["masterKeys"][]="cable";
 				$masterTablesData["spliters"][0]["masterKeys"][]="localidad";
+				$masterTablesData["spliters"][0]["masterKeys"][]="id_cables";
 				$masterTablesData["spliters"][0]["detailKeys"] = array();
 	$masterTablesData["spliters"][0]["detailKeys"][]="cable";
 				$masterTablesData["spliters"][0]["detailKeys"][]="localidad";
+				$masterTablesData["spliters"][0]["detailKeys"][]="id_cable";
+		
+	//endif
+	
+	//if !@t.bReportCrossTab
+			$strOriginalDetailsTable="puertos_olt";
+	$masterParams = array();
+	$masterParams["mDataSourceTable"]="puertos_olt";
+	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
+	$masterParams["mShortTable"]= "puertos_olt";
+	$masterParams["masterKeys"]= array();
+	$masterParams["detailKeys"]= array();
+
+	$masterParams["type"] = PAGE_LIST;
+					$masterTablesData["spliters"][1] = $masterParams;
+				$masterTablesData["spliters"][1]["masterKeys"] = array();
+	$masterTablesData["spliters"][1]["masterKeys"][]="spliter";
+				$masterTablesData["spliters"][1]["detailKeys"] = array();
+	$masterTablesData["spliters"][1]["detailKeys"][]="id_spliters";
 		
 	//endif
 // -----------------end  prepare master-details data arrays ------------------------------//
@@ -1509,12 +1706,12 @@ function createSqlQuery_spliters()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "`id_spliters`,  `spliter`,  `cable`,  `localidad`,  `Numero_de_tarjeta`,  `Numero_de_puerto`,  `Barrio`";
+$proto0["m_strFieldList"] = "`id_spliters`,  `spliter`,  `cable`,  `localidad`,  `Numero_de_tarjeta`,  `Numero_de_puerto`,  `Barrio`,  `id_cable`";
 $proto0["m_strFrom"] = "FROM `spliters`";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "ORDER BY `id_spliters`";
 	
-		;
+										;
 			$proto0["cipherer"] = null;
 $proto2=array();
 $proto2["m_sql"] = "";
@@ -1647,59 +1844,74 @@ $proto18["m_alias"] = "";
 $obj = new SQLFieldListItem($proto18);
 
 $proto0["m_fieldlist"][]=$obj;
-$proto0["m_fromlist"] = array();
-												$proto20=array();
-$proto20["m_link"] = "SQLL_MAIN";
-			$proto21=array();
-$proto21["m_strName"] = "spliters";
-$proto21["m_srcTableName"] = "spliters";
-$proto21["m_columns"] = array();
-$proto21["m_columns"][] = "id_spliters";
-$proto21["m_columns"][] = "spliter";
-$proto21["m_columns"][] = "cable";
-$proto21["m_columns"][] = "localidad";
-$proto21["m_columns"][] = "id_cable";
-$proto21["m_columns"][] = "Numero_de_tarjeta";
-$proto21["m_columns"][] = "Numero_de_puerto";
-$proto21["m_columns"][] = "Barrio";
-$obj = new SQLTable($proto21);
+						$proto20=array();
+			$obj = new SQLField(array(
+	"m_strName" => "id_cable",
+	"m_strTable" => "spliters",
+	"m_srcTableName" => "spliters"
+));
 
-$proto20["m_table"] = $obj;
-$proto20["m_sql"] = "`spliters`";
-$proto20["m_alias"] = "";
+$proto20["m_sql"] = "`id_cable`";
 $proto20["m_srcTableName"] = "spliters";
-$proto22=array();
-$proto22["m_sql"] = "";
-$proto22["m_uniontype"] = "SQLL_UNKNOWN";
+$proto20["m_expr"]=$obj;
+$proto20["m_alias"] = "";
+$obj = new SQLFieldListItem($proto20);
+
+$proto0["m_fieldlist"][]=$obj;
+$proto0["m_fromlist"] = array();
+												$proto22=array();
+$proto22["m_link"] = "SQLL_MAIN";
+			$proto23=array();
+$proto23["m_strName"] = "spliters";
+$proto23["m_srcTableName"] = "spliters";
+$proto23["m_columns"] = array();
+$proto23["m_columns"][] = "id_spliters";
+$proto23["m_columns"][] = "spliter";
+$proto23["m_columns"][] = "cable";
+$proto23["m_columns"][] = "localidad";
+$proto23["m_columns"][] = "id_cable";
+$proto23["m_columns"][] = "Numero_de_tarjeta";
+$proto23["m_columns"][] = "Numero_de_puerto";
+$proto23["m_columns"][] = "Barrio";
+$proto23["m_columns"][] = "id_localidad";
+$obj = new SQLTable($proto23);
+
+$proto22["m_table"] = $obj;
+$proto22["m_sql"] = "`spliters`";
+$proto22["m_alias"] = "";
+$proto22["m_srcTableName"] = "spliters";
+$proto24=array();
+$proto24["m_sql"] = "";
+$proto24["m_uniontype"] = "SQLL_UNKNOWN";
 	$obj = new SQLNonParsed(array(
 	"m_sql" => ""
 ));
 
-$proto22["m_column"]=$obj;
-$proto22["m_contained"] = array();
-$proto22["m_strCase"] = "";
-$proto22["m_havingmode"] = false;
-$proto22["m_inBrackets"] = false;
-$proto22["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto22);
+$proto24["m_column"]=$obj;
+$proto24["m_contained"] = array();
+$proto24["m_strCase"] = "";
+$proto24["m_havingmode"] = false;
+$proto24["m_inBrackets"] = false;
+$proto24["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto24);
 
-$proto20["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto20);
+$proto22["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto22);
 
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
 $proto0["m_orderby"] = array();
-												$proto24=array();
+												$proto26=array();
 						$obj = new SQLField(array(
 	"m_strName" => "id_spliters",
 	"m_strTable" => "spliters",
 	"m_srcTableName" => "spliters"
 ));
 
-$proto24["m_column"]=$obj;
-$proto24["m_bAsc"] = 1;
-$proto24["m_nColumn"] = 0;
-$obj = new SQLOrderByItem($proto24);
+$proto26["m_column"]=$obj;
+$proto26["m_bAsc"] = 1;
+$proto26["m_nColumn"] = 0;
+$obj = new SQLOrderByItem($proto26);
 
 $proto0["m_orderby"][]=$obj;					
 $proto0["m_srcTableName"]="spliters";		
@@ -1711,9 +1923,9 @@ $queryData_spliters = createSqlQuery_spliters();
 
 
 	
-		;
+										;
 
-							
+								
 
 $tdataspliters[".sqlquery"] = $queryData_spliters;
 

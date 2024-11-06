@@ -166,6 +166,11 @@ pdfDocument = {
 			"stack": [
 		
 				
+			{BEGIN mastertable_block}
+			{$showmasterfile}
+		{END mastertable_block},
+				
+				
 			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel puertos_cto_view Id_puertos }","bold":true},{"text":{$Id_puertos_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				

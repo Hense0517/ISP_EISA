@@ -47,6 +47,13 @@ function InitLookupLinks()
 			$lookupTableLinks["numeros_cto"]["ctos.Cto"] = array();
 		}
 		$lookupTableLinks["numeros_cto"]["ctos.Cto"]["edit"] = array("table" => "ctos", "field" => "Cto", "page" => "edit");
+		if( !isset( $lookupTableLinks["spliters"] ) ) {
+			$lookupTableLinks["spliters"] = array();
+		}
+		if( !isset( $lookupTableLinks["spliters"]["ctos.id_spliter"] )) {
+			$lookupTableLinks["spliters"]["ctos.id_spliter"] = array();
+		}
+		$lookupTableLinks["spliters"]["ctos.id_spliter"]["edit"] = array("table" => "ctos", "field" => "id_spliter", "page" => "edit");
 		if( !isset( $lookupTableLinks["numeros_de_cables"] ) ) {
 			$lookupTableLinks["numeros_de_cables"] = array();
 		}
@@ -54,13 +61,27 @@ function InitLookupLinks()
 			$lookupTableLinks["numeros_de_cables"]["cables.cable"] = array();
 		}
 		$lookupTableLinks["numeros_de_cables"]["cables.cable"]["edit"] = array("table" => "cables", "field" => "cable", "page" => "edit");
-		if( !isset( $lookupTableLinks["numeros_de_spliters"] ) ) {
-			$lookupTableLinks["numeros_de_spliters"] = array();
+		if( !isset( $lookupTableLinks["localidad"] ) ) {
+			$lookupTableLinks["localidad"] = array();
 		}
-		if( !isset( $lookupTableLinks["numeros_de_spliters"]["spliters.spliter"] )) {
-			$lookupTableLinks["numeros_de_spliters"]["spliters.spliter"] = array();
+		if( !isset( $lookupTableLinks["localidad"]["cables.id_localidad"] )) {
+			$lookupTableLinks["localidad"]["cables.id_localidad"] = array();
 		}
-		$lookupTableLinks["numeros_de_spliters"]["spliters.spliter"]["edit"] = array("table" => "spliters", "field" => "spliter", "page" => "edit");
+		$lookupTableLinks["localidad"]["cables.id_localidad"]["edit"] = array("table" => "cables", "field" => "id_localidad", "page" => "edit");
+		if( !isset( $lookupTableLinks["puertos_olt"] ) ) {
+			$lookupTableLinks["puertos_olt"] = array();
+		}
+		if( !isset( $lookupTableLinks["puertos_olt"]["spliters.id_spliters"] )) {
+			$lookupTableLinks["puertos_olt"]["spliters.id_spliters"] = array();
+		}
+		$lookupTableLinks["puertos_olt"]["spliters.id_spliters"]["edit"] = array("table" => "spliters", "field" => "id_spliters", "page" => "edit");
+		if( !isset( $lookupTableLinks["cables"] ) ) {
+			$lookupTableLinks["cables"] = array();
+		}
+		if( !isset( $lookupTableLinks["cables"]["spliters.id_cable"] )) {
+			$lookupTableLinks["cables"]["spliters.id_cable"] = array();
+		}
+		$lookupTableLinks["cables"]["spliters.id_cable"]["edit"] = array("table" => "spliters", "field" => "id_cable", "page" => "edit");
 		if( !isset( $lookupTableLinks["numero_puertos"] ) ) {
 			$lookupTableLinks["numero_puertos"] = array();
 		}
@@ -68,6 +89,13 @@ function InitLookupLinks()
 			$lookupTableLinks["numero_puertos"]["puertos_cto.Puerto"] = array();
 		}
 		$lookupTableLinks["numero_puertos"]["puertos_cto.Puerto"]["edit"] = array("table" => "puertos_cto", "field" => "Puerto", "page" => "edit");
+		if( !isset( $lookupTableLinks["ctos"] ) ) {
+			$lookupTableLinks["ctos"] = array();
+		}
+		if( !isset( $lookupTableLinks["ctos"]["mapa_general.id_Ctos"] )) {
+			$lookupTableLinks["ctos"]["mapa_general.id_Ctos"] = array();
+		}
+		$lookupTableLinks["ctos"]["mapa_general.id_Ctos"]["edit"] = array("table" => "Mapa_General", "field" => "id_Ctos", "page" => "edit");
 		if( !isset( $lookupTableLinks["ctos"] ) ) {
 			$lookupTableLinks["ctos"] = array();
 		}
@@ -96,6 +124,34 @@ function InitLookupLinks()
 			$lookupTableLinks["localidad"]["mapa_general.Localidad"] = array();
 		}
 		$lookupTableLinks["localidad"]["mapa_general.Localidad"]["edit"] = array("table" => "Mapa_General", "field" => "Localidad", "page" => "edit");
+		if( !isset( $lookupTableLinks["localidad"] ) ) {
+			$lookupTableLinks["localidad"] = array();
+		}
+		if( !isset( $lookupTableLinks["localidad"]["mapa_general.id_localidad"] )) {
+			$lookupTableLinks["localidad"]["mapa_general.id_localidad"] = array();
+		}
+		$lookupTableLinks["localidad"]["mapa_general.id_localidad"]["edit"] = array("table" => "Mapa_General", "field" => "id_localidad", "page" => "edit");
+		if( !isset( $lookupTableLinks["cables"] ) ) {
+			$lookupTableLinks["cables"] = array();
+		}
+		if( !isset( $lookupTableLinks["cables"]["mapa_general.id_cables"] )) {
+			$lookupTableLinks["cables"]["mapa_general.id_cables"] = array();
+		}
+		$lookupTableLinks["cables"]["mapa_general.id_cables"]["edit"] = array("table" => "Mapa_General", "field" => "id_cables", "page" => "edit");
+		if( !isset( $lookupTableLinks["spliters"] ) ) {
+			$lookupTableLinks["spliters"] = array();
+		}
+		if( !isset( $lookupTableLinks["spliters"]["mapa_general.id_spliters"] )) {
+			$lookupTableLinks["spliters"]["mapa_general.id_spliters"] = array();
+		}
+		$lookupTableLinks["spliters"]["mapa_general.id_spliters"]["edit"] = array("table" => "Mapa_General", "field" => "id_spliters", "page" => "edit");
+		if( !isset( $lookupTableLinks["ctos"] ) ) {
+			$lookupTableLinks["ctos"] = array();
+		}
+		if( !isset( $lookupTableLinks["ctos"]["mapa_ctos.id_Ctos"] )) {
+			$lookupTableLinks["ctos"]["mapa_ctos.id_Ctos"] = array();
+		}
+		$lookupTableLinks["ctos"]["mapa_ctos.id_Ctos"]["edit"] = array("table" => "Mapa_ctos", "field" => "id_Ctos", "page" => "edit");
 		if( !isset( $lookupTableLinks["ctos"] ) ) {
 			$lookupTableLinks["ctos"] = array();
 		}
@@ -124,6 +180,27 @@ function InitLookupLinks()
 			$lookupTableLinks["localidad"]["mapa_ctos.Localidad"] = array();
 		}
 		$lookupTableLinks["localidad"]["mapa_ctos.Localidad"]["edit"] = array("table" => "Mapa_ctos", "field" => "Localidad", "page" => "edit");
+		if( !isset( $lookupTableLinks["localidad"] ) ) {
+			$lookupTableLinks["localidad"] = array();
+		}
+		if( !isset( $lookupTableLinks["localidad"]["mapa_ctos.id_localidad"] )) {
+			$lookupTableLinks["localidad"]["mapa_ctos.id_localidad"] = array();
+		}
+		$lookupTableLinks["localidad"]["mapa_ctos.id_localidad"]["edit"] = array("table" => "Mapa_ctos", "field" => "id_localidad", "page" => "edit");
+		if( !isset( $lookupTableLinks["cables"] ) ) {
+			$lookupTableLinks["cables"] = array();
+		}
+		if( !isset( $lookupTableLinks["cables"]["mapa_ctos.id_cables"] )) {
+			$lookupTableLinks["cables"]["mapa_ctos.id_cables"] = array();
+		}
+		$lookupTableLinks["cables"]["mapa_ctos.id_cables"]["edit"] = array("table" => "Mapa_ctos", "field" => "id_cables", "page" => "edit");
+		if( !isset( $lookupTableLinks["spliters"] ) ) {
+			$lookupTableLinks["spliters"] = array();
+		}
+		if( !isset( $lookupTableLinks["spliters"]["mapa_ctos.id_spliters"] )) {
+			$lookupTableLinks["spliters"]["mapa_ctos.id_spliters"] = array();
+		}
+		$lookupTableLinks["spliters"]["mapa_ctos.id_spliters"]["edit"] = array("table" => "Mapa_ctos", "field" => "id_spliters", "page" => "edit");
 		if( !isset( $lookupTableLinks["ctos"] ) ) {
 			$lookupTableLinks["ctos"] = array();
 		}
@@ -278,6 +355,76 @@ function InitLookupLinks()
 			$lookupTableLinks["localidad"]["ingresar_cliente.Localidad"] = array();
 		}
 		$lookupTableLinks["localidad"]["ingresar_cliente.Localidad"]["search"] = array("table" => "Ingresar_cliente", "field" => "Localidad", "page" => "search");
+		if( !isset( $lookupTableLinks["localidad"] ) ) {
+			$lookupTableLinks["localidad"] = array();
+		}
+		if( !isset( $lookupTableLinks["localidad"]["reporte_afectaciones.Localidad"] )) {
+			$lookupTableLinks["localidad"]["reporte_afectaciones.Localidad"] = array();
+		}
+		$lookupTableLinks["localidad"]["reporte_afectaciones.Localidad"]["edit"] = array("table" => "reporte_afectaciones", "field" => "Localidad", "page" => "edit");
+		if( !isset( $lookupTableLinks["numeros_de_cables"] ) ) {
+			$lookupTableLinks["numeros_de_cables"] = array();
+		}
+		if( !isset( $lookupTableLinks["numeros_de_cables"]["reporte_afectaciones.Cables"] )) {
+			$lookupTableLinks["numeros_de_cables"]["reporte_afectaciones.Cables"] = array();
+		}
+		$lookupTableLinks["numeros_de_cables"]["reporte_afectaciones.Cables"]["edit"] = array("table" => "reporte_afectaciones", "field" => "Cables", "page" => "edit");
+		if( !isset( $lookupTableLinks["numeros_de_spliters"] ) ) {
+			$lookupTableLinks["numeros_de_spliters"] = array();
+		}
+		if( !isset( $lookupTableLinks["numeros_de_spliters"]["reporte_afectaciones.Spliters"] )) {
+			$lookupTableLinks["numeros_de_spliters"]["reporte_afectaciones.Spliters"] = array();
+		}
+		$lookupTableLinks["numeros_de_spliters"]["reporte_afectaciones.Spliters"]["edit"] = array("table" => "reporte_afectaciones", "field" => "Spliters", "page" => "edit");
+		if( !isset( $lookupTableLinks["numeros_cto"] ) ) {
+			$lookupTableLinks["numeros_cto"] = array();
+		}
+		if( !isset( $lookupTableLinks["numeros_cto"]["reporte_afectaciones.Ctos"] )) {
+			$lookupTableLinks["numeros_cto"]["reporte_afectaciones.Ctos"] = array();
+		}
+		$lookupTableLinks["numeros_cto"]["reporte_afectaciones.Ctos"]["edit"] = array("table" => "reporte_afectaciones", "field" => "Ctos", "page" => "edit");
+		if( !isset( $lookupTableLinks["localidad"] ) ) {
+			$lookupTableLinks["localidad"] = array();
+		}
+		if( !isset( $lookupTableLinks["localidad"]["tarjeta_olt.Loclaidad"] )) {
+			$lookupTableLinks["localidad"]["tarjeta_olt.Loclaidad"] = array();
+		}
+		$lookupTableLinks["localidad"]["tarjeta_olt.Loclaidad"]["edit"] = array("table" => "tarjeta_olt", "field" => "Loclaidad", "page" => "edit");
+		if( !isset( $lookupTableLinks["tarjeta_olt"] ) ) {
+			$lookupTableLinks["tarjeta_olt"] = array();
+		}
+		if( !isset( $lookupTableLinks["tarjeta_olt"]["puertos_olt.tarjeta"] )) {
+			$lookupTableLinks["tarjeta_olt"]["puertos_olt.tarjeta"] = array();
+		}
+		$lookupTableLinks["tarjeta_olt"]["puertos_olt.tarjeta"]["edit"] = array("table" => "puertos_olt", "field" => "tarjeta", "page" => "edit");
+		if( !isset( $lookupTableLinks["localidad"] ) ) {
+			$lookupTableLinks["localidad"] = array();
+		}
+		if( !isset( $lookupTableLinks["localidad"]["puertos_olt.localidad"] )) {
+			$lookupTableLinks["localidad"]["puertos_olt.localidad"] = array();
+		}
+		$lookupTableLinks["localidad"]["puertos_olt.localidad"]["edit"] = array("table" => "puertos_olt", "field" => "localidad", "page" => "edit");
+		if( !isset( $lookupTableLinks["cables"] ) ) {
+			$lookupTableLinks["cables"] = array();
+		}
+		if( !isset( $lookupTableLinks["cables"]["puertos_olt.cable"] )) {
+			$lookupTableLinks["cables"]["puertos_olt.cable"] = array();
+		}
+		$lookupTableLinks["cables"]["puertos_olt.cable"]["edit"] = array("table" => "puertos_olt", "field" => "cable", "page" => "edit");
+		if( !isset( $lookupTableLinks["spliters"] ) ) {
+			$lookupTableLinks["spliters"] = array();
+		}
+		if( !isset( $lookupTableLinks["spliters"]["puertos_olt.spliter"] )) {
+			$lookupTableLinks["spliters"]["puertos_olt.spliter"] = array();
+		}
+		$lookupTableLinks["spliters"]["puertos_olt.spliter"]["edit"] = array("table" => "puertos_olt", "field" => "spliter", "page" => "edit");
+		if( !isset( $lookupTableLinks["spliters"] ) ) {
+			$lookupTableLinks["spliters"] = array();
+		}
+		if( !isset( $lookupTableLinks["spliters"]["clientes_por_puerto.id_spliters"] )) {
+			$lookupTableLinks["spliters"]["clientes_por_puerto.id_spliters"] = array();
+		}
+		$lookupTableLinks["spliters"]["clientes_por_puerto.id_spliters"]["edit"] = array("table" => "Clientes_por_puerto", "field" => "id_spliters", "page" => "edit");
 }
 
 ?>

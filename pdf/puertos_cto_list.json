@@ -91,6 +91,9 @@ pdfDocument = {
 										{BEGIN col_grid_8}
 					"%",
 					{END col_grid_8}
+										{BEGIN col_grid_9}
+					"%",
+					{END col_grid_9}
 															],
 											heights: [ // first height for header part
 					"%",
@@ -322,6 +325,9 @@ pdfDocument = {
 		
 	//	dynamic colspan/rowspan
 
+					{BEGIN colspan_grid_headcell_field}
+			colSpan: {$colspan_grid_headcell_field},
+			{END colspan_grid_headcell_field}
 		
 						
 	
@@ -334,13 +340,19 @@ pdfDocument = {
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$Puerto_align}',
+              "alignment": 'center',
      
       
       },
 
 {END cellblock_grid_headcell_field}
-																							{BEGIN cellblock_grid_headcell_field1}
+																		{ 
+				cellId: 'headcell_field',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+																			{BEGIN cellblock_grid_headcell_field1}
 {
 	cellId: 'headcell_field1',
 	col:0,
@@ -590,6 +602,34 @@ pdfDocument = {
 	cellId: 'cell_field',
 	col:0,
 	row:0,
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":{$pdf_image images/ethernet%20(1).png undefined 0},"hidden":"{$item_hide_image1}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_field}
+																							{BEGIN cellblock_grid_cell_field7}
+{
+	cellId: 'cell_field7',
+	col:0,
+	row:0,
 			fieldName: 'Puerto',
 				style: 'bodycell',
 		
@@ -613,7 +653,7 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field}
+{END cellblock_grid_cell_field7}
 																							{BEGIN cellblock_grid_cell_field1}
 {
 	cellId: 'cell_field1',
@@ -859,6 +899,9 @@ pdfDocument = {
 		
 	//	dynamic colspan/rowspan
 
+					{BEGIN colspan_grid_footcell_field}
+			colSpan: {$colspan_grid_footcell_field},
+			{END colspan_grid_footcell_field}
 		
 						
 	
@@ -875,7 +918,13 @@ pdfDocument = {
       },
 
 {END cellblock_grid_footcell_field}
-																							{BEGIN cellblock_grid_footcell_field1}
+																		{ 
+				cellId: 'footcell_field',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+																			{BEGIN cellblock_grid_footcell_field1}
 {
 	cellId: 'footcell_field1',
 	col:0,

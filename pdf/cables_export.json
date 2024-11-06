@@ -106,13 +106,16 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$id_cables_pdfvalue},"hidden":"{$item_hide_export_field}"},
-				
-				
 			{"text":{$cable_pdfvalue},"hidden":"{$item_hide_export_field1}"},
 				
 				
 			{"text":{$localidad_pdfvalue},"hidden":"{$item_hide_export_field2}"},
+				
+				
+			{"text":{$id_cables_pdfvalue},"hidden":"{$item_hide_export_field}"},
+				
+				
+			{"text":{$id_localidad_pdfvalue},"hidden":"{$item_hide_export_field3}"},
 				
 		  ],
   "border": [ false, false, false, false ],

@@ -105,8 +105,16 @@ pdfDocument = {
 	
 			"text": [
 		
-				'',
-	  ],
+				
+			{"text":{$Cto_pdfvalue},"hidden":"{$item_hide_import_field2}"},
+				
+				
+			{"text":{$Cedula_pdfvalue},"hidden":"{$item_hide_import_field6}"},
+				
+				
+			{"text":{$id_spliters_pdfvalue},"hidden":"{$item_hide_import_field}"},
+				
+		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
      

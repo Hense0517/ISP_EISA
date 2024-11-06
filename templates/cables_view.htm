@@ -1,12 +1,17 @@
 <!doctype html>
 <html  {$html_attrs}>
 	<head>
-				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+			<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>{$pagetitle}</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<base href="{$projectPath}">
-		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	
+    <head profile="http://www.w3.org/2005/10/profile">
+
+    <link rel="icon" type="image/png" href="eia.png" />
+
+    </head>		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
 	{BEGIN rtlCSS}
 	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
 	{END rtlCSS}
@@ -30,7 +35,7 @@
 							{BEGIN top_block}
 <div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}"
 		data-v-width="4"
-	data-v-margin="0"
+	data-v-margin="1"
 	
 >		
 	 
@@ -48,7 +53,7 @@
 									{BEGIN above-grid_block}
 <div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}"
 		data-v-width="4"
-	data-v-margin="0"
+	data-v-margin="1"
 	
 >		
 	 
@@ -135,25 +140,6 @@
 
 
 {END localidad_fieldblock}
-											
-{BEGIN id_cables_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_id_cables}  r-vertical-field" data-fieldname="id_cables" data-signal-error-for="id_cables{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="id_cables" data-fieldname="id_cables" >
-
-	
-	<label class="col-md-offset-3 col-md-6" for="{$labelfor_id_cables}">
-		
-		{BEGIN id_cables_label}{$label cables id_cables }{END id_cables_label}
-	</label>
-	<div class="col-md-offset-3 col-md-6" >
-		{$id_cables_value}	</div>
-
-		
-</div>
-
-
-{END id_cables_fieldblock}
 										</td>
 			{END cellblock_grid_c3}
 										</tr>
@@ -176,12 +162,79 @@
 	</div>
 </div>
 {END details_spliters}
+											<table 
+	data-body-align="center"
+	data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr {$row_grid_0} >
+										
+
+{BEGIN cellblock_grid_c3}
+<td
+	{$cell_grid_c3}
+	class=" r-ori-vert"
 	
-				{END grid_block}
+				data-fullwidth
+		
+			data-cellId="grid_c3" data-pageid="{$pageid}"
+		data-v-cell="4"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN id_cables_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_id_cables}  r-vertical-field" data-fieldname="id_cables" data-signal-error-for="id_cables{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="id_cables" data-fieldname="id_cables" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_id_cables}">
+		
+		{BEGIN id_cables_label}{$label cables id_cables }{END id_cables_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$id_cables_value}	</div>
+
+		
+</div>
+
+
+{END id_cables_fieldblock}
+											
+{BEGIN id_localidad_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_id_localidad}  r-vertical-field" data-fieldname="id_localidad" data-signal-error-for="id_localidad{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="id_localidad" data-fieldname="id_localidad" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_id_localidad}">
+		
+		{BEGIN id_localidad_label}{$label cables id_localidad }{END id_localidad_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$id_localidad_value}	</div>
+
+		
+</div>
+
+
+{END id_localidad_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c3}
+								</tr>
+			</tbody></table>
+{END grid_block}
 									{BEGIN below-grid_block}
 <div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}"
 		data-v-width="4"
-	data-v-margin="0"
+	data-v-margin="1"
 	
 >		
 	 
@@ -228,6 +281,21 @@
 		</a>
 	</li>
 {END edit_page_button}
+								<li data-itemtype="view_pdf" data-itemid="view_pdf" {$item_view_pdf} data-pageid="{$pageid}" data-small >
+				<a class="pdflink" data-pdfpage="view" 
+data-scope="0" 
+data-split="0" 
+data-records="10" 
+data-orientation="portrait" 
+data-scale="100" 
+data-filename="Cables.pdf" 
+data-pagesize="LETTER" 
+data-pagetype="view" 
+{$pdflink_attrs}  title="" >
+				
+		{mlang_message PDF_VIEW}		
+		</a>
+	</li>
 					</ul>
 	</span>
 </span>

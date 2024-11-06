@@ -14,6 +14,10 @@
 	<link REL="stylesheet" href="{$stylepath}" type="text/css">
 	{END styleCSSFiles}
 			
+			
+	 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+	 
 	</head>
 
 	<body class="{$stylename} function-view" >
@@ -308,6 +312,105 @@
 	<div edit-form-cell class="clearfix">
 									</td>
 			{END cellblock_section_c5}
+								</tr>
+	 
+	 
+														<tr {$row_section_2} >
+										
+
+{BEGIN cellblock_section_c10}
+<td
+	{$cell_section_c10}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="section_c10" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN Foto_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Foto}  r-vertical-field" data-fieldname="Foto" data-signal-error-for="Foto{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field14" {$item_integrated_edit_field14} data-pageid="{$pageid}" data-page="localidad_view" data-field="Foto" data-fieldname="Foto" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Foto}">
+		
+		{BEGIN Foto_label}{$label localidad Foto }{END Foto_label}
+	</label>
+	<div class="" >
+		{$Foto_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Foto_fieldblock}
+	
+								</td>
+			{END cellblock_section_c10}
+			 
+																
+
+{BEGIN cellblock_section_c11}
+<td
+	{$cell_section_c11}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="section_c11" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN qr_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_qr}  r-vertical-field" data-fieldname="qr" data-signal-error-for="qr{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field17" {$item_integrated_edit_field17} data-pageid="{$pageid}" data-page="localidad_view" data-field="qr" data-fieldname="qr" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_qr}">
+		
+		{BEGIN qr_label}{$label localidad qr }{END qr_label}
+	</label>
+	<div class="" >
+		{$qr_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END qr_fieldblock}
+	
+								</td>
+			{END cellblock_section_c11}
+			 
+		
+							
+
+{BEGIN cellblock_section_c12}
+<td
+	{$cell_section_c12}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="section_c12" data-pageid="{$pageid}"
+		data-v-cell="1"
+		
+>
+	<div edit-form-cell class="clearfix">
+									</td>
+			{END cellblock_section_c12}
 								</tr>
 			</tbody></table>
 {END section_block}

@@ -365,7 +365,10 @@ class DB
 			$dalTables[$conn->connId][] = array("name" => "numeros_de_cables", "varname" => "isp_eisa_at_localhost__numeros_de_cables", "altvarname" => "numeros_de_cables", "connId" => "isp_eisa_at_localhost", "schema" => "", "connName" => "isp_eisa at localhost");
 			$dalTables[$conn->connId][] = array("name" => "numeros_de_spliters", "varname" => "isp_eisa_at_localhost__numeros_de_spliters", "altvarname" => "numeros_de_spliters", "connId" => "isp_eisa_at_localhost", "schema" => "", "connName" => "isp_eisa at localhost");
 			$dalTables[$conn->connId][] = array("name" => "puertos_cto", "varname" => "isp_eisa_at_localhost__puertos_cto", "altvarname" => "puertos_cto", "connId" => "isp_eisa_at_localhost", "schema" => "", "connName" => "isp_eisa at localhost");
+			$dalTables[$conn->connId][] = array("name" => "puertos_olt", "varname" => "isp_eisa_at_localhost__puertos_olt", "altvarname" => "puertos_olt", "connId" => "isp_eisa_at_localhost", "schema" => "", "connName" => "isp_eisa at localhost");
+			$dalTables[$conn->connId][] = array("name" => "reporte_afectaciones", "varname" => "isp_eisa_at_localhost__reporte_afectaciones", "altvarname" => "reporte_afectaciones", "connId" => "isp_eisa_at_localhost", "schema" => "", "connName" => "isp_eisa at localhost");
 			$dalTables[$conn->connId][] = array("name" => "spliters", "varname" => "isp_eisa_at_localhost__spliters", "altvarname" => "spliters", "connId" => "isp_eisa_at_localhost", "schema" => "", "connName" => "isp_eisa at localhost");
+			$dalTables[$conn->connId][] = array("name" => "tarjeta_olt", "varname" => "isp_eisa_at_localhost__tarjeta_olt", "altvarname" => "tarjeta_olt", "connId" => "isp_eisa_at_localhost", "schema" => "", "connName" => "isp_eisa at localhost");
 			$dalTables[$conn->connId][] = array("name" => "usuarios", "varname" => "isp_eisa_at_localhost__usuarios", "altvarname" => "usuarios", "connId" => "isp_eisa_at_localhost", "schema" => "", "connName" => "isp_eisa at localhost");
 		}
 	}

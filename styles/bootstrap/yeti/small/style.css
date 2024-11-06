@@ -11491,8 +11491,8 @@ However there might have been the case where dropdown showed up where it shouldn
   display: none;
 }
 .filterPanelContainer .panel-heading {
-  padding-top: 9px;
-  padding-bottom: 9px;
+  padding-top: 6px;
+  padding-bottom: 6px;
 }
 .filterPanelContainer .panel-heading label {
   margin-bottom: 0;
@@ -11521,7 +11521,7 @@ However there might have been the case where dropdown showed up where it shouldn
 .filterPanelContainer .filter-show-more > *:first-child,
 .filterPanelContainer .filter-multiselect > *:first-child,
 .filterPanelContainer .filter-btn-apply > *:first-child {
-  padding: 7px 10px;
+  padding: 4px 10px;
   display: block;
   flex: 1 1 auto;
 }
@@ -11842,10 +11842,7 @@ However there might have been the case where dropdown showed up where it shouldn
 .r-left:not(.r-left-collapsed) .r-menu [data-menu-inline] {
   padding: 0;
   font-size: 16px;
-  padding: 8px 16px;
-  margin: 0px 8px;
-  margin-bottom: 3px;
-  border-radius: 4px;
+  padding: 4px 7px;
 }
 .r-left:not(.r-left-collapsed) .r-menu [data-menu-top] .menu-icon,
 .r-left:not(.r-left-collapsed) .r-menu [data-menu-inline] .menu-icon {
@@ -11905,9 +11902,6 @@ However there might have been the case where dropdown showed up where it shouldn
     text-align: center;
     padding: 8px 16px;
     font-size: 16px;
-    margin: 0 6px;
-    margin-bottom: 3px;
-    border-radius: 4px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -11974,16 +11968,16 @@ However there might have been the case where dropdown showed up where it shouldn
   color: white;
 }
 .r-left:not(.r-left-collapsed) .r-menu.menu-treelike [data-menulevel="2"] > li > a {
-  margin-left: 24px;
+  padding-left: 24px;
 }
 .r-left:not(.r-left-collapsed) .r-menu.menu-treelike [data-menulevel="3"] > li > a {
-  margin-left: 40px;
+  padding-left: 40px;
 }
 .r-left:not(.r-left-collapsed) .r-menu.menu-treelike [data-menulevel="4"] > li > a {
-  margin-left: 56px;
+  padding-left: 56px;
 }
 .r-left:not(.r-left-collapsed) .r-menu.menu-treelike [data-menulevel="5"] > li > a {
-  margin-left: 72px;
+  padding-left: 72px;
 }
 .r-left .r-menu {
   padding-top: 12px;

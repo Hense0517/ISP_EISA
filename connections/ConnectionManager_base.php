@@ -258,11 +258,18 @@ class ConnectionManager_Base
 		$connectionsIds["Mapa Ventas"] = "isp_eisa_at_localhost";
 		$connectionsIds["Puertos_Libres"] = "isp_eisa_at_localhost";
 		$connectionsIds["usuarios"] = "isp_eisa_at_localhost";
+		$connectionsIds["Vista_Digitadores"] = "isp_eisa_at_localhost";
+		$connectionsIds["Ingresar_cliente"] = "isp_eisa_at_localhost";
+		$connectionsIds["reporte_afectaciones"] = "isp_eisa_at_localhost";
+		$connectionsIds["reporte_afectaciones_view"] = "isp_eisa_at_localhost";
+		$connectionsIds["tarjeta_olt"] = "isp_eisa_at_localhost";
+		$connectionsIds["puertos_olt"] = "isp_eisa_at_localhost";
+		$connectionsIds["Clientes_por_puerto"] = "isp_eisa_at_localhost";
+		$connectionsIds["Departamentos"] = "isp_eisa_at_localhost";
+		$connectionsIds["Ciudades"] = "isp_eisa_at_localhost";
 		$connectionsIds["admin_rights"] = "isp_eisa_at_localhost";
 		$connectionsIds["admin_members"] = "isp_eisa_at_localhost";
 		$connectionsIds["admin_users"] = "isp_eisa_at_localhost";
-		$connectionsIds["Vista_Digitadores"] = "isp_eisa_at_localhost";
-		$connectionsIds["Ingresar_cliente"] = "isp_eisa_at_localhost";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}

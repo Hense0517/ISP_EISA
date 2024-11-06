@@ -161,7 +161,7 @@ $tdataadmin_members[".addPageEvents"] = false;
 $tdataadmin_members[".isUseTimeForSearch"] = false;
 
 
-$tdataadmin_members[".badgeColor"] = "D2AF80";
+$tdataadmin_members[".badgeColor"] = "E07878";
 
 
 $tdataadmin_members[".allSearchFields"] = array();
@@ -720,7 +720,7 @@ $proto0["m_strFrom"] = "FROM `isp_eisa prueba de mapasugmembers`";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
 	
-		;
+										;
 			$proto0["cipherer"] = null;
 $proto2=array();
 $proto2["m_sql"] = "";
@@ -843,7 +843,7 @@ $queryData_admin_members = createSqlQuery_admin_members();
 
 
 	
-		;
+										;
 
 			
 

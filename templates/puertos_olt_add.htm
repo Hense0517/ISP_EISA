@@ -1,0 +1,403 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+			<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+	
+    <head profile="http://www.w3.org/2005/10/profile">
+
+    <link rel="icon" type="image/png" href="eia.png" />
+
+    </head>		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+			
+	</head>
+
+	<body class="{$stylename} function-add" >
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{$locking}
+		<div class="r-small-page" 
+			data-body-align="center"
+			data-body-width="standard"
+		>
+							{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		<h2 data-itemtype="add_header" data-itemid="add_header" {$item_add_header} data-pageid="{$pageid}" >{$pagetitlelabel puertos_olt add}</h2>
+	</div>					</div>
+	</div>		
+{END top_block}
+									{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		{BEGIN message_block}
+<div data-itemtype="add_message" data-itemid="add_message" {$item_add_message} data-pageid="{$pageid}" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN message_back_button}
+		
+	<button class="btn btn-sm btn-default" {$backbutton_attrs}>{mlang_message BACK_TO_LIST}</button>
+	{END message_back_button}
+{BEGIN view_page_button}
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>{mlang_message VIEW}</button>
+{END view_page_button}
+{BEGIN edit_page_button}
+	<button class="btn btn-sm btn-default" {$edit_page_button_attrs}>{mlang_message EDIT}</button>
+{END edit_page_button}
+</div>
+</div>
+{END message_block}	</div>					</div>
+	</div>		
+{END above-grid_block}
+									{BEGIN grid_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr {$row_grid_0} >
+										
+
+{BEGIN cellblock_grid_c3}
+<td
+	{$cell_grid_c3}
+	class=" r-ori-vert"
+	
+				data-fullwidth
+		
+			data-cellId="grid_c3" data-pageid="{$pageid}"
+		data-v-cell="4"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN tarjeta_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_tarjeta}  r-vertical-field" 
+	data-signal-error-for="tarjeta{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="tarjeta" data-fieldname="tarjeta" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_tarjeta}">
+		{BEGIN tarjeta_label}{$label puertos_olt tarjeta }{END tarjeta_label}
+	</label>
+	<div class="r-edit-field">
+		{$tarjeta_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="tarjeta">
+		<div class="text-muted" >
+		{$tooltip puertos_olt tarjeta }		</div>
+	</div>
+</div>
+
+
+{END tarjeta_fieldblock}
+											
+{BEGIN localidad_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_localidad}  r-vertical-field" 
+	data-signal-error-for="localidad{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="localidad" data-fieldname="localidad" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_localidad}">
+		{BEGIN localidad_label}{$label puertos_olt localidad }{END localidad_label}
+	</label>
+	<div class="r-edit-field">
+		{$localidad_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="localidad">
+		<div class="text-muted" >
+		{$tooltip puertos_olt localidad }		</div>
+	</div>
+</div>
+
+
+{END localidad_fieldblock}
+											
+{BEGIN cable_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_cable}  r-vertical-field" 
+	data-signal-error-for="cable{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="cable" data-fieldname="cable" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_cable}">
+		{BEGIN cable_label}{$label puertos_olt cable }{END cable_label}
+	</label>
+	<div class="r-edit-field">
+		{$cable_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="cable">
+		<div class="text-muted" >
+		{$tooltip puertos_olt cable }		</div>
+	</div>
+</div>
+
+
+{END cable_fieldblock}
+											
+{BEGIN spliter_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_spliter}  r-vertical-field" 
+	data-signal-error-for="spliter{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="spliter" data-fieldname="spliter" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_spliter}">
+		{BEGIN spliter_label}{$label puertos_olt spliter }{END spliter_label}
+	</label>
+	<div class="r-edit-field">
+		{$spliter_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="spliter">
+		<div class="text-muted" >
+		{$tooltip puertos_olt spliter }		</div>
+	</div>
+</div>
+
+
+{END spliter_fieldblock}
+											
+{BEGIN puerto_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_puerto}  r-vertical-field" 
+	data-signal-error-for="puerto{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field5" {$item_integrated_edit_field5} data-pageid="{$pageid}" data-field="puerto" data-fieldname="puerto" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_puerto}">
+		{BEGIN puerto_label}{$label puertos_olt puerto }{END puerto_label}
+	</label>
+	<div class="r-edit-field">
+		{$puerto_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="puerto">
+		<div class="text-muted" >
+		{$tooltip puertos_olt puerto }		</div>
+	</div>
+</div>
+
+
+{END puerto_fieldblock}
+											
+{BEGIN Odf_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Odf}  r-vertical-field" 
+	data-signal-error-for="Odf{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-field="Odf" data-fieldname="Odf" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Odf}">
+		{BEGIN Odf_label}{$label puertos_olt Odf }{END Odf_label}
+	</label>
+	<div class="r-edit-field">
+		{$Odf_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Odf">
+		<div class="text-muted" >
+		{$tooltip puertos_olt Odf }		</div>
+	</div>
+</div>
+
+
+{END Odf_fieldblock}
+											
+{BEGIN Bandeja_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Bandeja}  r-vertical-field" 
+	data-signal-error-for="Bandeja{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field7" {$item_integrated_edit_field7} data-pageid="{$pageid}" data-field="Bandeja" data-fieldname="Bandeja" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Bandeja}">
+		{BEGIN Bandeja_label}{$label puertos_olt Bandeja }{END Bandeja_label}
+	</label>
+	<div class="r-edit-field">
+		{$Bandeja_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Bandeja">
+		<div class="text-muted" >
+		{$tooltip puertos_olt Bandeja }		</div>
+	</div>
+</div>
+
+
+{END Bandeja_fieldblock}
+											
+{BEGIN Puerto_del_odf_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Puerto_del_odf}  r-vertical-field" 
+	data-signal-error-for="Puerto_del_odf{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field8" {$item_integrated_edit_field8} data-pageid="{$pageid}" data-field="Puerto_del_odf" data-fieldname="Puerto_del_odf" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Puerto_del_odf}">
+		{BEGIN Puerto_del_odf_label}{$label puertos_olt Puerto_del_odf }{END Puerto_del_odf_label}
+	</label>
+	<div class="r-edit-field">
+		{$Puerto_del_odf_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Puerto_del_odf">
+		<div class="text-muted" >
+		{$tooltip puertos_olt Puerto_del_odf }		</div>
+	</div>
+</div>
+
+
+{END Puerto_del_odf_fieldblock}
+											
+{BEGIN Barrio_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Barrio}  r-vertical-field" 
+	data-signal-error-for="Barrio{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="Barrio" data-fieldname="Barrio" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Barrio}">
+		{BEGIN Barrio_label}{$label puertos_olt Barrio }{END Barrio_label}
+	</label>
+	<div class="r-edit-field">
+		{$Barrio_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Barrio">
+		<div class="text-muted" >
+		{$tooltip puertos_olt Barrio }		</div>
+	</div>
+</div>
+
+
+{END Barrio_fieldblock}
+											
+{BEGIN Fin_de_Fibra_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Fin_de_Fibra}  r-vertical-field" 
+	data-signal-error-for="Fin_de_Fibra{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field10" {$item_integrated_edit_field10} data-pageid="{$pageid}" data-field="Fin_de_Fibra" data-fieldname="Fin_de_Fibra" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Fin_de_Fibra}">
+		{BEGIN Fin_de_Fibra_label}{$label puertos_olt Fin_de_Fibra }{END Fin_de_Fibra_label}
+	</label>
+	<div class="r-edit-field">
+		{$Fin_de_Fibra_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Fin_de_Fibra">
+		<div class="text-muted" >
+		{$tooltip puertos_olt Fin_de_Fibra }		</div>
+	</div>
+</div>
+
+
+{END Fin_de_Fibra_fieldblock}
+											
+{BEGIN Observaciones_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Observaciones}  r-vertical-field" 
+	data-signal-error-for="Observaciones{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field9" {$item_integrated_edit_field9} data-pageid="{$pageid}" data-field="Observaciones" data-fieldname="Observaciones" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Observaciones}">
+		{BEGIN Observaciones_label}{$label puertos_olt Observaciones }{END Observaciones_label}
+	</label>
+	<div class="r-edit-field">
+		{$Observaciones_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Observaciones">
+		<div class="text-muted" >
+		{$tooltip puertos_olt Observaciones }		</div>
+	</div>
+</div>
+
+
+{END Observaciones_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c3}
+								</tr>
+			</tbody></table>
+{END grid_block}
+									{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="			col-md-12
+	">
+	 
+		<span data-itemtype="add_save" data-itemid="add_save" {$item_add_save} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" {$savebutton_attrs} >
+							{mlang_message SAVE}			</a>
+</span>
+	 
+		<span data-itemtype="add_reset" data-itemid="add_reset" {$item_add_reset} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="resetButton{$id}" >
+							{mlang_message RESET}			</a>
+</span>
+	 
+		{BEGIN back_button}
+<span data-itemtype="add_back_list" data-itemid="add_back_list" {$item_add_back_list} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="backButton{$id}" >
+							{mlang_message BACK_TO_LIST}			</a>
+</span>
+{END back_button}
+	 
+		{BEGIN cancel_button}
+<span data-itemtype="add_cancel" data-itemid="add_cancel" {$item_add_cancel} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="cancelButton{$id}" >
+							{mlang_message CANCEL}			</a>
+</span>
+{END cancel_button}
+	</div>					</div>
+	</div>		
+{END below-grid_block}
+			</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

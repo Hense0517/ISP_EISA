@@ -160,6 +160,9 @@ pdfDocument = {
 			"stack": [
 		
 				
+			{"hidden":"{$item_hide_integrated_edit_field3}","stack":[{"text":"{$jslabel spliters id_spliters }","bold":true},{"text":{$id_spliters_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
 			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel spliters spliter }","bold":true},{"text":{$spliter_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
@@ -176,11 +179,6 @@ pdfDocument = {
 				
 				
 			{"hidden":"{$item_hide_integrated_edit_field6}","stack":[{"text":"{$jslabel spliters Barrio }","bold":true},{"text":{$Barrio_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
-			 {BEGIN details_ctos}
-			{$displayDetailTable_ctos }
-		{END details_ctos},
 				
 		  ],
   "border": [ false, false, false, false ],

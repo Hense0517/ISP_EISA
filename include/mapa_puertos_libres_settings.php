@@ -1863,7 +1863,7 @@ $proto0["m_strFrom"] = "FROM `ctos`  INNER JOIN `puertos_cto` ON `ctos`.`Cto` = 
 $proto0["m_strWhere"] = "(`puertos_cto`.`Ocupado` = 'No')";
 $proto0["m_strOrderBy"] = "ORDER BY `ctos`.`Localidad`, `ctos`.`id_Ctos`";
 	
-		;
+										;
 			$proto0["cipherer"] = null;
 $proto2=array();
 $proto2["m_sql"] = "`puertos_cto`.`Ocupado` = 'No'";
@@ -2120,6 +2120,8 @@ $proto39["m_columns"][] = "Lat";
 $proto39["m_columns"][] = "Lng";
 $proto39["m_columns"][] = "Ubicacion";
 $proto39["m_columns"][] = "id_spliter";
+$proto39["m_columns"][] = "id_cable";
+$proto39["m_columns"][] = "id_localidad";
 $obj = new SQLTable($proto39);
 
 $proto38["m_table"] = $obj;
@@ -2160,6 +2162,10 @@ $proto43["m_columns"][] = "Localidad";
 $proto43["m_columns"][] = "Cedula";
 $proto43["m_columns"][] = "Activo";
 $proto43["m_columns"][] = "Ocupado";
+$proto43["m_columns"][] = "id_cto";
+$proto43["m_columns"][] = "id_spliter";
+$proto43["m_columns"][] = "id_cable";
+$proto43["m_columns"][] = "id_localidad";
 $obj = new SQLTable($proto43);
 
 $proto42["m_table"] = $obj;
@@ -2454,7 +2460,7 @@ $queryData_mapa_puertos_libres = createSqlQuery_mapa_puertos_libres();
 
 
 	
-		;
+										;
 
 										
 

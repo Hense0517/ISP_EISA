@@ -1035,6 +1035,18 @@ function GetDefaultValue($field, $ptype, $table="")
 	{
 		return $_SESSION["geoLongitude"];
 	}
+				if($table=="reporte_afectaciones" && $field=="Fecha")
+	{
+		return NOW();
+	}
+				if($table=="reporte_afectaciones" && $field=="Estado")
+	{
+		return "ABIERTO";
+	}
+				if($table=="reporte_afectaciones" && $field=="Fecha_Solucion")
+	{
+		return NOW();
+	}
 	return "";
 }
 

@@ -192,6 +192,18 @@ pdfDocument = {
 				
 			{"text":{$Ocupado_pdfvalue},"hidden":"{$item_hide_integrated_search_field8}"},
 				
+				
+			{"text":{$id_cto_pdfvalue},"hidden":"{$item_hide_integrated_search_field9}"},
+				
+				
+			{"text":{$id_spliter_pdfvalue},"hidden":"{$item_hide_integrated_search_field10}"},
+				
+				
+			{"text":{$id_cable_pdfvalue},"hidden":"{$item_hide_integrated_search_field11}"},
+				
+				
+			{"text":{$id_localidad_pdfvalue},"hidden":"{$item_hide_integrated_search_field12}"},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

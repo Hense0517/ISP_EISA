@@ -1,3 +1,6 @@
+[data-page="spliters_view"][data-itemid="details_preview1"] {
+  page-break-after: always;
+}
 [data-page="spliters_view"][data-itemid="page_image_ash8f23hr"] {
   width: 400px;
 }
